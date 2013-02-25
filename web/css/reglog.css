@@ -1,0 +1,129 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, button, textarea, p, blockquote, th, td {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #dfdfdf;
+}
+
+#content {
+    width: 880px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content #pad {
+    float: left;
+    height: 80px;
+    width: 100%;
+}
+
+#content #logo {
+    float: left;
+    margin-top: 50px;
+    margin-left: 56px;
+    cursor: pointer;
+}
+
+#content #boxArea {
+    float: right;
+    margin-top: 20px;
+    width: 420px;
+    margin-right: 20px;
+    height: 380px;
+    border: solid 1px #666;
+}
+
+#content #boxArea2 {
+    float: right;
+    margin-top: 20px;
+    width: 420px;
+    margin-right: 20px;
+    height: 250px;
+    border: solid 1px #666;
+}
+
+h3 {
+    margin-top: 36px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 8px;
+    background: #666;
+    color: #fdfdfd;
+}
+
+.textDiv {
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0
+}
+
+#boxArea #register_form {
+    float: left;
+}
+
+.textDiv label {
+    float: left;
+    margin-top: 10px;
+    width: 120px;
+    text-align: right;
+    font-family: "隶书";
+    margin-right: 10px;
+}
+
+.textField {
+    margin-top: 10px;
+    width: 180px;
+    height: 24px;
+    line-height: 24px;
+    padding: 2px;
+    border: 1px solid #666;
+    background: url("../images/empty.png") repeat;
+}
+
+.textDiv .radio {
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+#registerBtn, #loginBtn {
+    float: left;
+    margin-left: 80px;
+    margin-top: 18px;
+    width: 120px;
+    height: 36px;
+    border-radius: 2px;
+    background-color: #666;
+    font-size: 20px;
+    color: #fdfdfd;
+    border: 0;
+    border-right: 1px solid #fdfdfd;
+    border-bottom: 1px solid #fdfdfd;
+    cursor: pointer;
+}
+
+#registerBtn:hover, #loginBtn:hover {
+    color: #ffffff;
+    border-right: 2px solid #fdfdfd;
+    border-bottom: 2px solid #fdfdfd;
+    background-color: #333;
+}
+
+.sub {
+    height: 42px;
+    line-height: 42px;
+    position: absolute
+}
+
+#msg, #errmsg {
+    position: absolute;
+    margin-top: 10px;
+    width: 200px;
+    height: 32px;
+    line-height: 32px;
+    left: 220px;
+    color: #f30;
+    font-weight: bold
+}

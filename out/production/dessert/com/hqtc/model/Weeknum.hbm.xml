@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hqtc.model.Weeknum" table="weeknum" schema="" catalog="dessert">
+        <composite-id mapped="true" class="com.hqtc.model.WeeknumPK">
+            <key-property name="shopid">
+                <column name="shopid" sql-type="int" length="10" not-null="true"/>
+            </key-property>
+            <key-property name="dessertid">
+                <column name="dessertid" sql-type="int" length="10" not-null="true"/>
+            </key-property>
+        </composite-id>
+        <property name="num">
+            <column name="num" sql-type="int" length="10" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

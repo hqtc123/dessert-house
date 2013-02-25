@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="s2shib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../dessert/lib" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-web.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../dessert/lib" recursive="false" />
+  </library>
+</component>
