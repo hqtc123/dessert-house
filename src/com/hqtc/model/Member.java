@@ -1,6 +1,7 @@
 package com.hqtc.model;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -15,7 +16,7 @@ import javax.persistence.Id;
 public class Member {
     private int id;
 
-    @javax.persistence.Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Id
     public int getId() {
         return id;
@@ -27,7 +28,7 @@ public class Member {
 
     private String account;
 
-    @javax.persistence.Column(name = "account", nullable = false, insertable = true, updatable = true, length = 255, precision = 0)
+    @Column(name = "account", nullable = false, insertable = true, updatable = true, length = 255, precision = 0)
     @Basic
     public String getAccount() {
         return account;
@@ -39,7 +40,7 @@ public class Member {
 
     private String password;
 
-    @javax.persistence.Column(name = "password", nullable = false, insertable = true, updatable = true, length = 255, precision = 0)
+    @Column(name = "password", nullable = false, insertable = true, updatable = true, length = 255, precision = 0)
     @Basic
     public String getPassword() {
         return password;
@@ -51,7 +52,7 @@ public class Member {
 
     private int position;
 
-    @javax.persistence.Column(name = "position", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "position", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Basic
     public int getPosition() {
         return position;
@@ -63,7 +64,7 @@ public class Member {
 
     private int shopid;
 
-    @javax.persistence.Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Basic
     public int getShopid() {
         return shopid;

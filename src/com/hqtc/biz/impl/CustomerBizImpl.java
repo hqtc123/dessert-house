@@ -3,6 +3,9 @@ package com.hqtc.biz.impl;
 import com.hqtc.biz.CustomerBiz;
 import com.hqtc.dao.CustomerDao;
 import com.hqtc.model.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -13,7 +16,9 @@ import java.util.List;
  * Time: 下午4:45
  * To change this template use File | Settings | File Templates.
  */
+@Service
 public class CustomerBizImpl implements CustomerBiz {
+    @Autowired
     private CustomerDao customerDao;
 
     public void setCustomerDao(CustomerDao customerDao) {

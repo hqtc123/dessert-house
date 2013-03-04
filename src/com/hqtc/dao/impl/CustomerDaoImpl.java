@@ -1,14 +1,13 @@
 package com.hqtc.dao.impl;
 
-import com.hqtc.HibernateSessionFactory;
 import com.hqtc.dao.BaseDao;
 import com.hqtc.dao.CustomerDao;
 import com.hqtc.model.Customer;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.hibernate.criterion.Example;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -19,6 +18,7 @@ import java.util.List;
  * Time: 下午2:02
  * To change this template use File | Settings | File Templates.
  */
+@Repository
 public class CustomerDaoImpl extends BaseDao implements CustomerDao {
 
     @Override
@@ -39,7 +39,7 @@ public class CustomerDaoImpl extends BaseDao implements CustomerDao {
     @Override
     public List accPassSearch(Customer customer) {
         List list = null;
-        Session session = HibernateSessionFactory.getSession();
+        Session session = getSession();
         Criteria criteria = session.createCriteria(Customer.class);
         try {
             if (customer != null) {
@@ -49,8 +49,6 @@ public class CustomerDaoImpl extends BaseDao implements CustomerDao {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            session.close();
         }
         return list;
     }
@@ -58,7 +56,7 @@ public class CustomerDaoImpl extends BaseDao implements CustomerDao {
     @Override
     public List accSearch(Customer customer) {
         List list = null;
-        Session session = HibernateSessionFactory.getSession();
+        Session session = getSession();
         Criteria criteria = session.createCriteria(Customer.class);
         try {
             if (customer != null) {
@@ -67,8 +65,6 @@ public class CustomerDaoImpl extends BaseDao implements CustomerDao {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            session.close();
         }
         return list;
     }

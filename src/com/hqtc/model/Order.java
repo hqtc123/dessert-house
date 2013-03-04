@@ -1,6 +1,9 @@
 package com.hqtc.model;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,8 +16,8 @@ import javax.persistence.Entity;
 public class Order {
     private int id;
 
-    @javax.persistence.Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @javax.persistence.Id
+    @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Id
     public int getId() {
         return id;
     }
@@ -25,8 +28,8 @@ public class Order {
 
     private int shopid;
 
-    @javax.persistence.Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @javax.persistence.Basic
+    @Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Basic
     public int getShopid() {
         return shopid;
     }
@@ -37,8 +40,8 @@ public class Order {
 
     private int salerid;
 
-    @javax.persistence.Column(name = "salerid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @javax.persistence.Basic
+    @Column(name = "salerid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Basic
     public int getSalerid() {
         return salerid;
     }
@@ -49,8 +52,8 @@ public class Order {
 
     private int customerid;
 
-    @javax.persistence.Column(name = "customerid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @javax.persistence.Basic
+    @Column(name = "customerid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Basic
     public int getCustomerid() {
         return customerid;
     }
@@ -61,8 +64,8 @@ public class Order {
 
     private float money;
 
-    @javax.persistence.Column(name = "money", nullable = false, insertable = true, updatable = true, length = 12, precision = 0)
-    @javax.persistence.Basic
+    @Column(name = "money", nullable = false, insertable = true, updatable = true, length = 12, precision = 0)
+    @Basic
     public float getMoney() {
         return money;
     }
@@ -73,8 +76,8 @@ public class Order {
 
     private int state;
 
-    @javax.persistence.Column(name = "state", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @javax.persistence.Basic
+    @Column(name = "state", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Basic
     public int getState() {
         return state;
     }

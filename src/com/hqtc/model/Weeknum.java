@@ -1,6 +1,6 @@
 package com.hqtc.model;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,13 +9,13 @@ import javax.persistence.Entity;
  * Time: 下午8:50
  * To change this template use File | Settings | File Templates.
  */
-@javax.persistence.IdClass(com.hqtc.model.WeeknumPK.class)
+@IdClass(WeeknumPK.class)
 @Entity
 public class Weeknum {
     private int shopid;
 
-    @javax.persistence.Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @javax.persistence.Id
+    @Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Id
     public int getShopid() {
         return shopid;
     }
@@ -26,8 +26,8 @@ public class Weeknum {
 
     private int dessertid;
 
-    @javax.persistence.Column(name = "dessertid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @javax.persistence.Id
+    @Column(name = "dessertid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Id
     public int getDessertid() {
         return dessertid;
     }
@@ -38,8 +38,8 @@ public class Weeknum {
 
     private int num;
 
-    @javax.persistence.Column(name = "num", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @javax.persistence.Basic
+    @Column(name = "num", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Basic
     public int getNum() {
         return num;
     }

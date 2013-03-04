@@ -1,9 +1,10 @@
 package com.hqtc.dao;
 
-import com.hqtc.HibernateSessionFactory;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Example;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -15,67 +16,27 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class BaseDao {
+
+    @Autowired
+    SessionFactory sessionFactory;
+
+    protected Session getSession() {
+        return sessionFactory.getCurrentSession();
+    }
+
     protected void add(Object object) {
-        Transaction tran = null;
-        Session session = HibernateSessionFactory.getSession();
-        try {
-            tran = session.beginTransaction();
-            session.save(object);
-            tran.commit();
-        } catch (Exception e) {
-            if (tran != null) {
-                tran.rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
+        getSession().save(object);
     }
 
     protected void delete(Object object) {
-        Transaction tran = null;
-        Session session = HibernateSessionFactory.getSession();
-        try {
-            tran = session.beginTransaction();
-            session.delete(object);
-            tran.commit();
-        } catch (Exception e) {
-            if (tran != null) {
-                tran.rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
+        getSession().delete(object);
     }
 
     protected void update(Object object) {
-        Transaction tran = null;
-        Session session = HibernateSessionFactory.getSession();
-        try {
-            tran = session.beginTransaction();
-            session.update(object);
-            tran.commit();
-        } catch (Exception e) {
-            if (tran != null) {
-                tran.rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
+        getSession().update(object);
     }
 
     protected List search(Class cla, Object object) {
-        List list = null;
-        Session session = HibernateSessionFactory.getSession();
-        try {
-            list = session.createCriteria(cla).add(Example.create(object)).list();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
-        return list;
+        return getSession().createCriteria(cla).add(Example.create(object)).list();
     }
 }

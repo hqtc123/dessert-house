@@ -5,7 +5,15 @@
       <element id="javaee-facet-resources" facet="dessert/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="dessert house" />
+          <element id="module-output" name="dessert" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="s2shib" />
+          <element id="library" level="project" name="c3p0-0.9.1.2" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.22" />
+          <element id="library" level="project" name="struts2-spring-plugin-2.0.11.2" />
+          <element id="library" level="project" name="struts2-json-plugin-2.2.3" />
+          <element id="library" level="project" name="org.aspectj:aspectjweaver:1.7.1" />
         </element>
       </element>
     </root>

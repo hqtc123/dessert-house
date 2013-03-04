@@ -5,6 +5,8 @@ import com.hqtc.model.Customer;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
@@ -15,9 +17,12 @@ import java.util.Map;
  * Time: 下午4:54
  * To change this template use File | Settings | File Templates.
  */
+@Component
 public class CustomerAction extends ActionSupport implements RequestAware, SessionAware {
     Map<String, Object> request;
     Map<String, Object> session;
+
+    @Autowired
     CustomerBiz customerBiz;
     private Customer customer;
     private String msg;

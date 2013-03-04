@@ -1,6 +1,9 @@
 package com.hqtc.model;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,8 +16,8 @@ import javax.persistence.Entity;
 public class Dessert {
     private int id;
 
-    @javax.persistence.Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @javax.persistence.Id
+    @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Id
     public int getId() {
         return id;
     }
@@ -25,8 +28,8 @@ public class Dessert {
 
     private String name;
 
-    @javax.persistence.Column(name = "name", nullable = false, insertable = true, updatable = true, length = 255, precision = 0)
-    @javax.persistence.Basic
+    @Column(name = "name", nullable = false, insertable = true, updatable = true, length = 255, precision = 0)
+    @Basic
     public String getName() {
         return name;
     }
@@ -37,8 +40,8 @@ public class Dessert {
 
     private float price;
 
-    @javax.persistence.Column(name = "price", nullable = false, insertable = true, updatable = true, length = 12, precision = 0)
-    @javax.persistence.Basic
+    @Column(name = "price", nullable = false, insertable = true, updatable = true, length = 12, precision = 0)
+    @Basic
     public float getPrice() {
         return price;
     }

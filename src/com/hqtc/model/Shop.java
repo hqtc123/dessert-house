@@ -1,6 +1,8 @@
 package com.hqtc.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,8 +15,8 @@ import javax.persistence.Entity;
 public class Shop {
     private int id;
 
-    @javax.persistence.Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @javax.persistence.Id
+    @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Id
     public int getId() {
         return id;
     }
