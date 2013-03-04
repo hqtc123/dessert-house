@@ -35,12 +35,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0" level="application_server_libraries" />
-    <orderEntry type="library" name="s2shib" level="project" />
-    <orderEntry type="library" name="c3p0-0.9.1.2" level="project" />
-    <orderEntry type="library" name="mysql-connector-java-5.1.22" level="project" />
-    <orderEntry type="library" name="struts2-spring-plugin-2.0.11.2" level="project" />
-    <orderEntry type="library" name="struts2-json-plugin-2.2.3" level="project" />
-    <orderEntry type="library" name="org.aspectj:aspectjweaver:1.7.1" level="project" />
+    <orderEntry type="library" name="s2shlib" level="project" />
+    <orderEntry type="library" name="apache-lang:commons-lang:2.1" level="project" />
   </component>
 </module>
 

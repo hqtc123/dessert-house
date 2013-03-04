@@ -20,12 +20,13 @@
     <schema name="" catalog="performance_schema" />
     <schema name="" catalog="test" />
     <table name="card" schema="" catalog="dessert" type="TABLE">
-      <column name="cardid" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="cardId" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
       <column name="customerId" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="state" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="lastTme" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
       <column name="money" sqlType="FLOAT" length="12" precision="0" nullable="false" jdbcType="7" />
-      <primary-key name="PRIMARY" columns="cardid" />
+      <primary-key name="PRIMARY" columns="id" />
       <foreign-key name="customerId" columns="customerId" ref-table="customer" ref-schema="" ref-catalog="dessert" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="customer" schema="" catalog="dessert" type="TABLE">
@@ -75,10 +76,11 @@
       <exported-key name="shoid" table="order" schema="" catalog="dessert" columns="shopid" />
     </table>
     <table name="weeknum" schema="" catalog="dessert" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="shopid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="dessertid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="num" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
-      <primary-key name="PRIMARY" columns="shopid,dessertid" />
+      <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="blog" schema="" catalog="hqtcblog" type="TABLE">
       <column name="blogid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />

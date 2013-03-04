@@ -1,7 +1,7 @@
 package com.hqtc.action;
 
 import com.hqtc.biz.CustomerBiz;
-import com.hqtc.model.Customer;
+import com.hqtc.model.entity.Customer;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
-/**
+/**`
  * Created with IntelliJ IDEA.
  * User: He Qing
  * Date: 13-2-5

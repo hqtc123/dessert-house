@@ -1,4 +1,4 @@
-<%@ page import="com.hqtc.model.Customer" %>
+<%@ page import="com.hqtc.model.entity.Customer" %>
 <%--
   Created by IntelliJ IDEA.
   User: He Qing

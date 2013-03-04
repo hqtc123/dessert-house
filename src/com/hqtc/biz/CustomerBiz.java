@@ -1,6 +1,6 @@
 package com.hqtc.biz;
 
-import com.hqtc.model.Customer;
+import com.hqtc.model.entity.Customer;
 
 /**
  * Created with IntelliJ IDEA.

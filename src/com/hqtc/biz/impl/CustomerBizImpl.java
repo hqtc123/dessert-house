@@ -1,11 +1,10 @@
 package com.hqtc.biz.impl;
 
 import com.hqtc.biz.CustomerBiz;
-import com.hqtc.dao.CustomerDao;
-import com.hqtc.model.Customer;
+import com.hqtc.model.dao.CustomerDao;
+import com.hqtc.model.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
