@@ -1,6 +1,7 @@
 package com.hqtc.biz.impl;
 
 import com.hqtc.biz.CustomerBiz;
+import com.hqtc.biz.MyMD5;
 import com.hqtc.model.dao.CustomerDao;
 import com.hqtc.model.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,9 @@ public class CustomerBizImpl implements CustomerBiz {
 
     @Override
     public void register(Customer customer) {
+        String password=customer.getPassword();
+        String newPass= MyMD5.encryption(password);
+        customer.setPassword(newPass);
         customerDao.add(customer);
     }
 
@@ -41,6 +45,9 @@ public class CustomerBizImpl implements CustomerBiz {
 
     @Override
     public Customer getCustomerByAccPass(Customer customer) {
+        String password=customer.getPassword();
+        String newPass= MyMD5.encryption(password);
+        customer.setPassword(newPass);
         List list = customerDao.accPassSearch(customer);
         if (list.size() > 0) {
             return (Customer) list.get(0);

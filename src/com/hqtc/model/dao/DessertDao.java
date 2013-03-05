@@ -1,5 +1,7 @@
 package com.hqtc.model.dao;
 
+import com.hqtc.model.entity.Dessert;
+
 /**
  * Created with IntelliJ IDEA.
  * User: hqtc
@@ -8,4 +10,9 @@ package com.hqtc.model.dao;
  * To change this template use File | Settings | File Templates.
  */
 public interface DessertDao {
+    public void add(Dessert dessert);
+
+    public void delete(Dessert dessert);
+
+    public void update(Dessert dessert);
 }

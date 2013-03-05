@@ -31,7 +31,7 @@ $(function () {
                         content: data.msg,
                         time: 2
                     });
-                    return false;
+                    window.location.reload();
                 }
             }
         });

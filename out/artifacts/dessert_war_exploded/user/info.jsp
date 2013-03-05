@@ -20,4 +20,5 @@
 <jsp:include page="../header.jsp"></jsp:include>
 </body>
 账号：<%=((Customer) session.getAttribute("customer")).getAccount()%>
+<%=request.getServletPath() %>
 </html>

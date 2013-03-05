@@ -71,7 +71,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "ajaxLogin",results = {@Result(type = "json")})
+    @Action(value = "ajaxLogin",results = {@Result(type = "json"),@Result(name = "error",location = "/login.jsp")})
     public String login() {
         Customer customer1 = customerBiz.getCustomerByAccPass(customer);
         if (customer1 == null) {
@@ -79,15 +79,15 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
             setMsg("抱歉，账号或者密码错误");
             return ActionSupport.ERROR;
         }
-        session.put("user", customer1);
+        session.put("customer", customer1);
         setResultMsg("success");
         return ActionSupport.SUCCESS;
     }
 
     @Action(value = "ajaxLogout",results = {@Result(type = "json")})
     public String logout() {
-        if (session.get("user") != null) {
-            session.remove("user");
+        if (session.get("customer") != null) {
+            session.remove("customer");
         }
         setResultMsg("success");
         return ActionSupport.SUCCESS;

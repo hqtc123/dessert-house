@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.28" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="357cab6a-a5e3-4ebf-a635-81af0a2e605b">
+  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.13" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="357cab6a-a5e3-4ebf-a635-81af0a2e605b">
     <extra-name-characters>#@</extra-name-characters>
     <identifier-quote-string>`</identifier-quote-string>
     <synchronize>true</synchronize>
@@ -9,13 +9,142 @@
     <user-password>df9bdf98df99df9edf9fdf9c</user-password>
     <libraries>
       <library>
-        <url>jar://$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.22.jar!/</url>
+        <url>jar://$PROJECT_DIR$/lib/antlr-2.7.7.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/aopalliance.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/asm-3.3.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/asm-commons-3.3.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/asm-tree-3.3.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/aspectjweaver-1.7.2.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/c3p0-0.9.1.2.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/commons-fileupload-1.2.2.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/commons-io-2.0.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/commons-lang-2.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/commons-lang3-3.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/commons-logging.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/dom4j-1.6.1.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/freemarker-2.3.19.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/hibernate-commons-annotations-4.0.1.Final.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/hibernate-core-4.1.1.Final.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/javassist-3.15.0-GA.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/jboss-logging-3.1.0.GA.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.22.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/ognl-3.0.6.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-aop.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-asm.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-aspects.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-beans.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-context-support.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-context.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-core.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-expression.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-instrument-tomcat.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-instrument.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-jdbc.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-jms.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-orm.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-oxm.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-test.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-tx.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/spring-web.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/struts2-convention-plugin-2.3.8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/struts2-core-2.3.8.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/struts2-json-plugin-2.2.3.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/struts2-spring-plugin-2.0.11.2.jar!/</url>
+      </library>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/xwork-core-2.3.8.jar!/</url>
       </library>
     </libraries>
     <schema name="" catalog="dessert" />
+    <schema name="" catalog="ee" />
     <schema name="" catalog="hqtcblog" />
     <schema name="" catalog="information_schema" />
-    <schema name="" catalog="j2ee" />
     <schema name="" catalog="mysql" />
     <schema name="" catalog="performance_schema" />
     <schema name="" catalog="test" />
@@ -69,6 +198,13 @@
       <foreign-key name="saleid" columns="salerid" ref-table="member" ref-schema="" ref-catalog="dessert" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <foreign-key name="shoid" columns="shopid" ref-table="shop" ref-schema="" ref-catalog="dessert" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
+    <table name="orderitem" schema="" catalog="dessert" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="orderid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="dessertid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="num" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="shop" schema="" catalog="dessert" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <primary-key name="PRIMARY" columns="id" />
@@ -81,6 +217,11 @@
       <column name="dessertid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="num" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="user" schema="" catalog="ee" type="TABLE">
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="password" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="money" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
     </table>
     <table name="blog" schema="" catalog="hqtcblog" type="TABLE">
       <column name="blogid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -97,7 +238,7 @@
     </table>
     <table name="blogtag" schema="" catalog="hqtcblog" type="TABLE">
       <column name="blogid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
-      <column name="tagname" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="tagname" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="PRIMARY" columns="blogid,tagname" />
     </table>
     <table name="boke" schema="" catalog="hqtcblog" type="TABLE">
@@ -107,9 +248,9 @@
       <primary-key name="PRIMARY" columns="bokeid" />
     </table>
     <table name="childblog" schema="" catalog="hqtcblog" type="TABLE">
-      <column name="blogid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="childid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="PRIMARY" columns="childid" />
     </table>
     <table name="comment" schema="" catalog="hqtcblog" type="TABLE">
@@ -120,13 +261,13 @@
       <primary-key name="PRIMARY" columns="commentid" />
     </table>
     <table name="followtag" schema="" catalog="hqtcblog" type="TABLE">
-      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
-      <column name="tagname" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="email" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <column name="tagname" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="PRIMARY" columns="email,tagname" />
     </table>
     <table name="followuser" schema="" catalog="hqtcblog" type="TABLE">
-      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
-      <column name="useremail" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="email" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <column name="useremail" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="PRIMARY" columns="email,useremail" />
     </table>
     <table name="likes" schema="" catalog="hqtcblog" type="TABLE">
@@ -270,84 +411,6 @@
     <table name="GLOBAL_VARIABLES" schema="" catalog="information_schema" type="SYSTEM TABLE">
       <column name="VARIABLE_NAME" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc=" />
       <column name="VARIABLE_VALUE" sqlType="VARCHAR" length="1024" precision="0" nullable="true" jdbcType="12" />
-    </table>
-    <table name="INNODB_BUFFER_PAGE" schema="" catalog="information_schema" type="SYSTEM TABLE">
-      <column name="POOL_ID" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="BLOCK_ID" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="SPACE" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PAGE_NUMBER" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PAGE_TYPE" sqlType="VARCHAR" length="64" precision="0" nullable="true" jdbcType="12" />
-      <column name="FLUSH_TYPE" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="FIX_COUNT" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="IS_HASHED" sqlType="VARCHAR" length="3" precision="0" nullable="true" jdbcType="12" />
-      <column name="NEWEST_MODIFICATION" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="OLDEST_MODIFICATION" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="ACCESS_TIME" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="TABLE_NAME" sqlType="VARCHAR" length="1024" precision="0" nullable="true" jdbcType="12" />
-      <column name="INDEX_NAME" sqlType="VARCHAR" length="1024" precision="0" nullable="true" jdbcType="12" />
-      <column name="NUMBER_RECORDS" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="DATA_SIZE" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="COMPRESSED_SIZE" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PAGE_STATE" sqlType="VARCHAR" length="64" precision="0" nullable="true" jdbcType="12" />
-      <column name="IO_FIX" sqlType="VARCHAR" length="64" precision="0" nullable="true" jdbcType="12" />
-      <column name="IS_OLD" sqlType="VARCHAR" length="3" precision="0" nullable="true" jdbcType="12" />
-      <column name="FREE_PAGE_CLOCK" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-    </table>
-    <table name="INNODB_BUFFER_PAGE_LRU" schema="" catalog="information_schema" type="SYSTEM TABLE">
-      <column name="POOL_ID" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="LRU_POSITION" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="SPACE" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PAGE_NUMBER" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PAGE_TYPE" sqlType="VARCHAR" length="64" precision="0" nullable="true" jdbcType="12" />
-      <column name="FLUSH_TYPE" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="FIX_COUNT" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="IS_HASHED" sqlType="VARCHAR" length="3" precision="0" nullable="true" jdbcType="12" />
-      <column name="NEWEST_MODIFICATION" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="OLDEST_MODIFICATION" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="ACCESS_TIME" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="TABLE_NAME" sqlType="VARCHAR" length="1024" precision="0" nullable="true" jdbcType="12" />
-      <column name="INDEX_NAME" sqlType="VARCHAR" length="1024" precision="0" nullable="true" jdbcType="12" />
-      <column name="NUMBER_RECORDS" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="DATA_SIZE" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="COMPRESSED_SIZE" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="COMPRESSED" sqlType="VARCHAR" length="3" precision="0" nullable="true" jdbcType="12" />
-      <column name="IO_FIX" sqlType="VARCHAR" length="64" precision="0" nullable="true" jdbcType="12" />
-      <column name="IS_OLD" sqlType="VARCHAR" length="3" precision="0" nullable="true" jdbcType="12" />
-      <column name="FREE_PAGE_CLOCK" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-    </table>
-    <table name="INNODB_BUFFER_POOL_STATS" schema="" catalog="information_schema" type="SYSTEM TABLE">
-      <column name="POOL_ID" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="POOL_SIZE" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="FREE_BUFFERS" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="DATABASE_PAGES" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="OLD_DATABASE_PAGES" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="MODIFIED_DATABASE_PAGES" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PENDING_DECOMPRESS" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PENDING_READS" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PENDING_FLUSH_LRU" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PENDING_FLUSH_LIST" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PAGES_MADE_YOUNG" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PAGES_NOT_MADE_YOUNG" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PAGES_MADE_YOUNG_RATE" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" def="MA==" />
-      <column name="PAGES_MADE_NOT_YOUNG_RATE" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" def="MA==" />
-      <column name="NUMBER_PAGES_READ" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="NUMBER_PAGES_CREATED" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="NUMBER_PAGES_WRITTEN" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="PAGES_READ_RATE" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" def="MA==" />
-      <column name="PAGES_CREATE_RATE" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" def="MA==" />
-      <column name="PAGES_WRITTEN_RATE" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" def="MA==" />
-      <column name="NUMBER_PAGES_GET" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="HIT_RATE" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="YOUNG_MAKE_PER_THOUSAND_GETS" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="NOT_YOUNG_MAKE_PER_THOUSAND_GETS" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="NUMBER_PAGES_READ_AHEAD" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="NUMBER_READ_AHEAD_EVICTED" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="READ_AHEAD_RATE" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" def="MA==" />
-      <column name="READ_AHEAD_EVICTED_RATE" sqlType="DOUBLE" length="22" precision="0" nullable="false" jdbcType="8" def="MA==" />
-      <column name="LRU_IO_TOTAL" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="LRU_IO_CURRENT" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="UNCOMPRESS_TOTAL" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
-      <column name="UNCOMPRESS_CURRENT" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" def="MA==" />
     </table>
     <table name="INNODB_CMP" schema="" catalog="information_schema" type="SYSTEM TABLE">
       <column name="page_size" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA==" />
@@ -700,12 +763,6 @@
       <column name="SECURITY_TYPE" sqlType="VARCHAR" length="7" precision="0" nullable="false" jdbcType="12" def="Jyc=" />
       <column name="CHARACTER_SET_CLIENT" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" def="Jyc=" />
       <column name="COLLATION_CONNECTION" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" def="Jyc=" />
-    </table>
-    <table name="user" schema="" catalog="j2ee" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
-      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
-      <column name="password" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
-      <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="columns_priv" schema="" catalog="mysql" type="TABLE">
       <column name="Host" sqlType="CHAR" length="60" precision="0" nullable="false" jdbcType="1" def="Jyc=" />
@@ -1145,6 +1202,21 @@
       <column name="THREAD_ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="PROCESSLIST_ID" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
       <column name="NAME" sqlType="VARCHAR" length="128" precision="0" nullable="false" jdbcType="12" />
+    </table>
+    <table name="test1" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="col1" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <column name="col2" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="test2" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="col1" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="col2" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="col3" sqlType="VARCHAR" length="1" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="name" unique="false" columns="col1" />
+      <index name="aname" unique="false" columns="col1" />
     </table>
   </data-source>
 </component>

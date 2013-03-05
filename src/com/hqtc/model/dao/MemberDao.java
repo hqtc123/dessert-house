@@ -1,5 +1,7 @@
 package com.hqtc.model.dao;
 
+import com.hqtc.model.entity.Member;
+
 /**
  * Created with IntelliJ IDEA.
  * User: hqtc
@@ -8,4 +10,9 @@ package com.hqtc.model.dao;
  * To change this template use File | Settings | File Templates.
  */
 public interface MemberDao {
+    public void add(Member member);
+
+    public void delete(Member member);
+
+    public void update(Member member);
 }
