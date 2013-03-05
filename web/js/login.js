@@ -24,12 +24,6 @@ $(function () {
             },
             success: function (data) {
                 if (data.resultMsg == "success") {
-                    $.dialog({
-                        lock: "true",
-                        title: "提示",
-                        content: data.msg,
-                        time: 2
-                    });
                     setTimeout("javascript:location.href='../index.jsp'", 1000);
                 } else {
                     $.dialog({

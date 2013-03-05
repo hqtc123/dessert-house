@@ -37,6 +37,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0" level="application_server_libraries" />
     <orderEntry type="library" name="s2shlib" level="project" />
     <orderEntry type="library" name="apache-lang:commons-lang:2.1" level="project" />
+    <orderEntry type="library" name="org.apache.struts:struts2-convention-plugin:2.3.8" level="project" />
   </component>
 </module>
 
