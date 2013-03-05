@@ -37,17 +37,6 @@ public class Card {
         this.cardId = cardId;
     }
 
-    private int customerId;
-
-    @javax.persistence.Column(name = "customerId", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @Basic
-    public int getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
-    }
 
     private int state;
 
@@ -103,7 +92,6 @@ public class Card {
 
         Card card = (Card) o;
 
-        if (customerId != card.customerId) return false;
         if (id != card.id) return false;
         if (Float.compare(card.money, money) != 0) return false;
         if (state != card.state) return false;
@@ -117,7 +105,6 @@ public class Card {
     public int hashCode() {
         int result = id;
         result = 31 * result + (cardId != null ? cardId.hashCode() : 0);
-        result = 31 * result + customerId;
         result = 31 * result + state;
         result = 31 * result + (lastTme != null ? lastTme.hashCode() : 0);
         result = 31 * result + (money != +0.0f ? Float.floatToIntBits(money) : 0);
