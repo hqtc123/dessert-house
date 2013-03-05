@@ -7,18 +7,4 @@
     <package name="struts2" extends="struts-default">
 
     </package>
-
-    <package name="ajax" namespace="/user" extends="json-default">
-        <action name="ajaxRegister" class="CustomerAction" method="register">
-            <result type="json" name="success"></result>
-        </action>
-        <action name="ajaxLogin" class="customerAction" method="login">
-            <result type="json">info.jsp</result>
-            <result name="error" type="json"></result>
-        </action>
-        <action name="ajaxLogout" class="customerAction" method="logout">
-            <result type="json" name="success">index.jsp</result>
-            <result type="json" name="error"></result>
-        </action>
-    </package>
 </struts>

@@ -1,8 +1,6 @@
 package com.hqtc.model.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -95,6 +93,17 @@ public class Customer {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    private Card card;
+
+    @OneToOne(fetch = FetchType.LAZY,mappedBy = "customer",cascade = CascadeType.ALL)
+    public Card getCard() {
+        return card;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
     }
 
     @Override

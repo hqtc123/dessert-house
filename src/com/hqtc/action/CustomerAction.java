@@ -3,9 +3,7 @@ package com.hqtc.action;
 import com.hqtc.biz.CustomerBiz;
 import com.hqtc.model.entity.Customer;
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.convention.annotation.Namespace;
-import org.apache.struts2.convention.annotation.ParentPackage;
+import org.apache.struts2.convention.annotation.*;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,18 +60,18 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         this.customerBiz = customerBiz;
     }
 
-
+    @Action(value = "ajaxRegister",results = {@Result(type = "json")})
     public String register() {
         if (customerBiz.checkAccExist(customer)) {
             return ActionSupport.ERROR;
         }
         customerBiz.register(customer);
-        session.put("user", customer);
+        session.put("customer", customer);
         setResultMsg("success");
         return ActionSupport.SUCCESS;
     }
 
-
+    @Action(value = "ajaxLogin",results = {@Result(type = "json")})
     public String login() {
         Customer customer1 = customerBiz.getCustomerByAccPass(customer);
         if (customer1 == null) {
@@ -86,6 +84,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
+    @Action(value = "ajaxLogout",results = {@Result(type = "json")})
     public String logout() {
         if (session.get("user") != null) {
             session.remove("user");

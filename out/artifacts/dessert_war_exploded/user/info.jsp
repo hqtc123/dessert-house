@@ -19,5 +19,5 @@
 <body>
 <jsp:include page="../header.jsp"></jsp:include>
 </body>
-账号：<%=((Customer) session.getAttribute("user")).getAccount()%>
+账号：<%=((Customer) session.getAttribute("customer")).getAccount()%>
 </html>

@@ -8,29 +8,14 @@
 $(function () {
     $("#logoutLink").on("click", function () {
         $.ajax({
-            url: "ajaxLogout!logout.action",
+            url: "user/ajaxLogout!logout.action",
             type: "POST",
             dataType: "json",
             data: {
             },
             success: function (data) {
                 if (data.resultMsg == "success") {
-                    $.dialog({
-                        lock: "true",
-                        title: "提示",
-                        content: data.msg,
-                        time: 2,
-                        close: function () {
-                            window.location.reload();
-                        }
-                    });
-                } else {
-                    $.dialog({
-                        title: "提示",
-                        content: data.msg,
-                        time: 2
-                    });
-                    return false;
+                    window.location.reload();
                 }
             }
         })
