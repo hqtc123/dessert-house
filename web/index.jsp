@@ -9,12 +9,17 @@
 <html>
 <head>
     <title>环球探测饼屋</title>
-    <script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="static/js/jquery.artDialog.js"></script>
-    <script type="text/javascript" src="static/js/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="static/css/dialog-twitter.css">
-    <link rel="stylesheet" type="text/css" href="static/css/layout.css">
-    <link rel="stylesheet" type="text/css" href="static/css/header.css">
+    <%
+        String path = request.getContextPath();
+        String basePath = request.getScheme() + "://" + request.getServerName() +
+                ":" + request.getServerPort() + path + "/";
+    %>
+    <script type="text/javascript" src="<%=basePath%>static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>static/js/jquery.artDialog.js"></script>
+    <script type="text/javascript" src="<%=basePath%>static/js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/dialog-twitter.css">
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/header.css">
 </head>
 <body>
 <jsp:include page="/header.jsp"></jsp:include>

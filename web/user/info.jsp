@@ -9,16 +9,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%
+        String path = request.getContextPath();
+        String basePath = request.getScheme() + "://" + request.getServerName() +
+                ":" + request.getServerPort() + path + "/";
+    %>
     <title>我的账户</title>
-    <script type="text/javascript" src="../js/jslib/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="../js/jslib/jquery.artDialog.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/dialog-twitter.css">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <script type="text/javascript" src="<%=basePath%>static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>static/js/jquery.artDialog.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/dialog-twitter.css">
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/header.css">
 </head>
 <body>
 <jsp:include page="../header.jsp"></jsp:include>
 </body>
 账号：<%=((Customer) session.getAttribute("customer")).getAccount()%>
-<%=request.getServletPath() %>
 </html>

@@ -11,7 +11,7 @@
             <li class="menuItem1"><a class="item">关于</a></li>
             <li class="menuItem"><a href="user/info.jsp" class="item">账户</a></li>
             <li class="menuItem"><a class="item">订单</a></li>
-            <li class="menuItem"><a class="item" id="logoutLink">注销</a></li>
+            <li class="menuItem"><a class="item" href="user/logoutAction.action" id="logoutLink">注销</a></li>
             <%}%>
         </ul>
     </div>

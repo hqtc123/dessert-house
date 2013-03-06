@@ -118,13 +118,6 @@ h3 {
     position: absolute
 }
 
-#msg, #errmsg {
-    position: absolute;
-    margin-top: 10px;
-    width: 200px;
-    height: 32px;
-    line-height: 32px;
-    left: 220px;
+.errorMessage {
     color: #f30;
-    font-weight: bold
 }

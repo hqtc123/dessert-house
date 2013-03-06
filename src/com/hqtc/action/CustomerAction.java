@@ -22,6 +22,7 @@ import java.util.Map;
 @Component
 @ParentPackage("struts-default")
 @Namespace("/user")
+@ResultPath(value = "/")
 public class CustomerAction extends ActionSupport implements RequestAware, SessionAware {
     Map<String, Object> request;
     Map<String, Object> session;
@@ -29,16 +30,8 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
     @Autowired
     CustomerBiz customerBiz;
     private Customer customer;
-    private String msg;
     private String resultMsg;
 
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
 
     public String getResultMsg() {
         return resultMsg;
@@ -47,6 +40,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
     public void setResultMsg(String resultMsg) {
         this.resultMsg = resultMsg;
     }
+
 
     public Customer getCustomer() {
         return customer;
@@ -60,10 +54,12 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         this.customerBiz = customerBiz;
     }
 
-    @Action(value = "registerAction",results = {@Result(name = "success",location = "/index.jsp")})
+    @Action(value = "registerAction", results = {@Result(type = "redirect", name = "success", location = "/index.jsp"),
+            @Result(name = "input", location = "/user/register.jsp")})
     public String register() {
         if (customerBiz.checkAccExist(customer)) {
-            return ActionSupport.ERROR;
+            setResultMsg("error");
+            return ActionSupport.INPUT;
         }
         customerBiz.register(customer);
         session.put("customer", customer);
@@ -71,20 +67,20 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "loginAction",results = {@Result(name = "success",location = "/user/register.jsp"),@Result(name = "error",location = "/login.jsp")})
+    @Action(value = "loginAction", results = {@Result(type = "redirect", name = "success", location = "/index.jsp"),
+            @Result(name = "input", location = "/user/login.jsp")})
     public String login() {
         Customer customer1 = customerBiz.getCustomerByAccPass(customer);
         if (customer1 == null) {
             setResultMsg("error");
-            setMsg("抱歉，账号或者密码错误");
-            return ActionSupport.ERROR;
+            return ActionSupport.INPUT;
         }
         session.put("customer", customer1);
         setResultMsg("success");
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "ajaxLogout",results = {@Result(name = "success",location = "../index.jsp")})
+    @Action(value = "logoutAction", results = {@Result(type = "redirect", name = "success", location = "/index.jsp")})
     public String logout() {
         if (session.get("customer") != null) {
             session.remove("customer");
