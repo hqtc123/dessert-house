@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : hqtcblog
-Source Server Version : 50528
+Source Server         : localhost
+Source Server Version : 50513
 Source Host           : localhost:3306
 Source Database       : dessert
 
 Target Server Type    : MYSQL
-Target Server Version : 50528
+Target Server Version : 50513
 File Encoding         : 65001
 
-Date: 2013-03-04 23:49:47
+Date: 2013-03-05 21:56:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -48,19 +48,12 @@ CREATE TABLE `customer` (
   `address` varchar(255) NOT NULL,
   `score` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of customer
 -- ----------------------------
-INSERT INTO `customer` VALUES ('2', 'q', 'q', '23', '1', '湖南', '0');
-INSERT INTO `customer` VALUES ('4', 'w', 'er', '20', '1', '周口', '0');
-INSERT INTO `customer` VALUES ('5', 'wewe', 'wewe', '23', '2', 'eeee', '0');
-INSERT INTO `customer` VALUES ('6', 'we', 'eee', '23', '1', 'af', '0');
-INSERT INTO `customer` VALUES ('7', 'rt', 'rt', '23', '1', 'jh', '0');
-INSERT INTO `customer` VALUES ('8', 'rtt', 'rt', '23', '1', 'jh', '0');
-INSERT INTO `customer` VALUES ('9', 'kb', 'kb', '67', '2', '上海', '0');
-INSERT INTO `customer` VALUES ('10', 'r', 'r', '43', '1', '北京', '0');
+INSERT INTO `customer` VALUES ('12', 'q', 'e10adc3949ba59abbe56e057f20f883e', '21', '1', 'fdtg', '0');
 
 -- ----------------------------
 -- Table structure for `dessert`
@@ -118,6 +111,22 @@ CREATE TABLE `order` (
 
 -- ----------------------------
 -- Records of order
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `orderitem`
+-- ----------------------------
+DROP TABLE IF EXISTS `orderitem`;
+CREATE TABLE `orderitem` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `orderid` int(11) NOT NULL,
+  `dessertid` int(11) NOT NULL,
+  `num` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of orderitem
 -- ----------------------------
 
 -- ----------------------------

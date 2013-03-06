@@ -9,14 +9,14 @@
 <html>
 <head>
     <title>环球探测饼屋</title>
-    <script type="text/javascript" src="js/jslib/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/jslib/jquery.artDialog.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/dialog-twitter.css">
-    <link rel="stylesheet" type="text/css" href="css/layout.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.artDialog.js"></script>
+    <script type="text/javascript" src="static/js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/dialog-twitter.css">
+    <link rel="stylesheet" type="text/css" href="static/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="static/css/header.css">
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="/header.jsp"></jsp:include>
 </body>
 </html>

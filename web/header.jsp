@@ -1,7 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<script type="text/javascript" src="js/jslib/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/jslib/jquery.artDialog.js"></script>
-<script type="text/javascript" src="js/header.js"></script>
 <div id="navTop">
     <div id="navContent">
         <div id="welcome"><span>欢迎光临环球探测饼屋</span></div>

@@ -60,8 +60,9 @@ h3 {
     margin: 10px 0
 }
 
-#boxArea #register_form {
+#login_form,#register_form {
     float: left;
+    padding-left: 25px;
 }
 
 .textDiv label {

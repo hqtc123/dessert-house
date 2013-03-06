@@ -20,7 +20,7 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 @Component
-@ParentPackage("json-default")
+@ParentPackage("struts-default")
 @Namespace("/user")
 public class CustomerAction extends ActionSupport implements RequestAware, SessionAware {
     Map<String, Object> request;
@@ -60,7 +60,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         this.customerBiz = customerBiz;
     }
 
-    @Action(value = "ajaxRegister",results = {@Result(type = "json")})
+    @Action(value = "registerAction",results = {@Result(name = "success",location = "/index.jsp")})
     public String register() {
         if (customerBiz.checkAccExist(customer)) {
             return ActionSupport.ERROR;
@@ -71,7 +71,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "ajaxLogin",results = {@Result(type = "json"),@Result(name = "error",location = "/login.jsp")})
+    @Action(value = "loginAction",results = {@Result(name = "success",location = "/user/register.jsp"),@Result(name = "error",location = "/login.jsp")})
     public String login() {
         Customer customer1 = customerBiz.getCustomerByAccPass(customer);
         if (customer1 == null) {
@@ -84,7 +84,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "ajaxLogout",results = {@Result(type = "json")})
+    @Action(value = "ajaxLogout",results = {@Result(name = "success",location = "../index.jsp")})
     public String logout() {
         if (session.get("customer") != null) {
             session.remove("customer");
