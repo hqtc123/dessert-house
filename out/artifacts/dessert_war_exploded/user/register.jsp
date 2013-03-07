@@ -38,7 +38,7 @@
 
             <s:password required="true"
                         id="passwordField" cssClass="textField" name="customer.password" label="密 码"></s:password>
-            <s:password id="rePasswordField" cssClass="textField" label="确认密码"></s:password>
+            <s:password id="rePasswordField" cssClass="textField" name="rePassword" label="确认密码"></s:password>
             <s:textfield id="ageField" cssClass="textField" name="customer.age" label="年 龄"></s:textfield> <br>
             <s:radio label="性别" list="#{'1':'男','0':'女'}" name="sex" value="1"/>
             <s:textfield id="addressField" cssClass="textField" name="customer.address" label="住 址"></s:textfield>

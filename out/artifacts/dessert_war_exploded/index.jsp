@@ -8,20 +8,64 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>环球探测饼屋</title>
+    <title>环球探测甜品屋</title>
     <%
         String path = request.getContextPath();
         String basePath = request.getScheme() + "://" + request.getServerName() +
                 ":" + request.getServerPort() + path + "/";
     %>
     <script type="text/javascript" src="<%=basePath%>static/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>static/js/jquery.artDialog.js"></script>
+    <script type="text/javascript" src="<%=basePath%>static/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>static/js/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/dialog-twitter.css">
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/layout.css">
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/header.css">
+    <link href="<%=basePath%>static/bootstrap/lib.min.css" rel="stylesheet" type="text/css"/>
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+    <link href="<%=basePath%>static/bootstrap/lib-resp.min.css"
+          rel="stylesheet">
 </head>
 <body>
-<jsp:include page="/header.jsp"></jsp:include>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </a>
+            <a class="brand" href="#">环球探测甜品屋</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="user/loginPage.action">登录</a>
+                    </li>
+                    <li>
+                        <a href="user/registerPage.action">注册</a>
+                    </li>
+                    <li>
+                        <a href="#contact">账单</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h1>欢迎光临环球探测甜品屋</h1>
+
+    <p>Use this document as a way to quick start any new project.
+        <br>All you get is this message and a barebones HTML document.</p>
+</div>
+<input type="text" class="input-large">
+<button class="btn">Button</button>
+<!-- /container -->
+<!-- Le javascript==================================================-
+->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
 </body>
 </html>

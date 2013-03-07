@@ -16,9 +16,9 @@
     %>
     <title>登录</title>
     <script type="text/javascript" src="<%=basePath%>static/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>static/js/jquery.artDialog.js"></script>
-    <script type="text/javascript" src="<%=basePath%>static/js/login.js"></script>
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/dialog-twitter.css">
+    <script type="text/javascript" src="<%=basePath%>static/bootstrap/js/bootstrap.min.js"></script>
+    <link href="<%=basePath%>static/bootstrap/lib.min.css" rel="stylesheet" type="text/css"/>
+    <link href="<%=basePath%>static/bootstrap/lib-resp.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/reglog.css">
 </head>
 <body>
@@ -36,10 +36,10 @@
             <s:textfield required="true" id="accountField" label="账户名" cssClass="textField"
                          name="customer.account"></s:textfield>
 
-            <s:password required="true" id="passwordField" cssClass="textField" name="customer.password"
+            <s:password required="true" id="passwordField" cssClass="input-large" name="customer.password"
                         label="密 码"></s:password>
             <br>
-            <s:submit id="loginBtn" type="button" value="登录"/>
+            <s:submit cssClass="btn" type="button" value="登录"/>
         </s:form>
     </div>
 </div>

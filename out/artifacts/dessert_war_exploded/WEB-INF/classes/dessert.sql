@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50513
 File Encoding         : 65001
 
-Date: 2013-03-07 16:44:05
+Date: 2013-03-07 21:58:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -48,14 +48,13 @@ CREATE TABLE `customer` (
   `address` varchar(255) NOT NULL,
   `score` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of customer
 -- ----------------------------
-INSERT INTO `customer` VALUES ('12', 'q', 'e10adc3949ba59abbe56e057f20f883e', '21', '1', 'fdtg', '0');
-INSERT INTO `customer` VALUES ('13', 'w', 'e10adc3949ba59abbe56e057f20f883e', '12', '2', 'sd', '0');
-INSERT INTO `customer` VALUES ('14', 'qw', 'e10adc3949ba59abbe56e057f20f883e', '23', '0', 'adf', '0');
+INSERT INTO `customer` VALUES ('15', 'qqq', 'e10adc3949ba59abbe56e057f20f883e', '23', '0', '河南', '0');
+INSERT INTO `customer` VALUES ('18', 'www', '4eae35f1b35977a00ebd8086c259d4c9', '23', '0', 'sfggf', '0');
 
 -- ----------------------------
 -- Table structure for `dessert`
@@ -102,6 +101,7 @@ CREATE TABLE `order` (
   `customerid` int(11) NOT NULL,
   `money` float NOT NULL,
   `date` date NOT NULL,
+  `realmoney` float NOT NULL,
   PRIMARY KEY (`id`),
   KEY `shoid` (`shopid`),
   KEY `saleid` (`salerid`),
