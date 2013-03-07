@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50513
+Source Server         : hqtcblog
+Source Server Version : 50528
 Source Host           : localhost:3306
 Source Database       : dessert
 
 Target Server Type    : MYSQL
-Target Server Version : 50513
+Target Server Version : 50528
 File Encoding         : 65001
 
-Date: 2013-03-05 21:56:09
+Date: 2013-03-07 09:26:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -48,12 +48,14 @@ CREATE TABLE `customer` (
   `address` varchar(255) NOT NULL,
   `score` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of customer
 -- ----------------------------
 INSERT INTO `customer` VALUES ('12', 'q', 'e10adc3949ba59abbe56e057f20f883e', '21', '1', 'fdtg', '0');
+INSERT INTO `customer` VALUES ('13', 'w', 'e10adc3949ba59abbe56e057f20f883e', '12', '2', 'sd', '0');
+INSERT INTO `customer` VALUES ('14', 'qw', 'e10adc3949ba59abbe56e057f20f883e', '23', '0', 'adf', '0');
 
 -- ----------------------------
 -- Table structure for `dessert`

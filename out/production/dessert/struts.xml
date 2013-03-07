@@ -6,4 +6,19 @@
 <struts>
     <constant name="struts.devMode" value="true"></constant>
     <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+    <package name="default" extends="struts-default">
+        <interceptors>
+            <interceptor name="authority" class="com.hqtc.interceptor.AuthorityInterceptor">
+
+            </interceptor>
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="authority"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="myStack"></default-interceptor-ref>
+        <global-results>
+            <result name="login" type="redirect">/user/login.jsp</result>
+        </global-results>
+    </package>
 </struts>
