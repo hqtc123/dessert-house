@@ -121,4 +121,16 @@ public class Order {
     public void setDate(Date date) {
         this.date = date;
     }
+
+    private float realmoney;
+
+    @Column(name = "realmoney", nullable = false, insertable = true, updatable = true, length = 12, precision = 0)
+    @Basic
+    public float getRealmoney() {
+        return realmoney;
+    }
+
+    public void setRealmoney(float realmoney) {
+        this.realmoney = realmoney;
+    }
 }

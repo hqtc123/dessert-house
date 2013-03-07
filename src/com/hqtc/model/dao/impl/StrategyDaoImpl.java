@@ -3,6 +3,7 @@ package com.hqtc.model.dao.impl;
 import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.StrategyDao;
 import com.hqtc.model.entity.Strategy;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +12,7 @@ import com.hqtc.model.entity.Strategy;
  * Time: 下午4:41
  * To change this template use File | Settings | File Templates.
  */
+@Repository
 public class StrategyDaoImpl extends BaseDao implements StrategyDao {
     @Override
     public void add(Strategy strategy) {

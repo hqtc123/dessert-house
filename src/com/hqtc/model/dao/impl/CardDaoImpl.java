@@ -3,6 +3,7 @@ package com.hqtc.model.dao.impl;
 import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.CardDao;
 import com.hqtc.model.entity.Card;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +12,7 @@ import com.hqtc.model.entity.Card;
  * Time: 下午5:00
  * To change this template use File | Settings | File Templates.
  */
+@Repository
 public class CardDaoImpl extends BaseDao implements CardDao {
     @Override
     public void add(Card card) {

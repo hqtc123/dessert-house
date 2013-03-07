@@ -54,6 +54,11 @@ public class CustomerDaoImpl extends BaseDao implements CustomerDao {
     }
 
     @Override
+    public Customer getCustomerById(int id) {
+        return (Customer) super.get(Customer.class, id);
+    }
+
+    @Override
     public List accSearch(Customer customer) {
         List list = null;
         Session session = getSession();

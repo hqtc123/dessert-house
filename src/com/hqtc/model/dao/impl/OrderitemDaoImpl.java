@@ -3,6 +3,7 @@ package com.hqtc.model.dao.impl;
 import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.OrderitemDao;
 import com.hqtc.model.entity.Orderitem;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +12,7 @@ import com.hqtc.model.entity.Orderitem;
  * Time: 下午8:07
  * To change this template use File | Settings | File Templates.
  */
+@Repository
 public class OrderitemDaoImpl extends BaseDao implements OrderitemDao {
     @Override
     public void add(Orderitem orderitemr) {

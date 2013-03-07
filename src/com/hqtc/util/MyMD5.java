@@ -12,7 +12,6 @@ import java.security.NoSuchAlgorithmException;
  */
 public class MyMD5 {
     public static String encryption(String strToEncrypt) {
-        String password = "123456";
 
         MessageDigest md = null;
         try {
@@ -20,7 +19,7 @@ public class MyMD5 {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-        md.update(password.getBytes());
+        md.update(strToEncrypt.getBytes());
 
         byte byteData[] = md.digest();
 

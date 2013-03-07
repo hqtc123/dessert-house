@@ -33,9 +33,11 @@
         <h3>免费注册</h3>
 
         <s:form id="register_form" action="registerAction" method="POST">
-            <s:textfield id="accountField" label="账户名" cssClass="textField" name="customer.account"></s:textfield>
+            <s:textfield id="accountField" label="账户名" cssClass="textField"
+                         required="true" name="customer.account"></s:textfield>
 
-            <s:password id="passwordField" cssClass="textField" name="customer.password" label="密 码"></s:password>
+            <s:password required="true"
+                        id="passwordField" cssClass="textField" name="customer.password" label="密 码"></s:password>
             <s:password id="rePasswordField" cssClass="textField" label="确认密码"></s:password>
             <s:textfield id="ageField" cssClass="textField" name="customer.age" label="年 龄"></s:textfield> <br>
             <s:radio label="性别" list="#{'1':'男','0':'女'}" name="sex" value="1"/>

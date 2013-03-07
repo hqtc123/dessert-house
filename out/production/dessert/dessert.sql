@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : hqtcblog
-Source Server Version : 50528
+Source Server         : localhost
+Source Server Version : 50513
 Source Host           : localhost:3306
 Source Database       : dessert
 
 Target Server Type    : MYSQL
-Target Server Version : 50528
+Target Server Version : 50513
 File Encoding         : 65001
 
-Date: 2013-03-07 09:26:51
+Date: 2013-03-07 16:44:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -101,7 +101,7 @@ CREATE TABLE `order` (
   `salerid` int(11) NOT NULL,
   `customerid` int(11) NOT NULL,
   `money` float NOT NULL,
-  `state` int(11) NOT NULL,
+  `date` date NOT NULL,
   PRIMARY KEY (`id`),
   KEY `shoid` (`shopid`),
   KEY `saleid` (`salerid`),
@@ -124,11 +124,29 @@ CREATE TABLE `orderitem` (
   `orderid` int(11) NOT NULL,
   `dessertid` int(11) NOT NULL,
   `num` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `order` (`orderid`),
+  CONSTRAINT `order` FOREIGN KEY (`orderid`) REFERENCES `order` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of orderitem
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `recharge`
+-- ----------------------------
+DROP TABLE IF EXISTS `recharge`;
+CREATE TABLE `recharge` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `customerid` int(11) NOT NULL,
+  `money` int(11) NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of recharge
 -- ----------------------------
 
 -- ----------------------------
@@ -145,6 +163,21 @@ CREATE TABLE `shop` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for `strategy`
+-- ----------------------------
+DROP TABLE IF EXISTS `strategy`;
+CREATE TABLE `strategy` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `score` int(11) NOT NULL,
+  `discount` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of strategy
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `weeknum`
 -- ----------------------------
 DROP TABLE IF EXISTS `weeknum`;
@@ -153,6 +186,7 @@ CREATE TABLE `weeknum` (
   `shopid` int(11) NOT NULL,
   `dessertid` int(11) NOT NULL,
   `num` int(11) NOT NULL,
+  `weekday` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

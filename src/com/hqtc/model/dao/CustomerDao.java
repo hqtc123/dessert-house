@@ -21,4 +21,6 @@ public interface CustomerDao {
     public List accSearch(Customer customer);
 
     public List accPassSearch(Customer customer);
+
+    public Customer getCustomerById(int id);
 }

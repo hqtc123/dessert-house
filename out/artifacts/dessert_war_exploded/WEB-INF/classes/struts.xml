@@ -25,5 +25,8 @@
         <action name="loginPage">
             <result>login.jsp</result>
         </action>
+        <action name="registerPage">
+            <result>register.jsp</result>
+        </action>
     </package>
 </struts>

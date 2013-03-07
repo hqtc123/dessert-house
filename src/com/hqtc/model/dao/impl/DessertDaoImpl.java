@@ -3,6 +3,7 @@ package com.hqtc.model.dao.impl;
 import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.DessertDao;
 import com.hqtc.model.entity.Dessert;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +12,7 @@ import com.hqtc.model.entity.Dessert;
  * Time: 下午7:42
  * To change this template use File | Settings | File Templates.
  */
+@Repository
 public class DessertDaoImpl extends BaseDao implements DessertDao {
     @Override
     public void add(Dessert dessert) {

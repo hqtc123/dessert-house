@@ -3,6 +3,7 @@ package com.hqtc.model.dao.impl;
 import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.WeeknumDao;
 import com.hqtc.model.entity.Weeknum;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +12,7 @@ import com.hqtc.model.entity.Weeknum;
  * Time: 下午8:22
  * To change this template use File | Settings | File Templates.
  */
+@Repository
 public class WeeknumDaoImpl extends BaseDao implements WeeknumDao {
     @Override
     public void add(Weeknum weeknum) {

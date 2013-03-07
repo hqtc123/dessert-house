@@ -3,6 +3,7 @@ package com.hqtc.model.dao.impl;
 import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.RechargeDao;
 import com.hqtc.model.entity.Recharge;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +12,7 @@ import com.hqtc.model.entity.Recharge;
  * Time: 下午4:39
  * To change this template use File | Settings | File Templates.
  */
+@Repository
 public class RechargeDaoImpl extends BaseDao implements RechargeDao {
     @Override
     public void add(Recharge recharge) {

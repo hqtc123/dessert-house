@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Example;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -33,6 +34,10 @@ public abstract class BaseDao {
 
     protected void update(Object object) {
         getSession().update(object);
+    }
+
+    protected Object get(Class cla, Serializable id) {
+        return getSession().get(cla, id);
     }
 
     protected List search(Class cla, Object object) {

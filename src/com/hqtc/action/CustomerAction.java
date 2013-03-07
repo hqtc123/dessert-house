@@ -31,6 +31,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
     CustomerBiz customerBiz;
     private Customer customer;
     private String resultMsg;
+    private String rePassword;
 
 
     public String getResultMsg() {
@@ -59,6 +60,12 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
     public String register() {
         if (customerBiz.checkAccExist(customer)) {
             setResultMsg("error");
+            addFieldError("customer.account", "账号已经被占用");
+            return ActionSupport.INPUT;
+        }
+        if(!rePassword.trim().equals(customer.getPassword()))   {
+            setResultMsg("error");
+            addFieldError("customer.account", "两次密码输入不一致");
             return ActionSupport.INPUT;
         }
         customerBiz.register(customer);
@@ -73,6 +80,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         Customer customer1 = customerBiz.getCustomerByAccPass(customer);
         if (customer1 == null) {
             setResultMsg("error");
+            addFieldError("customer.account", "登录失败、请检查您的账号和密码");
             return ActionSupport.INPUT;
         }
         session.put("customer", customer1);

@@ -5,6 +5,7 @@ import com.hqtc.model.dao.MemberDao;
 import com.hqtc.model.dao.StrategyDao;
 import com.hqtc.model.entity.Member;
 import com.hqtc.model.entity.Strategy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,32 +17,33 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AdminBizImpl implements AdminBiz {
+    @Autowired
     private MemberDao memberDao;
+    @Autowired
     private StrategyDao strategyDao;
-    //todo
 
     @Override
     public void addMember(Member member) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        memberDao.add(member);
     }
 
     @Override
     public void deleteMember(Member member) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        memberDao.delete(member);
     }
 
     @Override
     public void updateMember(Member member) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        memberDao.update(member);
     }
 
     @Override
     public void addStrategy(Strategy strategy) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        strategyDao.add(strategy);
     }
 
     @Override
     public void updateStrategy(Strategy strategy) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        strategyDao.update(strategy);
     }
 }

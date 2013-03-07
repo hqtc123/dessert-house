@@ -1,7 +1,9 @@
 package com.hqtc.biz.impl;
 
 import com.hqtc.biz.CustomerBiz;
+import com.hqtc.model.dao.CardDao;
 import com.hqtc.model.dao.OrderDao;
+import com.hqtc.model.entity.Card;
 import com.hqtc.model.entity.Order;
 import com.hqtc.util.MyMD5;
 import com.hqtc.model.dao.CustomerDao;
@@ -22,6 +24,10 @@ import java.util.List;
 public class CustomerBizImpl implements CustomerBiz {
     @Autowired
     private CustomerDao customerDao;
+    @Autowired
+    private CardDao cardDao;
+    @Autowired
+    private OrderDao orderDao;
 
     public void setCustomerDao(CustomerDao customerDao) {
         this.customerDao = customerDao;
@@ -29,8 +35,8 @@ public class CustomerBizImpl implements CustomerBiz {
 
     @Override
     public void register(Customer customer) {
-        String password=customer.getPassword();
-        String newPass= MyMD5.encryption(password);
+        String password = customer.getPassword();
+        String newPass = MyMD5.encryption(password);
         customer.setPassword(newPass);
         customerDao.add(customer);
     }
@@ -47,8 +53,8 @@ public class CustomerBizImpl implements CustomerBiz {
 
     @Override
     public Customer getCustomerByAccPass(Customer customer) {
-        String password=customer.getPassword();
-        String newPass= MyMD5.encryption(password);
+        String password = customer.getPassword();
+        String newPass = MyMD5.encryption(password);
         customer.setPassword(newPass);
         List list = customerDao.accPassSearch(customer);
         if (list.size() > 0) {
@@ -59,21 +65,25 @@ public class CustomerBizImpl implements CustomerBiz {
 
     @Override
     public void recharge(Customer customer, int money) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        Card card = customer.getCard();
+        float oldMoney = card.getMoney();
+        float newMoney = oldMoney + money;
+        card.setMoney(newMoney);
+        cardDao.update(card);
     }
 
     @Override
     public void terminate(Customer customer) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        customerDao.delete(customer);
     }
 
     @Override
     public void makeOrder(Order order) {
-
+        orderDao.add(order);
     }
 
     @Override
     public void cancelOrder(Order order) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        orderDao.delete(order);
     }
 }
