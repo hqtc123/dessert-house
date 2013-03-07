@@ -1,6 +1,7 @@
 package com.hqtc.model.entity;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -15,7 +16,7 @@ import javax.persistence.Id;
 public class Weeknum {
     private int id;
 
-    @javax.persistence.Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Id
     public int getId() {
         return id;
@@ -27,7 +28,7 @@ public class Weeknum {
 
     private int shopid;
 
-    @javax.persistence.Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Basic
     public int getShopid() {
         return shopid;
@@ -39,7 +40,7 @@ public class Weeknum {
 
     private int dessertid;
 
-    @javax.persistence.Column(name = "dessertid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "dessertid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Basic
     public int getDessertid() {
         return dessertid;
@@ -51,7 +52,7 @@ public class Weeknum {
 
     private int num;
 
-    @javax.persistence.Column(name = "num", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "num", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Basic
     public int getNum() {
         return num;
@@ -83,5 +84,17 @@ public class Weeknum {
         result = 31 * result + dessertid;
         result = 31 * result + num;
         return result;
+    }
+
+    private int weekday;
+
+    @Column(name = "weekday", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Basic
+    public int getWeekday() {
+        return weekday;
+    }
+
+    public void setWeekday(int weekday) {
+        this.weekday = weekday;
     }
 }

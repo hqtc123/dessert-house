@@ -1,4 +1,4 @@
-package com.hqtc.biz;
+package com.hqtc.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

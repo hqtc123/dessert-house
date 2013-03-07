@@ -1,6 +1,7 @@
 package com.hqtc.biz;
 
 import com.hqtc.model.entity.Customer;
+import com.hqtc.model.entity.Order;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,4 +16,12 @@ public interface CustomerBiz {
     public boolean checkAccExist(Customer customer);
 
     public Customer getCustomerByAccPass(Customer customer);
+
+    public void recharge(Customer customer,int money);
+
+    public void terminate(Customer customer);
+
+    public void makeOrder(Order order);
+
+    public void cancelOrder(Order order);
 }

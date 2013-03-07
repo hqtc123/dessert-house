@@ -192,17 +192,26 @@
       <column name="salerid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="customerid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="money" sqlType="FLOAT" length="12" precision="0" nullable="false" jdbcType="7" />
-      <column name="state" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="date" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
       <primary-key name="PRIMARY" columns="id" />
       <foreign-key name="customeid" columns="customerid" ref-table="customer" ref-schema="" ref-catalog="dessert" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <foreign-key name="saleid" columns="salerid" ref-table="member" ref-schema="" ref-catalog="dessert" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <foreign-key name="shoid" columns="shopid" ref-table="shop" ref-schema="" ref-catalog="dessert" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="order" table="orderitem" schema="" catalog="dessert" columns="orderid" />
     </table>
     <table name="orderitem" schema="" catalog="dessert" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="orderid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="dessertid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="num" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="order" columns="orderid" ref-table="order" ref-schema="" ref-catalog="dessert" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+    </table>
+    <table name="recharge" schema="" catalog="dessert" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="customerid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="money" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="date" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="shop" schema="" catalog="dessert" type="TABLE">
@@ -211,11 +220,18 @@
       <exported-key name="shopid" table="member" schema="" catalog="dessert" columns="shopid" />
       <exported-key name="shoid" table="order" schema="" catalog="dessert" columns="shopid" />
     </table>
+    <table name="strategy" schema="" catalog="dessert" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="score" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="discount" sqlType="FLOAT" length="12" precision="0" nullable="false" jdbcType="7" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
     <table name="weeknum" schema="" catalog="dessert" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="shopid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="dessertid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="num" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="weekday" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="user" schema="" catalog="ee" type="TABLE">

@@ -1,6 +1,8 @@
 package com.hqtc.model.entity;
 
 import javax.persistence.*;
+import java.sql.Date;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +15,7 @@ import javax.persistence.*;
 public class Order {
     private int id;
 
-    @javax.persistence.Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
@@ -26,7 +28,7 @@ public class Order {
 
     private int shopid;
 
-    @javax.persistence.Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Basic
     public int getShopid() {
         return shopid;
@@ -38,7 +40,7 @@ public class Order {
 
     private int salerid;
 
-    @javax.persistence.Column(name = "salerid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "salerid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Basic
     public int getSalerid() {
         return salerid;
@@ -50,7 +52,7 @@ public class Order {
 
     private int customerid;
 
-    @javax.persistence.Column(name = "customerid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Column(name = "customerid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Basic
     public int getCustomerid() {
         return customerid;
@@ -62,7 +64,7 @@ public class Order {
 
     private float money;
 
-    @javax.persistence.Column(name = "money", nullable = false, insertable = true, updatable = true, length = 12, precision = 0)
+    @Column(name = "money", nullable = false, insertable = true, updatable = true, length = 12, precision = 0)
     @Basic
     public float getMoney() {
         return money;
@@ -72,16 +74,14 @@ public class Order {
         this.money = money;
     }
 
-    private int state;
-
-    @javax.persistence.Column(name = "state", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @Basic
-    public int getState() {
-        return state;
+    private Set<Orderitem> orderitems;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "order")
+    public Set<Orderitem> getOrderitems() {
+        return orderitems;
     }
 
-    public void setState(int state) {
-        this.state = state;
+    public void setOrderitems(Set<Orderitem> orderitems) {
+        this.orderitems = orderitems;
     }
 
     @Override
@@ -96,7 +96,6 @@ public class Order {
         if (Float.compare(order.money, money) != 0) return false;
         if (salerid != order.salerid) return false;
         if (shopid != order.shopid) return false;
-        if (state != order.state) return false;
 
         return true;
     }
@@ -108,7 +107,18 @@ public class Order {
         result = 31 * result + salerid;
         result = 31 * result + customerid;
         result = 31 * result + (money != +0.0f ? Float.floatToIntBits(money) : 0);
-        result = 31 * result + state;
         return result;
+    }
+
+    private Date date;
+
+    @Column(name = "date", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Basic
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

@@ -1,12 +1,14 @@
 package com.hqtc.model.entity;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * Created with IntelliJ IDEA.
- * User: He Qing
- * Date: 13-3-4
- * Time: 下午9:24
+ * User: hqtc
+ * Date: 13-3-7
+ * Time: 下午4:26
  * To change this template use File | Settings | File Templates.
  */
 @Entity
@@ -59,16 +61,16 @@ public class Member {
         this.position = position;
     }
 
-   private Shop shop;
+    private int shopid;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "shopid",nullable = false)
-    public Shop getShop() {
-        return shop;
+    @javax.persistence.Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Basic
+    public int getShopid() {
+        return shopid;
     }
 
-    public void setShop(Shop shop) {
-        this.shop = shop;
+    public void setShopid(int shopid) {
+        this.shopid = shopid;
     }
 
     @Override
@@ -80,7 +82,7 @@ public class Member {
 
         if (id != member.id) return false;
         if (position != member.position) return false;
-        if (shop != member.shop) return false;
+        if (shopid != member.shopid) return false;
         if (account != null ? !account.equals(member.account) : member.account != null) return false;
         if (password != null ? !password.equals(member.password) : member.password != null) return false;
 
@@ -93,6 +95,7 @@ public class Member {
         result = 31 * result + (account != null ? account.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + position;
+        result = 31 * result + shopid;
         return result;
     }
 }

@@ -1,7 +1,9 @@
 package com.hqtc.biz.impl;
 
 import com.hqtc.biz.CustomerBiz;
-import com.hqtc.biz.MyMD5;
+import com.hqtc.model.dao.OrderDao;
+import com.hqtc.model.entity.Order;
+import com.hqtc.util.MyMD5;
 import com.hqtc.model.dao.CustomerDao;
 import com.hqtc.model.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,5 +55,25 @@ public class CustomerBizImpl implements CustomerBiz {
             return (Customer) list.get(0);
         }
         return null;
+    }
+
+    @Override
+    public void recharge(Customer customer, int money) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void terminate(Customer customer) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void makeOrder(Order order) {
+
+    }
+
+    @Override
+    public void cancelOrder(Order order) {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 }

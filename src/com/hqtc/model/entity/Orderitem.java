@@ -24,16 +24,16 @@ public class Orderitem {
         this.id = id;
     }
 
-    private int orderid;
+    private Order order;
 
-    @javax.persistence.Column(name = "orderid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @Basic
-    public int getOrderid() {
-        return orderid;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "orderid", nullable = false)
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrderid(int orderid) {
-        this.orderid = orderid;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     private int dessertid;
@@ -70,15 +70,12 @@ public class Orderitem {
         if (dessertid != orderitem.dessertid) return false;
         if (id != orderitem.id) return false;
         if (num != orderitem.num) return false;
-        if (orderid != orderitem.orderid) return false;
-
         return true;
     }
 
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + orderid;
         result = 31 * result + dessertid;
         result = 31 * result + num;
         return result;

@@ -11,7 +11,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/index.jsp" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362569270135" ignored="false" />
     <file path="/register.jsp" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362569238840" ignored="false" />
-    <file path="/fragment.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362484775400" ignored="false" />
+    <file path="/fragment.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362644770921" ignored="false" />
     <file path="/UserDao.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360039770799" ignored="false" />
     <file path="/CustomerDao.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1361086264304" ignored="false" />
     <file path="/applicationContext.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362319656150" ignored="false" />
@@ -20,8 +20,8 @@
     <file path="$PROJECT_DIR$/../sHiber/src/com/hqtc/HibernateSessionFactory.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360046574894" ignored="false" />
     <file path="/HibernateSessionFactory.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360048446094" ignored="false" />
     <file path="/BaseDao.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362318412310" ignored="false" />
-    <file path="/CustomerBiz.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1361086606406" ignored="false" />
-    <file path="/CustomerBizImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362488840831" ignored="false" />
+    <file path="/CustomerBiz.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362645259808" ignored="false" />
+    <file path="/CustomerBizImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362645265215" ignored="false" />
     <file path="/customerAction.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360054970054" ignored="false" />
     <file path="$PROJECT_DIR$/../sHiber/web/WEB-INF/web.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360055256429" ignored="false" />
     <file path="$PROJECT_DIR$/../sHiber/src/struts.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360055256232" ignored="false" />
@@ -56,8 +56,8 @@
     <file path="/ShopDaoImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362485815178" ignored="false" />
     <file path="/MemberDaoImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362485674316" ignored="false" />
     <file path="/DessertDaoImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362485603699" ignored="false" />
-    <file path="/Orderitem.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362484994425" ignored="false" />
-    <file path="/Order.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362485015657" ignored="false" />
+    <file path="/Orderitem.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362644567284" ignored="false" />
+    <file path="/Order.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362644598547" ignored="false" />
     <file path="/OrderitemDao.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362485141328" ignored="false" />
     <file path="/OrderitemDaoImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362485682276" ignored="false" />
     <file path="/OrderDao.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362485996417" ignored="false" />
@@ -68,6 +68,17 @@
     <file path="/CustomerAction-loginAction-validation.tld" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362575322580" ignored="false" />
     <file path="/CustomerAction-loginAction-validation.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362575647496" ignored="false" />
     <file path="/AuthorityInterceptor.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362616860200" ignored="false" />
+    <file path="/OrderBiz.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362641692273" ignored="false" />
+    <file path="/SalerBiz.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362642428356" ignored="false" />
+    <file path="/ManagerBiz.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362642650650" ignored="false" />
+    <file path="/AdminBiz.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362643548835" ignored="false" />
+    <file path="/AdminBizImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362645791771" ignored="false" />
+    <file path="/ManagerBizImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362644088601" ignored="false" />
+    <file path="/SalerBizImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362644126943" ignored="false" />
+    <file path="/StrategyDao.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362645453727" ignored="false" />
+    <file path="/RechargeDao.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362645534693" ignored="false" />
+    <file path="/RechargeDaoImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362645652628" ignored="false" />
+    <file path="/StrategyDaoImpl.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362645751115" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +99,22 @@
   </component>
   <component name="DebuggerManager">
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/web/user/register.jsp" line="10" class="register.jsp" package="H:\codes\intellij\Dessert\web\user">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -122,22 +149,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/web/user/register.jsp" line="10" class="register.jsp" package="H:\codes\intellij\Dessert\web\user">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -148,19 +159,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="reglog.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/static/css/reglog.css">
+      <file leaf-file-name="AdminBizImpl.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/impl/AdminBizImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="6" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerAction.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="30" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.42105263">
+            <state line="21" column="19" selection-start="546" selection-end="546" vertical-scroll-proportion="1.6239316">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,28 +170,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerAction-registerAction-validation.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-registerAction-validation.xml">
+      <file leaf-file-name="StrategyDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/impl/StrategyDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="26" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerAction-loginAction-validation.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-loginAction-validation.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="26" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthorityInterceptor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hqtc/interceptor/AuthorityInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="31" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
+            <state line="26" column="29" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,37 +181,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/struts.xml">
+      <file leaf-file-name="StrategyDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/StrategyDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="31" selection-start="1081" selection-end="1090" vertical-scroll-proportion="0.0">
+            <state line="16" column="50" selection-start="251" selection-end="377" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/user/login.jsp">
+      <file leaf-file-name="RechargeDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/RechargeDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="7" selection-start="1691" selection-end="1691" vertical-scroll-proportion="-6.035714">
+            <state line="16" column="40" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/header.jsp">
+      <file leaf-file-name="RechargeDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/impl/RechargeDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="22" selection-start="188" selection-end="188" vertical-scroll-proportion="-2.7142856">
+            <state line="20" column="43" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/impl/OrderDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="13" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/user/info.jsp">
+      <file leaf-file-name="CardDaoImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/impl/CardDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="7" selection-start="970" selection-end="970" vertical-scroll-proportion="-3.107143">
+            <state line="13" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/BaseDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="25" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerBizImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/impl/CustomerBizImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="15" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShopDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/ShopDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="36" selection-start="247" selection-end="346" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -243,22 +265,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/static/js/login.js" />
-        <option value="$PROJECT_DIR$/web/static/js/register.js" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/user/register.jsp" />
-        <option value="$PROJECT_DIR$/web/user/info.jsp" />
-        <option value="$PROJECT_DIR$/web/user/login.jsp" />
-        <option value="$PROJECT_DIR$/web/static/css/reglog.css" />
-        <option value="$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-loginAction-validation.tld" />
-        <option value="$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-loginAction-validation.xml" />
-        <option value="$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-registerAction-validation.xml" />
-        <option value="$PROJECT_DIR$/src/com/hqtc/action/CustomerAction.java" />
-        <option value="$PROJECT_DIR$/src/com/hqtc/interceptor/AuthorityInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/struts.xml" />
-        <option value="$PROJECT_DIR$/web/header.jsp" />
-        <option value="$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-RegisterAction-validation.xml" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/model/entity/Member.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/biz/AdminBiz.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/biz/SalerBiz.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/biz/impl/SalerBizImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/model/dao/MemberDao.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/model/dao/impl/MemberDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/model/dao/ShopDao.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/model/dao/impl/ShopDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/model/entity/Orderitem.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/biz/CustomerBiz.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/biz/impl/CustomerBizImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/model/dao/StrategyDao.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/model/dao/RechargeDao.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/model/dao/impl/RechargeDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/model/dao/impl/StrategyDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/biz/impl/AdminBizImpl.java" />
       </list>
     </option>
   </component>
@@ -271,9 +293,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
-    <option name="y" value="11" />
-    <option name="width" value="1216" />
-    <option name="height" value="735" />
+    <option name="y" value="13" />
+    <option name="width" value="1182" />
+    <option name="height" value="826" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -382,6 +404,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -414,96 +438,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dessert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dessert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dessert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dessert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dessert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dessert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -544,7 +478,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="interceptor" />
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -566,14 +504,94 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dessert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hqtc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dessert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hqtc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dessert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dessert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hqtc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -592,13 +610,13 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="H:\codes\intellij\Dessert\lib" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="Downloaded.Files.Path" value="H:\codes\intellij\Dessert\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -611,16 +629,16 @@
       <recent name="H:\codes\intellij\er\Dessert\web\css" />
       <recent name="H:\codes\intellij\er\Dessert\web\WEB-INF\lib" />
     </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.hqtc.model.entity" />
-      <recent name="com.hqtc.model" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\codes\intellij\Dessert\web" />
       <recent name="H:\codes\intellij\Dessert\web\static" />
       <recent name="H:\codes\intellij\Dessert\web\static\js" />
       <recent name="H:\codes\intellij\Dessert\web\WEB-INF" />
       <recent name="H:\codes\intellij\Dessert\web\WEB-INF\static\css" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.hqtc.model.entity" />
+      <recent name="com.hqtc.model" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 7.0">
@@ -636,6 +654,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -664,19 +695,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -722,17 +740,17 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
       <deployment />
       <server-settings />
       <predefined_log_file id="Tomcat" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="false" name="Tomcat 7.0" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0">
@@ -864,30 +882,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="11" width="1216" height="735" extended-state="0" />
+    <frame x="35" y="13" width="1182" height="826" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2543403" sideWeight="0.40710825" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22361359" sideWeight="0.14242879" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.6510417" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.599681" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3457189" sideWeight="0.48697916" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2543403" sideWeight="0.32933104" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2526096" sideWeight="0.18229167" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325" sideWeight="0.4965278" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32383808" sideWeight="0.49284437" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.17166667" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263328" sideWeight="0.48958334" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2543403" sideWeight="0.3207547" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5190972" sideWeight="0.18836805" order="8" side_tool="true" content_ui="tabs" x="316" y="506" width="572" height="203" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3046875" sideWeight="0.4809028" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5190972" sideWeight="0.8055556" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.51874065" sideWeight="0.1940966" order="8" side_tool="true" content_ui="tabs" x="316" y="506" width="572" height="203" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22361359" sideWeight="0.32833582" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51874065" sideWeight="0.7996422" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -955,116 +973,122 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/impl/CustomerBizImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/impl/SalerBizImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="476" selection-end="476" vertical-scroll-proportion="0.61455524">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/MyMD5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/CustomerBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="6" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/js/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="8" selection-start="18" selection-end="2502" vertical-scroll-proportion="3.2724936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/user/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="31" selection-start="1081" selection-end="1090" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="188" selection-end="188" vertical-scroll-proportion="-2.7142856">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/user/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="7" selection-start="1691" selection-end="1691" vertical-scroll-proportion="-6.035714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/user/info.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="7" selection-start="970" selection-end="970" vertical-scroll-proportion="-3.107143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hqtc/interceptor/AuthorityInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="31" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
+        <state line="16" column="2" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/MemberDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="7" selection-start="1072" selection-end="1072" vertical-scroll-proportion="1.2918919">
+        <state line="12" column="20" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/css/reglog.css">
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/impl/MemberDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="6" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0">
+        <state line="14" column="3" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-loginAction-validation.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/impl/ShopDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+        <state line="14" column="22" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-registerAction-validation.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/entity/Orderitem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="26" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+        <state line="7" column="39" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/CustomerBiz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="30" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.42105263">
+        <state line="23" column="15" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/impl/CustomerBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="15" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/ShopDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="36" selection-start="247" selection-end="346" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/StrategyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="50" selection-start="251" selection-end="377" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/RechargeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="40" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/impl/OrderDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="25" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/impl/CardDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/impl/RechargeDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="43" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/model/dao/impl/StrategyDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="29" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/impl/AdminBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="19" selection-start="546" selection-end="546" vertical-scroll-proportion="1.6239316">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
