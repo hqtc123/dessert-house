@@ -25,7 +25,7 @@
     <file path="/customerAction.java" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360054970054" ignored="false" />
     <file path="$PROJECT_DIR$/../sHiber/web/WEB-INF/web.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360055256429" ignored="false" />
     <file path="$PROJECT_DIR$/../sHiber/src/struts.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360055256232" ignored="false" />
-    <file path="/struts.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362617892181" ignored="false" />
+    <file path="/struts.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362630293278" ignored="false" />
     <file path="/web.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362554657619" ignored="false" />
     <file path="$PROJECT_DIR$/../struts2lib/web/WEB-INF/web.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360065692722" ignored="false" />
     <file path="$PROJECT_DIR$/../struts2lib/src/struts.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1360065692589" ignored="false" />
@@ -34,7 +34,7 @@
     <file path="/reglog.css" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362573955070" ignored="false" />
     <file path="/dummy.xml" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1361090526636" ignored="false" />
     <file path="/login.jsp" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362573493280" ignored="false" />
-    <file path="/header.jsp" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362571359680" ignored="false" />
+    <file path="/header.jsp" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1362630321076" ignored="false" />
     <file path="/header.css" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1361096252942" ignored="false" />
     <file path="/layout.css" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1361096171370" ignored="false" />
     <file path="/index.js" changelist="6456b221-85f6-446c-a00f-f615d2f28f41" time="1361096071533" ignored="false" />
@@ -148,15 +148,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="7" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="reglog.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/static/css/reglog.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -166,13 +157,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerAction.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CustomerAction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="5" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
+            <state line="58" column="30" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.42105263">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerAction-registerAction-validation.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-registerAction-validation.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="26" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerAction-loginAction-validation.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-loginAction-validation.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="26" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -188,10 +197,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="struts.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/struts.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="9" selection-start="999" selection-end="999" vertical-scroll-proportion="1.6490566">
+            <state line="24" column="31" selection-start="1081" selection-end="1090" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -200,7 +209,7 @@
       <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/user/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="7" selection-start="1691" selection-end="1691" vertical-scroll-proportion="0.0">
+            <state line="47" column="7" selection-start="1691" selection-end="1691" vertical-scroll-proportion="-6.035714">
               <folding />
             </state>
           </provider>
@@ -209,7 +218,7 @@
       <file leaf-file-name="header.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="61" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+            <state line="4" column="22" selection-start="188" selection-end="188" vertical-scroll-proportion="-2.7142856">
               <folding />
             </state>
           </provider>
@@ -218,16 +227,7 @@
       <file leaf-file-name="info.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/user/info.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="7" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/user/register.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="18" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
+            <state line="22" column="7" selection-start="970" selection-end="970" vertical-scroll-proportion="-3.107143">
               <folding />
             </state>
           </provider>
@@ -243,13 +243,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/content/header.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/static/js/login.js" />
         <option value="$PROJECT_DIR$/web/static/js/register.js" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/user/register.jsp" />
-        <option value="$PROJECT_DIR$/web/header.jsp" />
         <option value="$PROJECT_DIR$/web/user/info.jsp" />
         <option value="$PROJECT_DIR$/web/user/login.jsp" />
         <option value="$PROJECT_DIR$/web/static/css/reglog.css" />
@@ -259,6 +257,8 @@
         <option value="$PROJECT_DIR$/src/com/hqtc/action/CustomerAction.java" />
         <option value="$PROJECT_DIR$/src/com/hqtc/interceptor/AuthorityInterceptor.java" />
         <option value="$PROJECT_DIR$/src/struts.xml" />
+        <option value="$PROJECT_DIR$/web/header.jsp" />
+        <option value="$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-RegisterAction-validation.xml" />
       </list>
     </option>
   </component>
@@ -270,8 +270,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-22" />
-    <option name="y" value="10" />
+    <option name="x" value="35" />
+    <option name="y" value="11" />
     <option name="width" value="1216" />
     <option name="height" value="735" />
   </component>
@@ -864,14 +864,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-22" y="10" width="1216" height="735" extended-state="1" />
+    <frame x="35" y="11" width="1216" height="735" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2543403" sideWeight="0.40710825" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298611" sideWeight="0.6510417" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.6510417" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.599681" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -885,9 +885,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2543403" sideWeight="0.3207547" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34895834" sideWeight="0.18836805" order="8" side_tool="true" content_ui="tabs" x="316" y="506" width="572" height="203" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20833333" sideWeight="0.6510417" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34895834" sideWeight="0.8055556" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5190972" sideWeight="0.18836805" order="8" side_tool="true" content_ui="tabs" x="316" y="506" width="572" height="203" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3046875" sideWeight="0.4809028" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5190972" sideWeight="0.8055556" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -955,18 +955,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/user/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="18" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/impl/CustomerBizImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="13" selection-start="476" selection-end="476" vertical-scroll-proportion="0.61455524">
@@ -976,7 +964,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/MyMD5.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" />
+        <state line="12" column="13" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hqtc/biz/CustomerBiz.java">
@@ -993,23 +983,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/user/info.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="7" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/user/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="18" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/user/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="7" selection-start="1691" selection-end="1691" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1021,33 +997,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/css/reglog.css">
+    <entry file="file://$PROJECT_DIR$/src/struts.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="6" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0">
+        <state line="24" column="31" selection-start="1081" selection-end="1090" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="61" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+        <state line="4" column="22" selection-start="188" selection-end="188" vertical-scroll-proportion="-2.7142856">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/web/user/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="7" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0">
+        <state line="47" column="7" selection-start="1691" selection-end="1691" vertical-scroll-proportion="-6.035714">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction.java">
+    <entry file="file://$PROJECT_DIR$/web/user/info.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="5" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="22" column="7" selection-start="970" selection-end="970" vertical-scroll-proportion="-3.107143">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,10 +1034,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/struts.xml">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="9" selection-start="999" selection-end="999" vertical-scroll-proportion="1.6490566">
+        <state line="26" column="7" selection-start="1072" selection-end="1072" vertical-scroll-proportion="1.2918919">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/css/reglog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="6" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-loginAction-validation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="26" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction-registerAction-validation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="26" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hqtc/action/CustomerAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="30" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.42105263">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

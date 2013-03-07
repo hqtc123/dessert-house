@@ -21,4 +21,9 @@
             <result name="login" type="redirect">/user/login.jsp</result>
         </global-results>
     </package>
+    <package name="user" namespace="/user" extends="struts-default">
+        <action name="loginPage">
+            <result>login.jsp</result>
+        </action>
+    </package>
 </struts>
