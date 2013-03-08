@@ -20,4 +20,6 @@ public interface AdminBiz {
     public void addStrategy(Strategy strategy);
 
     public void updateStrategy(Strategy strategy);
+
+    public Member getAdminByAccPass(Member member);
 }

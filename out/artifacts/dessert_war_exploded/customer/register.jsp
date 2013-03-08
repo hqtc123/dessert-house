@@ -10,16 +10,7 @@
 <html>
 <head>
     <title>注册</title>
-    <%
-        String path = request.getContextPath();
-        String basePath = request.getScheme() + "://" + request.getServerName() +
-                ":" + request.getServerPort() + path + "/";
-    %>
-    <script type="text/javascript" src="<%=basePath%>static/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>static/bootstrap/js/bootstrap.min.js"></script>
-    <link href="<%=basePath%>static/bootstrap/lib.min.css" rel="stylesheet" type="text/css"/>
-    <link href="<%=basePath%>static/bootstrap/lib-resp.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/reglog.css">
+    <jsp:include page="resource.jsp"></jsp:include>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -51,7 +42,7 @@
 
     </div>
     <div id="logo">
-        <a href="<%=basePath%>index.jsp"><img src="<%=basePath%>static/images/logo.png" title="返回首页"></a>
+        <a href="../index.jsp"><img src="../static/images/logo.png" title="返回首页"></a>
     </div>
     <div id="boxArea">
         <h3>免费注册</h3>

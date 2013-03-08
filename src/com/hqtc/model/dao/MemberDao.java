@@ -2,6 +2,8 @@ package com.hqtc.model.dao;
 
 import com.hqtc.model.entity.Member;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: hqtc
@@ -15,4 +17,6 @@ public interface MemberDao {
     public void delete(Member member);
 
     public void update(Member member);
+
+    public List accPassSearch(Member member);
 }

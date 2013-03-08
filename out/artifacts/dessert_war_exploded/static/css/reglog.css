@@ -59,15 +59,6 @@ h3 {
 .textField {
 }
 
-
-#registerBtn, #loginBtn {
-    float: left;
-    margin-left: 80px;
-    margin-top: 18px;
-    width: 120px;
-    height: 36px;
-}
-
 .sub {
     height: 42px;
     line-height: 42px;

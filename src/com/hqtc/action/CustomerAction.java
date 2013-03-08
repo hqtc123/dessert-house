@@ -32,6 +32,13 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
     private String resultMsg;
     private String rePassword;
 
+    public String getRePassword() {
+        return rePassword;
+    }
+
+    public void setRePassword(String rePassword) {
+        this.rePassword = rePassword;
+    }
 
     public String getResultMsg() {
         return resultMsg;
@@ -54,7 +61,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         this.customerBiz = customerBiz;
     }
 
-    @Action(value = "registerAction", results = {@Result(type = "redirect", name = "success", location = "/customer/index.jsp"),
+    @Action(value = "registerAction", results = {@Result(type = "redirect", name = "success", location = "/customer/main.jsp"),
             @Result(name = "input", location = "/customer/register.jsp")})
     public String register() {
         if (customerBiz.checkAccExist(customer)) {
@@ -62,7 +69,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
             addFieldError("customer.account", "账号已经被占用");
             return ActionSupport.INPUT;
         }
-        if(!rePassword.trim().equals(customer.getPassword()))   {
+        if (!rePassword.trim().equals(customer.getPassword())) {
             setResultMsg("error");
             addFieldError("customer.account", "两次密码输入不一致");
             return ActionSupport.INPUT;
@@ -73,7 +80,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "loginAction", results = {@Result(type = "redirect", name = "success", location = "/customer/index.jsp"),
+    @Action(value = "loginAction", results = {@Result(type = "redirect", name = "success", location = "/customer/main.jsp"),
             @Result(name = "input", location = "/customer/login.jsp")})
     public String login() {
         Customer customer1 = customerBiz.getCustomerByAccPass(customer);
@@ -87,7 +94,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "logoutAction", results = {@Result(type = "redirect", name = "success", location = "/customer/index.jsp")})
+    @Action(value = "logoutAction", results = {@Result(type = "redirect", name = "success", location = "/index.jsp")})
     public String logout() {
         if (session.get("customer") != null) {
             session.remove("customer");

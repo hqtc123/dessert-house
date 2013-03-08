@@ -5,8 +5,11 @@ import com.hqtc.model.dao.MemberDao;
 import com.hqtc.model.dao.StrategyDao;
 import com.hqtc.model.entity.Member;
 import com.hqtc.model.entity.Strategy;
+import com.hqtc.util.MyMD5;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -45,5 +48,17 @@ public class AdminBizImpl implements AdminBiz {
     @Override
     public void updateStrategy(Strategy strategy) {
         strategyDao.update(strategy);
+    }
+
+    @Override
+    public Member getAdminByAccPass(Member member) {
+        String password = member.getPassword();
+        String newPass = MyMD5.encryption(password);
+        member.setPassword(newPass);
+        List list = memberDao.accPassSearch(member);
+        if (list.size() > 0) {
+            return (Member) list.get(0);
+        }
+        return null;
     }
 }

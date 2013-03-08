@@ -1,8 +1,6 @@
 package com.hqtc.model.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -61,16 +59,17 @@ public class Member {
         this.position = position;
     }
 
-    private int shopid;
+    private Shop shop;
 
-    @javax.persistence.Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @Basic
-    public int getShopid() {
-        return shopid;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "shopid", nullable = false)
+    public Shop getShop() {
+        return shop;
     }
 
-    public void setShopid(int shopid) {
-        this.shopid = shopid;
+    public void setShop(Shop shop) {
+        this.shop = shop;
     }
 
     @Override
@@ -82,7 +81,6 @@ public class Member {
 
         if (id != member.id) return false;
         if (position != member.position) return false;
-        if (shopid != member.shopid) return false;
         if (account != null ? !account.equals(member.account) : member.account != null) return false;
         if (password != null ? !password.equals(member.password) : member.password != null) return false;
 
@@ -95,7 +93,6 @@ public class Member {
         result = 31 * result + (account != null ? account.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + position;
-        result = 31 * result + shopid;
         return result;
     }
 }

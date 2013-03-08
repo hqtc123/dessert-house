@@ -1,9 +1,7 @@
 package com.hqtc.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.convention.annotation.ParentPackage;
-import org.apache.struts2.convention.annotation.Result;
+import org.apache.struts2.convention.annotation.*;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,14 +13,19 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ParentPackage("struts-default")
+@Namespace("/")
 public class IndexAction extends ActionSupport {
-    @Action(value = "toCustomer", results = {@Result(name = "success", type = "redirect", location = "/customer/login.jsp")})
+    @Action(value = "toCustomer", results = {@Result(name = SUCCESS, type = "redirect", location = "/customer/login.jsp")})
     public String toCustomer() {
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "toMember", results = {@Result(name = "success", type = "redirect", location = "/member/login.jsp")})
+    @Action(value = "toMember", results = {@Result(name = SUCCESS, type = "redirect", location = "/member/login.jsp")})
     public String toMember() {
+        return ActionSupport.SUCCESS;
+    }
+    @Action(value = "toAdmin", results = {@Result(name = SUCCESS, type = "redirect", location = "/admin/login.jsp")})
+    public String toAdmin() {
         return ActionSupport.SUCCESS;
     }
 }

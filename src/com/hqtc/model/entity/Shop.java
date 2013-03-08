@@ -1,7 +1,10 @@
 package com.hqtc.model.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,6 +25,17 @@ public class Shop {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    private Set<Member> members;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "shop")
+    public Set<Member> getMembers() {
+        return members;
+    }
+
+    public void setMembers(Set<Member> members) {
+        this.members = members;
     }
 
     @Override
