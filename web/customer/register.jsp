@@ -28,7 +28,7 @@
 
     </div>
     <div id="logo">
-        <a href="../../index.jsp"><img src="../static/images/logo.png" title="返回首页"></a>
+        <a href="<%=basePath%>index.jsp"><img src="<%=basePath%>static/images/logo.png" title="返回首页"></a>
     </div>
     <div id="boxArea">
         <h3>免费注册</h3>

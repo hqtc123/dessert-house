@@ -12,10 +12,10 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li class="active">
-                        <a href="loginPage.action">登录</a>
+                        <a href="toLogin.action">登录</a>
                     </li>
                     <li>
-                        <a href="registerPage.action">注册</a>
+                        <a href="toRegister.action">注册</a>
                     </li>
                     <li>
                         <a href="#contact">账单</a>

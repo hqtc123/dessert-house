@@ -21,8 +21,7 @@ import java.util.Map;
  */
 @Component
 @ParentPackage("struts-default")
-@Namespace("/user")
-@ResultPath(value = "/")
+@Namespace("/customer")
 public class CustomerAction extends ActionSupport implements RequestAware, SessionAware {
     Map<String, Object> request;
     Map<String, Object> session;
@@ -55,8 +54,8 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         this.customerBiz = customerBiz;
     }
 
-    @Action(value = "registerAction", results = {@Result(type = "redirect", name = "success", location = "/index.jsp"),
-            @Result(name = "input", location = "/user/register.jsp")})
+    @Action(value = "registerAction", results = {@Result(type = "redirect", name = "success", location = "/customer/index.jsp"),
+            @Result(name = "input", location = "/customer/register.jsp")})
     public String register() {
         if (customerBiz.checkAccExist(customer)) {
             setResultMsg("error");
@@ -74,8 +73,8 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "loginAction", results = {@Result(type = "redirect", name = "success", location = "/index.jsp"),
-            @Result(name = "input", location = "/user/login.jsp")})
+    @Action(value = "loginAction", results = {@Result(type = "redirect", name = "success", location = "/customer/index.jsp"),
+            @Result(name = "input", location = "/customer/login.jsp")})
     public String login() {
         Customer customer1 = customerBiz.getCustomerByAccPass(customer);
         if (customer1 == null) {
@@ -88,7 +87,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "logoutAction", results = {@Result(type = "redirect", name = "success", location = "/index.jsp")})
+    @Action(value = "logoutAction", results = {@Result(type = "redirect", name = "success", location = "/customer/index.jsp")})
     public String logout() {
         if (session.get("customer") != null) {
             session.remove("customer");

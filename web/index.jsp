@@ -40,13 +40,13 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li class="active">
-                        <a href="user/loginPage.action">登录</a>
+                        <a href="customer/toLogin.action">登录</a>
                     </li>
                     <li>
-                        <a href="user/registerPage.action">注册</a>
+                        <a href="customer/toRegister.action">注册</a>
                     </li>
                     <li>
-                        <a href="#contact">账单</a>
+                        <a href="about">关于</a>
                     </li>
                 </ul>
             </div>
@@ -56,6 +56,8 @@
 </div>
 <div class="container">
     <h1>欢迎光临环球探测甜品屋</h1>
+    <a href="toCustomer.action"><h1>顾客登陆页面</h1></a>
+    <a href="toMember.action"><h1>内部工作人员登陆页面</h1></a>
 
     <p>Use this document as a way to quick start any new project.
         <br>All you get is this message and a barebones HTML document.</p>

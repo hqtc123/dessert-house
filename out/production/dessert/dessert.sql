@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50513
 File Encoding         : 65001
 
-Date: 2013-03-07 21:58:08
+Date: 2013-03-08 09:54:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -48,7 +48,7 @@ CREATE TABLE `customer` (
   `address` varchar(255) NOT NULL,
   `score` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of customer
@@ -91,31 +91,6 @@ CREATE TABLE `member` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `order`
--- ----------------------------
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE `order` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `shopid` int(11) NOT NULL,
-  `salerid` int(11) NOT NULL,
-  `customerid` int(11) NOT NULL,
-  `money` float NOT NULL,
-  `date` date NOT NULL,
-  `realmoney` float NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `shoid` (`shopid`),
-  KEY `saleid` (`salerid`),
-  KEY `customeid` (`customerid`),
-  CONSTRAINT `customeid` FOREIGN KEY (`customerid`) REFERENCES `customer` (`id`),
-  CONSTRAINT `saleid` FOREIGN KEY (`salerid`) REFERENCES `member` (`id`),
-  CONSTRAINT `shoid` FOREIGN KEY (`shopid`) REFERENCES `shop` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of order
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `orderitem`
 -- ----------------------------
 DROP TABLE IF EXISTS `orderitem`;
@@ -126,7 +101,7 @@ CREATE TABLE `orderitem` (
   `num` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `order` (`orderid`),
-  CONSTRAINT `order` FOREIGN KEY (`orderid`) REFERENCES `order` (`id`)
+  CONSTRAINT `order` FOREIGN KEY (`orderid`) REFERENCES `torder` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -175,6 +150,31 @@ CREATE TABLE `strategy` (
 
 -- ----------------------------
 -- Records of strategy
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `torder`
+-- ----------------------------
+DROP TABLE IF EXISTS `torder`;
+CREATE TABLE `torder` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `shopid` int(11) NOT NULL,
+  `salerid` int(11) NOT NULL,
+  `customerid` int(11) NOT NULL,
+  `money` float NOT NULL,
+  `date` date NOT NULL,
+  `realmoney` float NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `shoid` (`shopid`),
+  KEY `saleid` (`salerid`),
+  KEY `customeid` (`customerid`),
+  CONSTRAINT `customeid` FOREIGN KEY (`customerid`) REFERENCES `customer` (`id`),
+  CONSTRAINT `saleid` FOREIGN KEY (`salerid`) REFERENCES `member` (`id`),
+  CONSTRAINT `shoid` FOREIGN KEY (`shopid`) REFERENCES `shop` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of torder
 -- ----------------------------
 
 -- ----------------------------

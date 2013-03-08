@@ -18,15 +18,7 @@
         </interceptors>
         <default-interceptor-ref name="myStack"></default-interceptor-ref>
         <global-results>
-            <result name="login" type="redirect">/user/login.jsp</result>
+            <result name="login" type="redirect">/customer/login.jsp</result>
         </global-results>
-    </package>
-    <package name="user" namespace="/user" extends="struts-default">
-        <action name="loginPage">
-            <result>login.jsp</result>
-        </action>
-        <action name="registerPage">
-            <result>register.jsp</result>
-        </action>
     </package>
 </struts>
