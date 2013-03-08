@@ -1,6 +1,5 @@
 package com.hqtc.model.dao.impl;
 
-import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.ShopDao;
 import com.hqtc.model.entity.Shop;
 import org.springframework.stereotype.Repository;
@@ -13,19 +12,5 @@ import org.springframework.stereotype.Repository;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class ShopDaoImpl extends BaseDao implements ShopDao {
-    @Override
-    public void add(Shop shop) {
-        super.add(shop);
-    }
-
-    @Override
-    public void delete(Shop shop) {
-        super.delete(shop);
-    }
-
-    @Override
-    public void update(Shop shop) {
-        super.update(shop);
-    }
+public class ShopDaoImpl extends BaseDaoImpl<Shop> implements ShopDao {
 }

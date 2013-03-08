@@ -1,6 +1,8 @@
 package com.hqtc.action;
 
 import com.hqtc.biz.AdminBiz;
+import com.hqtc.biz.CustomerBiz;
+import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Member;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.Action;
@@ -12,6 +14,8 @@ import org.apache.struts2.interceptor.SessionAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -27,7 +31,15 @@ import java.util.Map;
 public class AdminAction extends ActionSupport implements RequestAware, SessionAware {
     @Autowired
     AdminBiz adminBiz;
+    @Autowired
+    CustomerBiz customerBiz;
     Member member;
+
+    List<Customer> customers = new ArrayList<Customer>();
+
+    public List<Customer> getCustomers() {
+        return customers;
+    }
 
     public Member getMember() {
         return member;
@@ -40,6 +52,7 @@ public class AdminAction extends ActionSupport implements RequestAware, SessionA
     Map<String, Object> request;
     Map<String, Object> session;
 
+    @SuppressWarnings("unchecked")
     @Action(value = "loginAction", results = {@Result(type = "redirect", name = "success", location = "/admin/main.jsp"),
             @Result(name = "input", location = "/customer/login.jsp")})
     public String login() {
@@ -48,6 +61,8 @@ public class AdminAction extends ActionSupport implements RequestAware, SessionA
             addFieldError("customer.account", "登录失败、请检查您的账号和密码");
             return ActionSupport.INPUT;
         }
+        customers = customerBiz.getAll();
+
         session.put("admin", admin);
         return ActionSupport.SUCCESS;
     }

@@ -9,10 +9,5 @@ import com.hqtc.model.entity.Dessert;
  * Time: 上午10:46
  * To change this template use File | Settings | File Templates.
  */
-public interface DessertDao {
-    public void add(Dessert dessert);
-
-    public void delete(Dessert dessert);
-
-    public void update(Dessert dessert);
+public interface DessertDao extends BaseDao<Dessert> {
 }

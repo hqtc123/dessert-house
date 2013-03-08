@@ -1,6 +1,5 @@
 package com.hqtc.model.dao.impl;
 
-import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.WeeknumDao;
 import com.hqtc.model.entity.Weeknum;
 import org.springframework.stereotype.Repository;
@@ -13,19 +12,6 @@ import org.springframework.stereotype.Repository;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class WeeknumDaoImpl extends BaseDao implements WeeknumDao {
-    @Override
-    public void add(Weeknum weeknum) {
-        super.add(weeknum);
-    }
+public class WeeknumDaoImpl extends BaseDaoImpl<Weeknum> implements WeeknumDao {
 
-    @Override
-    public void delete(Weeknum weeknum) {
-        super.delete(weeknum);
-    }
-
-    @Override
-    public void update(Weeknum weeknum) {
-        super.update(weeknum);
-    }
 }

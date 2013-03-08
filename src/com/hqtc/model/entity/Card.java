@@ -1,6 +1,7 @@
 package com.hqtc.model.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 
 /**
@@ -11,7 +12,7 @@ import java.sql.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-public class Card {
+public class Card implements Serializable {
     private int id;
 
     @javax.persistence.Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)

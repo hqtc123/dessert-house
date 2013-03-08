@@ -38,7 +38,7 @@ public class CustomerBizImpl implements CustomerBiz {
         String password = customer.getPassword();
         String newPass = MyMD5.encryption(password);
         customer.setPassword(newPass);
-        customerDao.add(customer);
+        customerDao.save(customer);
     }
 
     @Override
@@ -79,11 +79,16 @@ public class CustomerBizImpl implements CustomerBiz {
 
     @Override
     public void makeOrder(Torder torder) {
-        torderDao.add(torder);
+        torderDao.save(torder);
     }
 
     @Override
     public void cancelOrder(Torder torder) {
         torderDao.delete(torder);
+    }
+
+    @Override
+    public List getAll() {
+        return customerDao.getAll();
     }
 }

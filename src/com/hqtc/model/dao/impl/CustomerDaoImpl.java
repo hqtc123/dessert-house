@@ -1,6 +1,5 @@
 package com.hqtc.model.dao.impl;
 
-import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.CustomerDao;
 import com.hqtc.model.entity.Customer;
 import org.hibernate.Criteria;
@@ -19,23 +18,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class CustomerDaoImpl extends BaseDao implements CustomerDao {
-
-    @Override
-    public void add(Customer customer) {
-        super.add(customer);    //To change body of overridden methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public void delete(Customer customer) {
-        super.delete(customer);
-    }
-
-    @Override
-    public void update(Customer customer) {
-        super.update(customer);
-    }
-
+public class CustomerDaoImpl extends BaseDaoImpl<Customer> implements CustomerDao {
     @Override
     public List accPassSearch(Customer customer) {
         List list = null;
@@ -54,8 +37,8 @@ public class CustomerDaoImpl extends BaseDao implements CustomerDao {
     }
 
     @Override
-    public Customer getCustomerById(int id) {
-        return (Customer) super.get(Customer.class, id);
+    public List getAll() {
+        return getSession().createCriteria(Customer.class).list();
     }
 
     @Override

@@ -11,12 +11,6 @@ import java.util.List;
  * Time: 上午10:47
  * To change this template use File | Settings | File Templates.
  */
-public interface MemberDao {
-    public void add(Member member);
-
-    public void delete(Member member);
-
-    public void update(Member member);
-
+public interface MemberDao extends BaseDao<Member> {
     public List accPassSearch(Member member);
 }

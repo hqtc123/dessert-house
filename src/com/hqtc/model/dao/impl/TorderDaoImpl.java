@@ -1,6 +1,5 @@
 package com.hqtc.model.dao.impl;
 
-import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.TorderDao;
 import com.hqtc.model.entity.Torder;
 import org.springframework.stereotype.Repository;
@@ -13,20 +12,5 @@ import org.springframework.stereotype.Repository;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class TorderDaoImpl extends BaseDao implements TorderDao {
-
-    @Override
-    public void add(Torder torder) {
-        super.add(torder);
-    }
-
-    @Override
-    public void delete(Torder torder) {
-        super.delete(torder);
-    }
-
-    @Override
-    public void update(Torder torder) {
-        super.update(torder);
-    }
+public class TorderDaoImpl extends BaseDaoImpl<Torder> implements TorderDao {
 }

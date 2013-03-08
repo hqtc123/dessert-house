@@ -30,7 +30,7 @@ public class SalerBizImpl implements SalerBiz {
     @Override
     public void dealOrder(Torder torder, Member member) {
         torder.setSalerid(member.getId());
-        Customer customer = customerDao.getCustomerById(torder.getCustomerid());
+        Customer customer = customerDao.findById(torder.getCustomerid());
         int oldScore = customer.getScore();
         int newScore = oldScore + (int) torder.getRealmoney();
         customer.setScore(newScore);

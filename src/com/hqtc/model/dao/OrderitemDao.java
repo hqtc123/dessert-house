@@ -9,10 +9,6 @@ import com.hqtc.model.entity.Orderitem;
  * Time: 下午8:04
  * To change this template use File | Settings | File Templates.
  */
-public interface OrderitemDao {
-    public void add(Orderitem orderitemr);
+public interface OrderitemDao extends BaseDao<Orderitem>{
 
-    public void delete(Orderitem orderitemr);
-
-    public void update(Orderitem orderitemr);
 }

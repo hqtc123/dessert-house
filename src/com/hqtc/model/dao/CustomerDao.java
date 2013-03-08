@@ -11,16 +11,10 @@ import java.util.List;
  * Time: 下午12:58
  * To change this template use File | Settings | File Templates.
  */
-public interface CustomerDao {
-    public void add(Customer customer);
-
-    public void delete(Customer customer);
-
-    public void update(Customer customer);
-
+public interface CustomerDao extends BaseDao<Customer> {
     public List accSearch(Customer customer);
 
     public List accPassSearch(Customer customer);
 
-    public Customer getCustomerById(int id);
+    public List getAll();
 }

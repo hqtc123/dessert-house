@@ -9,10 +9,5 @@ import com.hqtc.model.entity.Recharge;
  * Time: 下午4:38
  * To change this template use File | Settings | File Templates.
  */
-public interface RechargeDao {
-    public void add(Recharge recharge);
-
-    public void delete(Recharge recharge);
-
-    public void update(Recharge recharge);
+public interface RechargeDao extends BaseDao<Recharge>{
 }

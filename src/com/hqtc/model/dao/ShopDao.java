@@ -9,10 +9,6 @@ import com.hqtc.model.entity.Shop;
  * Time: 上午10:47
  * To change this template use File | Settings | File Templates.
  */
-public interface ShopDao {
-    public void add(Shop shop);
+public interface ShopDao extends BaseDao<Shop> {
 
-    public void delete(Shop shop);
-
-    public void update(Shop shop);
 }

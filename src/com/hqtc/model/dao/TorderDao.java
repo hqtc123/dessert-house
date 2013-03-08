@@ -9,10 +9,6 @@ import com.hqtc.model.entity.Torder;
  * Time: 下午8:18
  * To change this template use File | Settings | File Templates.
  */
-public interface TorderDao {
-    public void add(Torder torder);
+public interface TorderDao extends BaseDao<Torder>{
 
-    public void delete(Torder torder);
-
-    public void update(Torder torder);
 }

@@ -9,10 +9,6 @@ import com.hqtc.model.entity.Card;
  * Time: 上午10:46
  * To change this template use File | Settings | File Templates.
  */
-public interface CardDao {
-    public void add(Card card);
+public interface CardDao extends BaseDao<Card> {
 
-    public void delete(Card card);
-
-    public void update(Card card);
 }

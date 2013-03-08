@@ -1,46 +1,24 @@
 package com.hqtc.model.dao;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Example;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.hibernate.criterion.Criterion;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
  * User: He Qing
- * Date: 13-2-5
- * Time: 下午3:16
+ * Date: 13-3-8
+ * Time: 下午11:18
  * To change this template use File | Settings | File Templates.
  */
-public abstract class BaseDao {
+public interface BaseDao<T> {
+    void save(T t);
 
-    @Autowired
-    SessionFactory sessionFactory;
+    void update(T t);
 
-    protected Session getSession() {
-        return sessionFactory.getCurrentSession();
-    }
+    void delete(T t);
 
-    protected void add(Object object) {
-        getSession().save(object);
-    }
+    T findById(int i);
 
-    protected void delete(Object object) {
-        getSession().delete(object);
-    }
-
-    protected void update(Object object) {
-        getSession().update(object);
-    }
-
-    protected Object get(Class cla, Serializable id) {
-        return getSession().get(cla, id);
-    }
-
-    protected List search(Class cla, Object object) {
-        return getSession().createCriteria(cla).add(Example.create(object)).list();
-    }
+    List<T> findByCriteria(Criterion... criterions);
 }

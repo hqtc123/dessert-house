@@ -9,10 +9,6 @@ import com.hqtc.model.entity.Strategy;
  * Time: 下午4:36
  * To change this template use File | Settings | File Templates.
  */
-public interface StrategyDao {
-    public void add(Strategy strategy);
+public interface StrategyDao extends BaseDao<Strategy>{
 
-    public void delete(Strategy strategy);
-
-    public void update(Strategy strategy);
 }

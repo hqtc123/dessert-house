@@ -9,10 +9,5 @@ import com.hqtc.model.entity.Weeknum;
  * Time: 下午8:20
  * To change this template use File | Settings | File Templates.
  */
-public interface WeeknumDao {
-    public void add(Weeknum weeknum);
-
-    public void delete(Weeknum weeknum);
-
-    public void update(Weeknum weeknum);
+public interface WeeknumDao extends BaseDao<Weeknum> {
 }

@@ -1,6 +1,7 @@
 package com.hqtc.model.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.Set;
 
@@ -12,7 +13,7 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-public class Torder {
+public class Torder implements Serializable {
     private int id;
 
     @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)

@@ -1,6 +1,5 @@
 package com.hqtc.model.dao.impl;
 
-import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.DessertDao;
 import com.hqtc.model.entity.Dessert;
 import org.springframework.stereotype.Repository;
@@ -13,19 +12,6 @@ import org.springframework.stereotype.Repository;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class DessertDaoImpl extends BaseDao implements DessertDao {
-    @Override
-    public void add(Dessert dessert) {
-        super.add(dessert);
-    }
+public class DessertDaoImpl extends BaseDaoImpl<Dessert> implements DessertDao {
 
-    @Override
-    public void delete(Dessert dessert) {
-        super.delete(dessert);
-    }
-
-    @Override
-    public void update(Dessert dessert) {
-        super.update(dessert);
-    }
 }

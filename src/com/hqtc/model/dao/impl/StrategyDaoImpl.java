@@ -1,6 +1,5 @@
 package com.hqtc.model.dao.impl;
 
-import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.StrategyDao;
 import com.hqtc.model.entity.Strategy;
 import org.springframework.stereotype.Repository;
@@ -13,19 +12,5 @@ import org.springframework.stereotype.Repository;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class StrategyDaoImpl extends BaseDao implements StrategyDao {
-    @Override
-    public void add(Strategy strategy) {
-        super.add(strategy);
-    }
-
-    @Override
-    public void delete(Strategy strategy) {
-        super.delete(strategy);
-    }
-
-    @Override
-    public void update(Strategy strategy) {
-        super.update(strategy);
-    }
+public class StrategyDaoImpl extends BaseDaoImpl<Strategy> implements StrategyDao {
 }

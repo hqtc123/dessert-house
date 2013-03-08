@@ -1,6 +1,5 @@
 package com.hqtc.model.dao.impl;
 
-import com.hqtc.model.dao.BaseDao;
 import com.hqtc.model.dao.MemberDao;
 import com.hqtc.model.entity.Member;
 import org.hibernate.Criteria;
@@ -19,17 +18,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class MemberDaoImpl extends BaseDao implements MemberDao{
-    @Override
-    public void delete(Member member) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public void update(Member member) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
-
+public class MemberDaoImpl extends BaseDaoImpl<Member> implements MemberDao{
     @Override
     public List accPassSearch(Member member) {
         List list = null;
@@ -46,10 +35,5 @@ public class MemberDaoImpl extends BaseDao implements MemberDao{
             e.printStackTrace();
         }
         return list;
-    }
-
-    @Override
-    public void add(Member member) {
-        //To change body of implemented methods use File | Settings | File Templates.
     }
 }

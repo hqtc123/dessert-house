@@ -3,6 +3,7 @@ package com.hqtc.model.entity;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.sql.Date;
 
 /**
@@ -13,7 +14,7 @@ import java.sql.Date;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-public class Recharge {
+public class Recharge implements Serializable {
     private int id;
 
     @javax.persistence.Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)

@@ -1,3 +1,5 @@
+<%@ taglib prefix="S" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: hqtc
@@ -59,6 +61,9 @@
                         <th></th>
 
                     </tr>
+                    <S:iterator value="customers">
+                        <s:property></s:property>
+                    </S:iterator>
                     <tr>
                         <td>row 1,col 1</td>
                         <td>row 1,col 2</td>

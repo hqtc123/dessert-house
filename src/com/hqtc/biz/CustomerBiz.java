@@ -3,6 +3,8 @@ package com.hqtc.biz;
 import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Torder;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: He Qing
@@ -17,11 +19,13 @@ public interface CustomerBiz {
 
     public Customer getCustomerByAccPass(Customer customer);
 
-    public void recharge(Customer customer,int money);
+    public void recharge(Customer customer, int money);
 
     public void terminate(Customer customer);
 
     public void makeOrder(Torder torder);
 
     public void cancelOrder(Torder torder);
+
+    public List getAll();
 }

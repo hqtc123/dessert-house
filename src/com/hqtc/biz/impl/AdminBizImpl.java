@@ -27,7 +27,7 @@ public class AdminBizImpl implements AdminBiz {
 
     @Override
     public void addMember(Member member) {
-        memberDao.add(member);
+        memberDao.save(member);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class AdminBizImpl implements AdminBiz {
 
     @Override
     public void addStrategy(Strategy strategy) {
-        strategyDao.add(strategy);
+        strategyDao.save(strategy);
     }
 
     @Override
