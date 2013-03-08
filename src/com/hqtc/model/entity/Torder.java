@@ -12,7 +12,7 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-public class Order {
+public class Torder {
     private int id;
 
     @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
@@ -75,7 +75,7 @@ public class Order {
     }
 
     private Set<Orderitem> orderitems;
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "order")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "torder")
     public Set<Orderitem> getOrderitems() {
         return orderitems;
     }
@@ -89,13 +89,13 @@ public class Order {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Order order = (Order) o;
+        Torder torder = (Torder) o;
 
-        if (customerid != order.customerid) return false;
-        if (id != order.id) return false;
-        if (Float.compare(order.money, money) != 0) return false;
-        if (salerid != order.salerid) return false;
-        if (shopid != order.shopid) return false;
+        if (customerid != torder.customerid) return false;
+        if (id != torder.id) return false;
+        if (Float.compare(torder.money, money) != 0) return false;
+        if (salerid != torder.salerid) return false;
+        if (shopid != torder.shopid) return false;
 
         return true;
     }

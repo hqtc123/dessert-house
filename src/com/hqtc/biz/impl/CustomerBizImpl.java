@@ -2,9 +2,9 @@ package com.hqtc.biz.impl;
 
 import com.hqtc.biz.CustomerBiz;
 import com.hqtc.model.dao.CardDao;
-import com.hqtc.model.dao.OrderDao;
+import com.hqtc.model.dao.TorderDao;
 import com.hqtc.model.entity.Card;
-import com.hqtc.model.entity.Order;
+import com.hqtc.model.entity.Torder;
 import com.hqtc.util.MyMD5;
 import com.hqtc.model.dao.CustomerDao;
 import com.hqtc.model.entity.Customer;
@@ -27,7 +27,7 @@ public class CustomerBizImpl implements CustomerBiz {
     @Autowired
     private CardDao cardDao;
     @Autowired
-    private OrderDao orderDao;
+    private TorderDao torderDao;
 
     public void setCustomerDao(CustomerDao customerDao) {
         this.customerDao = customerDao;
@@ -78,12 +78,12 @@ public class CustomerBizImpl implements CustomerBiz {
     }
 
     @Override
-    public void makeOrder(Order order) {
-        orderDao.add(order);
+    public void makeOrder(Torder torder) {
+        torderDao.add(torder);
     }
 
     @Override
-    public void cancelOrder(Order order) {
-        orderDao.delete(order);
+    public void cancelOrder(Torder torder) {
+        torderDao.delete(torder);
     }
 }

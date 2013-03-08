@@ -3,7 +3,7 @@ package com.hqtc.biz.impl;
 import com.hqtc.biz.SalerBiz;
 import com.hqtc.model.dao.CustomerDao;
 import com.hqtc.model.dao.DessertDao;
-import com.hqtc.model.dao.OrderDao;
+import com.hqtc.model.dao.TorderDao;
 import com.hqtc.model.dao.WeeknumDao;
 import com.hqtc.model.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class SalerBizImpl implements SalerBiz {
     @Autowired
-    private OrderDao orderDao;
+    private TorderDao torderDao;
     @Autowired
     private CustomerDao customerDao;
     @Autowired
@@ -28,14 +28,14 @@ public class SalerBizImpl implements SalerBiz {
     private WeeknumDao weeknumDao;
 
     @Override
-    public void dealOrder(Order order, Member member) {
-        order.setSalerid(member.getId());
-        Customer customer = customerDao.getCustomerById(order.getCustomerid());
+    public void dealOrder(Torder torder, Member member) {
+        torder.setSalerid(member.getId());
+        Customer customer = customerDao.getCustomerById(torder.getCustomerid());
         int oldScore = customer.getScore();
-        int newScore = oldScore + (int) order.getRealmoney();
+        int newScore = oldScore + (int) torder.getRealmoney();
         customer.setScore(newScore);
 
-        orderDao.update(order);
+        torderDao.update(torder);
         customerDao.update(customer);
     }
 

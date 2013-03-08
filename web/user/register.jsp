@@ -16,12 +16,13 @@
                 ":" + request.getServerPort() + path + "/";
     %>
     <script type="text/javascript" src="<%=basePath%>static/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>static/js/jquery.artDialog.js"></script>
-    <script type="text/javascript" src="<%=basePath%>static/js/register.js"></script>
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/dialog-twitter.css">
+    <script type="text/javascript" src="<%=basePath%>static/bootstrap/js/bootstrap.min.js"></script>
+    <link href="<%=basePath%>static/bootstrap/lib.min.css" rel="stylesheet" type="text/css"/>
+    <link href="<%=basePath%>static/bootstrap/lib-resp.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/reglog.css">
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 <div id="content">
     <div id="pad">
 
@@ -45,7 +46,7 @@
             <br>
 
             <div class="sub">
-                <s:submit id="registerBtn" type="button" value="注册"/>
+                <s:submit cssClass="btn" type="button" value="注册"/>
             </div>
         </s:form>
     </div>

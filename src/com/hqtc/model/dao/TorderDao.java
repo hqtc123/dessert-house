@@ -1,6 +1,6 @@
 package com.hqtc.model.dao;
 
-import com.hqtc.model.entity.Order;
+import com.hqtc.model.entity.Torder;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,10 +9,10 @@ import com.hqtc.model.entity.Order;
  * Time: 下午8:18
  * To change this template use File | Settings | File Templates.
  */
-public interface OrderDao {
-    public void add(Order order);
+public interface TorderDao {
+    public void add(Torder torder);
 
-    public void delete(Order order);
+    public void delete(Torder torder);
 
-    public void update(Order order);
+    public void update(Torder torder);
 }

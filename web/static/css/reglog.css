@@ -5,6 +5,11 @@
     margin-right: auto;
 }
 
+#pad {
+    width: 100%;
+    height: 160px;
+}
+
 #logo {
     float: left;
     margin-top: 50px;
@@ -31,11 +36,12 @@
 }
 
 h3 {
+    color: white;
     margin-top: 36px;
     height: 32px;
     line-height: 32px;
     padding-left: 8px;
-    background: #d87809;
+    background: #432d21;
 }
 
 .textDiv {
@@ -44,32 +50,15 @@ h3 {
     margin: 10px 0
 }
 
-#login_form,#register_form {
+#login_form, #register_form {
     float: left;
     padding-left: 25px;
 }
 
-.textDiv label {
-    float: left;
-    margin-top: 10px;
-    width: 120px;
-    text-align: right;
-    font-family: "隶书";
-    margin-right: 10px;
-}
 
 .textField {
-    margin-top: 10px;
-    width: 180px;
-    height: 50px;
-    line-height: 36px;
-    padding: 2px;
 }
 
-.textDiv .radio {
-    margin-top: 15px;
-    margin-right: 10px;
-}
 
 #registerBtn, #loginBtn {
     float: left;
@@ -77,7 +66,6 @@ h3 {
     margin-top: 18px;
     width: 120px;
     height: 36px;
-    border-radius: 2px;
 }
 
 .sub {
@@ -86,13 +74,22 @@ h3 {
     position: absolute
 }
 
-table{
-    background-color: #f0c899;
+table {
+    background-color: transparent;
 }
 
-.label{
-    background-color: #d0a899;
+.label {
+    display: inline;
+    background-color: #654325;
+}
+
+label{
+    display: inline;
 }
 .errorMessage {
     color: #f30;
+}
+
+#register_form_sex1,#register_form_sex0{
+    display: inline;
 }

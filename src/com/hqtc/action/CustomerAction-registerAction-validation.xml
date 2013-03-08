@@ -23,4 +23,11 @@
             <message>密码只能为长度3-8的字母数字组合</message>
         </field-validator>
     </field>
+    <field name="customer.age">
+        <field-validator type="int">
+            <param name="max">100</param>
+            <param name="min">10</param>
+            <message>请输入有效的年龄（10-100）</message>
+        </field-validator>
+    </field>
 </validators>
