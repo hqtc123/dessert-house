@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/header.css">
 </head>
 <body>
-<jsp:include page="../header.jsp"></jsp:include>
+<jsp:include page="header.jsp"></jsp:include>
 </body>
 账号：<%=((Customer) session.getAttribute("customer")).getAccount()%>
 </html>

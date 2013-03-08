@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/reglog.css">
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 <div id="content">
     <div id="pad">
 

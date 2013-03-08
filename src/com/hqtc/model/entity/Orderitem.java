@@ -24,16 +24,16 @@ public class Orderitem {
         this.id = id;
     }
 
-    private Order order;
+    private Torder torder;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "orderid", nullable = false)
-    public Order getOrder() {
-        return order;
+    public Torder getTorder() {
+        return torder;
     }
 
-    public void setOrder(Order order) {
-        this.order = order;
+    public void setTorder(Torder torder) {
+        this.torder = torder;
     }
 
     private int dessertid;

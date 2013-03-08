@@ -2,7 +2,7 @@ package com.hqtc.biz;
 
 import com.hqtc.model.entity.Dessert;
 import com.hqtc.model.entity.Member;
-import com.hqtc.model.entity.Order;
+import com.hqtc.model.entity.Torder;
 import com.hqtc.model.entity.Weeknum;
 
 /**
@@ -13,7 +13,7 @@ import com.hqtc.model.entity.Weeknum;
  * To change this template use File | Settings | File Templates.
  */
 public interface SalerBiz {
-    public void dealOrder(Order order,Member member);
+    public void dealOrder(Torder torder,Member member);
 
     public void manageDessert(Dessert dessert);
 

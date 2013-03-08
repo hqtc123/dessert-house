@@ -1,7 +1,7 @@
 package com.hqtc.biz;
 
 import com.hqtc.model.entity.Customer;
-import com.hqtc.model.entity.Order;
+import com.hqtc.model.entity.Torder;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,7 +21,7 @@ public interface CustomerBiz {
 
     public void terminate(Customer customer);
 
-    public void makeOrder(Order order);
+    public void makeOrder(Torder torder);
 
-    public void cancelOrder(Order order);
+    public void cancelOrder(Torder torder);
 }
