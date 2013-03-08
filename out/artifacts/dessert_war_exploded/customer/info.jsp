@@ -16,10 +16,6 @@
     %>
     <title>我的账户</title>
     <script type="text/javascript" src="<%=basePath%>static/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>static/js/jquery.artDialog.js"></script>
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/dialog-twitter.css">
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/layout.css">
-    <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/header.css">
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>

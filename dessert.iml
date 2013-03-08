@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
-    <facet type="hibernate" name="Hibernate">
-      <configuration>
-        <datasource-map>
-          <unit-entry name="sessionFactory" value="357cab6a-a5e3-4ebf-a635-81af0a2e605b" />
-        </datasource-map>
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
-      </configuration>
-    </facet>
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
@@ -19,9 +11,18 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/out/production/dessert house/hibernate.cfg.xml" />
+      </configuration>
+    </facet>
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset1" name="XML Application Context" removed="false">
+          <file>file://$MODULE_DIR$/out/production/dessert/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/out/production/dessert house/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/out/artifacts/dessert_war_exploded/WEB-INF/classes/applicationContext.xml</file>
           <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
         </fileset>
       </configuration>
@@ -34,10 +35,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0" level="application_server_libraries" />
-    <orderEntry type="library" name="s2shlib" level="project" />
-    <orderEntry type="library" name="apache-lang:commons-lang:2.1" level="project" />
-    <orderEntry type="library" name="org.apache.struts:struts2-convention-plugin:2.3.8" level="project" />
   </component>
 </module>
 

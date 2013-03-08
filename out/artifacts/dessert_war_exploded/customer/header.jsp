@@ -12,13 +12,13 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li class="active">
-                        <a href="toLogin.action">登录</a>
+                        <a href="index.jsp">首页</a>
                     </li>
                     <li>
-                        <a href="toRegister.action">注册</a>
+                        <a href="#">购物车</a>
                     </li>
                     <li>
-                        <a href="#contact">账单</a>
+                        <a href="info.jsp">个人资料</a>
                     </li>
                 </ul>
             </div>

@@ -1,20 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #fdfdfd;
+.pad {
+    width: 100%;
+    height: 88px;
 }
-
-ul {
-    display: inline;
-}
-
-li {
-    display: inline;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: #000000;
-}
-

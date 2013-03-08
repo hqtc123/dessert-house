@@ -12,7 +12,30 @@
     <jsp:include page="resource.jsp"></jsp:include>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </a>
+            <a class="brand" href="#">环球探测甜品屋</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="#">登录</a>
+                    </li>
+                    <li>
+                        <a href="toRegister.action">注册</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
 <div id="content">
     <div id="pad">
 

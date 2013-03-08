@@ -22,7 +22,30 @@
     <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/reglog.css">
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </a>
+            <a class="brand" href="#">环球探测甜品屋</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="toLogin.action">登录</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">注册</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
 <div id="content">
     <div id="pad">
 

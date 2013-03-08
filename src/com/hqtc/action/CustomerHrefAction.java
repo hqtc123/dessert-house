@@ -21,7 +21,7 @@ public class CustomerHrefAction extends ActionSupport {
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "toRegister", results = {@Result(type = "redirect", name = "success", location = "/customer/login.jsp")})
+    @Action(value = "toRegister", results = {@Result(type = "redirect", name = "success", location = "/customer/register.jsp")})
     public String toRegister() {
         return ActionSupport.SUCCESS;
     }

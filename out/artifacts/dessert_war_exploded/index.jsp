@@ -16,7 +16,6 @@
     %>
     <script type="text/javascript" src="<%=basePath%>static/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>static/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<%=basePath%>static/js/index.js"></script>
     <link href="<%=basePath%>static/bootstrap/lib.min.css" rel="stylesheet" type="text/css"/>
     <style>
         body {
@@ -39,15 +38,7 @@
 
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active">
-                        <a href="customer/toLogin.action">登录</a>
-                    </li>
-                    <li>
-                        <a href="customer/toRegister.action">注册</a>
-                    </li>
-                    <li>
-                        <a href="about">关于</a>
-                    </li>
+
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -56,18 +47,14 @@
 </div>
 <div class="container">
     <h1>欢迎光临环球探测甜品屋</h1>
-    <a href="toCustomer.action"><h1>顾客登陆页面</h1></a>
-    <a href="toMember.action"><h1>内部工作人员登陆页面</h1></a>
+    <br>
+    <br>
+    <a href="toCustomer.action"><h3>顾客登陆页面>>></h3></a>
+    <a href="toMember.action"><h3>内部工作人员登陆页面>>></h3></a>
 
-    <p>Use this document as a way to quick start any new project.
-        <br>All you get is this message and a barebones HTML document.</p>
+    <p>环球探测探测甜品屋，人生甜蜜之选.
+        <br>甜品，是一个很广的概念，大致分为甜点心和广式的糖水。甜品，顾名思义，是不能做正餐的东西，自然也不用顾忌营养或者其他一些禁锢我们口味偏好的规矩之类，
+        只要好吃全部都可饮用甜品以成为点心。名副其实的点心还要恰如其分地点在心头，所谓心水之物就是这个意思了。</p>
 </div>
-<input type="text" class="input-large">
-<button class="btn">Button</button>
-<!-- /container -->
-<!-- Le javascript==================================================-
-->
-<!-- Placed at the end of the document so the pages load faster -->
-</body>
 </body>
 </html>
