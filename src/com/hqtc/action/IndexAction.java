@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * To change this template use File | Settings | File Templates.
  */
 @Component
-@ParentPackage("struts-default")
+@ParentPackage("myinterceptor")
 @Namespace("/")
 public class IndexAction extends ActionSupport {
     @Action(value = "toCustomer", results = {@Result(name = SUCCESS, type = "redirect", location = "/customer/login.jsp")})

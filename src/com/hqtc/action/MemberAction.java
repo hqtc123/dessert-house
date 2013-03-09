@@ -6,10 +6,7 @@ import com.hqtc.model.entity.Dessert;
 import com.hqtc.model.entity.Member;
 import com.hqtc.model.entity.Weeknum;
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.convention.annotation.Namespace;
-import org.apache.struts2.convention.annotation.ParentPackage;
-import org.apache.struts2.convention.annotation.Result;
+import org.apache.struts2.convention.annotation.*;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +24,7 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 @Component
-@ParentPackage("struts-default")
+@ParentPackage("myinterceptor")
 @Namespace("/member")
 public class MemberAction extends ActionSupport implements RequestAware, SessionAware {
     @Autowired
@@ -36,6 +33,15 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
     private ManagerBiz managerBiz;
 
     private Member member;
+    private Weeknum weeknum;
+
+    public Weeknum getWeeknum() {
+        return weeknum;
+    }
+
+    public void setWeeknum(Weeknum weeknum) {
+        this.weeknum = weeknum;
+    }
 
     public Member getMember() {
         return member;
@@ -47,15 +53,52 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
 
     List<Dessert> desserts = new ArrayList<Dessert>();
 
-    public List<Weeknum> getWeeknums() {
-        return weeknums;
+    public List<Weeknum> getWeeknums1() {
+        return weeknums1;
     }
 
-    public void setWeeknums(List<Weeknum> weeknums) {
-        this.weeknums = weeknums;
+    public void setWeeknums1(List<Weeknum> weeknums1) {
+        this.weeknums1 = weeknums1;
     }
 
-    List<Weeknum> weeknums = new ArrayList<Weeknum>();
+    List<Weeknum> weeknums1 = new ArrayList<Weeknum>();
+    List<Weeknum> weeknums2 = new ArrayList<Weeknum>();
+    List<Weeknum> weeknums3 = new ArrayList<Weeknum>();
+    List<Weeknum> weeknums4 = new ArrayList<Weeknum>();
+
+    public List<Weeknum> getWeeknums5() {
+        return weeknums5;
+    }
+
+    public void setWeeknums5(List<Weeknum> weeknums5) {
+        this.weeknums5 = weeknums5;
+    }
+
+    public List<Weeknum> getWeeknums2() {
+        return weeknums2;
+    }
+
+    public void setWeeknums2(List<Weeknum> weeknums2) {
+        this.weeknums2 = weeknums2;
+    }
+
+    public List<Weeknum> getWeeknums3() {
+        return weeknums3;
+    }
+
+    public void setWeeknums3(List<Weeknum> weeknums3) {
+        this.weeknums3 = weeknums3;
+    }
+
+    public List<Weeknum> getWeeknums4() {
+        return weeknums4;
+    }
+
+    public void setWeeknums4(List<Weeknum> weeknums4) {
+        this.weeknums4 = weeknums4;
+    }
+
+    List<Weeknum> weeknums5 = new ArrayList<Weeknum>();
 
     Map<String, Object> request;
     Map<String, Object> session;
@@ -94,9 +137,26 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
     }
 
     @SuppressWarnings("unchecked")
-    @Action(value = "viewDesserts", results = {@Result(name = SUCCESS, location = "/member/saler.jsp")})
+    @Action(interceptorRefs = {@InterceptorRef("mySalStack")}, value = "viewDesserts", results = {@Result(name = SUCCESS, location = "/member/saler.jsp")})
     public String viewDesserts() {
+        if (session.get("saler") == null) {
+            return INPUT;
+        }
+        int shopid = ((Member) session.get("saler")).getShop().getId();
         desserts = salerBiz.getAllDesserts();
+        Weeknum weeknum1 = new Weeknum();
+        weeknum1.getShop().setId(shopid);
+        weeknum1.setWeekday(1);
+        weeknums1 = salerBiz.getWeekNumByShopDay(weeknum1);
+        weeknum1.setWeekday(2);
+        weeknums2 = salerBiz.getWeekNumByShopDay(weeknum1);
+        weeknum1.setWeekday(3);
+        weeknums3 = salerBiz.getWeekNumByShopDay(weeknum1);
+        weeknum1.setWeekday(4);
+        weeknums4 = salerBiz.getWeekNumByShopDay(weeknum1);
+        weeknum1.setWeekday(5);
+        weeknums5 = salerBiz.getWeekNumByShopDay(weeknum1);
+        //todo
         return SUCCESS;
     }
 

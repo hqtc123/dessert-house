@@ -32,17 +32,17 @@ public class CustomerInterceptor extends AbstractInterceptor {
     @Override
     public String intercept(ActionInvocation actionInvocation) throws Exception {
         String actionName = actionInvocation.getInvocationContext().getName();
-        if (actionName.equals("login")) {
+        if (actionName.equals("loginAction")) {
             return actionInvocation.invoke();
         } else {
             ActionContext ac = actionInvocation.getInvocationContext();
             Map session = (Map)ac.get(ServletActionContext.SESSION);
             if(session==null){
-                return "login";
+                return "cusLogin";
             }else{
                 Object customer=session.get("customer");
                 if(customer==null){
-                    return "login";
+                    return "cusLogin";
                 }else{
                     return actionInvocation.invoke();
                 }

@@ -14,7 +14,7 @@ import java.util.List;
  * Time: 下午3:37
  * To change this template use File | Settings | File Templates.
  */
-public interface SalerBiz extends MemberBiz{
+public interface SalerBiz extends MemberBiz {
     public void dealOrder(Torder torder, Member member);
 
     public void addDessert(Dessert dessert);
@@ -27,7 +27,5 @@ public interface SalerBiz extends MemberBiz{
 
     public List getAllDesserts();
 
-    public List getAllWeeknums();
-
-    public void manageWeekNum(Weeknum weeknum);
+    List<Weeknum> getWeekNumByShopDay(Weeknum weeknum1);
 }

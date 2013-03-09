@@ -94,14 +94,16 @@
 
                 </table>
                 <table class="table" id="man-weeknum-table">
+                    <thead><S:select list="#{1:'星期一',2:'星期二',3:'星期三',4:'星期四',5:'星期五'}" label="选择日期"
+                                     listKey="key" listValue="value" headerKey="1"></S:select></thead>
                     <tbody>
                     <tr>
-                        <th>策略号</th>
-                        <th>积分</th>
-                        <th>折扣</th>
+                        <th>甜品ID</th>
+                        <th>甜品名</th>
+                        <th>数量</th>
                         <th></th>
                     </tr>
-                    <S:iterator value="strategies">
+                    <S:iterator value="weeknums1">
                         <tr>
                             <td><S:property value="id"></S:property></td>
                             <td><S:property value="score"></S:property></td>

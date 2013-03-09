@@ -6,10 +6,8 @@ import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Member;
 import com.hqtc.model.entity.Strategy;
 import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.convention.annotation.Namespace;
-import org.apache.struts2.convention.annotation.ParentPackage;
-import org.apache.struts2.convention.annotation.Result;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.Intercepter;
+import org.apache.struts2.convention.annotation.*;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +26,7 @@ import java.util.Map;
  */
 @Component
 @Namespace("/admin")
-@ParentPackage("struts-default")
+@ParentPackage("myinterceptor")
 public class AdminAction extends ActionSupport implements RequestAware, SessionAware {
     @Autowired
     private AdminBiz adminBiz;
@@ -79,12 +77,20 @@ public class AdminAction extends ActionSupport implements RequestAware, SessionA
     }
 
     @SuppressWarnings("unchecked")
-    @Action(value = "viewMemAndStr", results = {@Result(name = SUCCESS, location = "/admin/main.jsp")})
+    @Action(interceptorRefs = {@InterceptorRef("myAdmStack")}, value = "viewMemAndStr", results = {@Result(name = SUCCESS, location = "/admin/main.jsp")})
     public String viewMemAndStr() {
         members = adminBiz.getAllMembers();
         members.remove(0);
         strategies = adminBiz.getAllStrategies();
         return SUCCESS;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Action(value = "logoutAction", results = {@Result(name = "success", type = "redirect", location = "/index.jsp")})
+    public String logout() {
+        if (session.get("admin") != null)
+            session.remove("admin");
+        return ActionSupport.SUCCESS;
     }
 
     @Override

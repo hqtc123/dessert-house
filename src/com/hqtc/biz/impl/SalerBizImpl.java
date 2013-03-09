@@ -67,12 +67,9 @@ public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
     }
 
     @Override
-    public List getAllWeeknums() {
-        return null;  //todo
+    public List<Weeknum> getWeekNumByShopDay(Weeknum weeknum1) {
+        return weeknumDao.getWeekNumByShopDay(weeknum1);
     }
 
-    @Override
-    public void manageWeekNum(Weeknum weeknum) {
-        weeknumDao.update(weeknum);
-    }
+
 }

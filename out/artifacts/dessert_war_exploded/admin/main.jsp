@@ -29,6 +29,9 @@
                     <li class="active">
                         <a href="#">系统管理员</a>
                     </li>
+                    <li>
+                        <a href="logoutAction.action">退出登录</a>
+                    </li>
                 </ul>
             </div>
             <!--/.nav-collapse -->

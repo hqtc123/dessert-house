@@ -2,6 +2,8 @@ package com.hqtc.model.dao;
 
 import com.hqtc.model.entity.Weeknum;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: hqtc
@@ -10,4 +12,5 @@ import com.hqtc.model.entity.Weeknum;
  * To change this template use File | Settings | File Templates.
  */
 public interface WeeknumDao extends BaseDao<Weeknum> {
+    List<Weeknum> getWeekNumByShopDay(Weeknum weeknum1);
 }

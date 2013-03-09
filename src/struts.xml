@@ -7,7 +7,7 @@
     <constant name="struts.devMode" value="true"></constant>
     <constant name="struts.i18n.encoding" value="UTF-8"></constant>
 
-    <package name="interceptor" extends="struts-default">
+    <package name="myinterceptor" extends="struts-default">
         <interceptors>
             <!--customer-->
             <interceptor name="cusInterceptor" class="com.hqtc.interceptor.CustomerInterceptor">
