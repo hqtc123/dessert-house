@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * Time: 下午3:42
  * To change this template use File | Settings | File Templates.
  */
-public interface ManagerBiz {
+public interface ManagerBiz extends MemberBiz{
     public ArrayList<Customer> viewCustomers();
     public ArrayList<Card> viewCards();
     public ArrayList<Orderitem> viewSales();

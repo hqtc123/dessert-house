@@ -15,6 +15,4 @@ public interface CustomerDao extends BaseDao<Customer> {
     public List accSearch(Customer customer);
 
     public List accPassSearch(Customer customer);
-
-    public List getAll();
 }

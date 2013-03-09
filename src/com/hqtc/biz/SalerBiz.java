@@ -5,6 +5,8 @@ import com.hqtc.model.entity.Member;
 import com.hqtc.model.entity.Torder;
 import com.hqtc.model.entity.Weeknum;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: hqtc
@@ -12,10 +14,20 @@ import com.hqtc.model.entity.Weeknum;
  * Time: 下午3:37
  * To change this template use File | Settings | File Templates.
  */
-public interface SalerBiz {
-    public void dealOrder(Torder torder,Member member);
+public interface SalerBiz extends MemberBiz{
+    public void dealOrder(Torder torder, Member member);
 
-    public void manageDessert(Dessert dessert);
+    public void addDessert(Dessert dessert);
+
+    public void deleteDessert(Dessert dessert);
+
+    public void updateDessert(Dessert dessert);
+
+    public Dessert getDessertById(int id);
+
+    public List getAllDesserts();
+
+    public List getAllWeeknums();
 
     public void manageWeekNum(Weeknum weeknum);
 }

@@ -2,6 +2,8 @@ package com.hqtc.model.dao;
 
 import com.hqtc.model.entity.Dessert;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: hqtc

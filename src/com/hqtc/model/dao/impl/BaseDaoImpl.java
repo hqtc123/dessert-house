@@ -50,6 +50,10 @@ public abstract class BaseDaoImpl<T extends Serializable> implements BaseDao<T> 
     public T findById(int id) {
         return (T) getSession().get(getPersistentClass(), id);
     }
+    @SuppressWarnings("unchecked")
+    public List<T> getAll() {
+        return getSession().createCriteria(getPersistentClass()).list();
+    }
 
     public Class<T> getPersistentClass() {
         return persistentClass;

@@ -1,9 +1,6 @@
 package com.hqtc.model.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -27,28 +24,27 @@ public class Weeknum implements Serializable {
         this.id = id;
     }
 
-    private int shopid;
+    private Shop shop;
+    private Dessert dessert;
 
-    @Column(name = "shopid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @Basic
-    public int getShopid() {
-        return shopid;
+    @ManyToOne
+    @JoinColumn(name = "shopid", nullable = false)
+    public Shop getShop() {
+        return shop;
     }
 
-    public void setShopid(int shopid) {
-        this.shopid = shopid;
+    public void setShop(Shop shop) {
+        this.shop = shop;
     }
 
-    private int dessertid;
-
-    @Column(name = "dessertid", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @Basic
-    public int getDessertid() {
-        return dessertid;
+    @ManyToOne
+    @JoinColumn(name = "dessertid", nullable = false)
+    public Dessert getDessert() {
+        return dessert;
     }
 
-    public void setDessertid(int dessertid) {
-        this.dessertid = dessertid;
+    public void setDessert(Dessert dessert) {
+        this.dessert = dessert;
     }
 
     private int num;
@@ -70,10 +66,8 @@ public class Weeknum implements Serializable {
 
         Weeknum weeknum = (Weeknum) o;
 
-        if (dessertid != weeknum.dessertid) return false;
         if (id != weeknum.id) return false;
         if (num != weeknum.num) return false;
-        if (shopid != weeknum.shopid) return false;
 
         return true;
     }
@@ -81,8 +75,6 @@ public class Weeknum implements Serializable {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + shopid;
-        result = 31 * result + dessertid;
         result = 31 * result + num;
         return result;
     }

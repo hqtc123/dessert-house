@@ -4,6 +4,8 @@ import com.hqtc.model.dao.DessertDao;
 import com.hqtc.model.entity.Dessert;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: hqtc
@@ -13,5 +15,4 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class DessertDaoImpl extends BaseDaoImpl<Dessert> implements DessertDao {
-
 }

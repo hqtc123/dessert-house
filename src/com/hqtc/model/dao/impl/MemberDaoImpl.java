@@ -28,18 +28,12 @@ public class MemberDaoImpl extends BaseDaoImpl<Member> implements MemberDao {
             if (member != null) {
                 criteria.add(Restrictions.like("account", member.getAccount(), MatchMode.EXACT));
                 criteria.add(Restrictions.like("password", member.getPassword(), MatchMode.EXACT));
-                criteria.add(Restrictions.like("position", member.getPosition(), MatchMode.EXACT));
                 list = criteria.list();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return list;
-    }
-
-    @Override
-    public List getAll() {
-        return getSession().createCriteria(Member.class).list();
     }
 
     @Override

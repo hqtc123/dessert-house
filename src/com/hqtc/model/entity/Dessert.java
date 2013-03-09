@@ -1,9 +1,8 @@
 package com.hqtc.model.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -48,6 +47,17 @@ public class Dessert implements Serializable {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    private Set<Weeknum> weeknums;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "shop")
+    public Set<Weeknum> getWeeknums() {
+        return weeknums;
+    }
+
+    public void setWeeknums(Set<Weeknum> weeknums) {
+        this.weeknums = weeknums;
     }
 
     @Override

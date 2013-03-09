@@ -37,11 +37,6 @@ public class CustomerDaoImpl extends BaseDaoImpl<Customer> implements CustomerDa
     }
 
     @Override
-    public List getAll() {
-        return getSession().createCriteria(Customer.class).list();
-    }
-
-    @Override
     public List accSearch(Customer customer) {
         List list = null;
         Session session = getSession();

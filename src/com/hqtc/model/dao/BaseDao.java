@@ -20,5 +20,7 @@ public interface BaseDao<T> {
 
     T findById(int i);
 
+    List<T> getAll();
+
     List<T> findByCriteria(Criterion... criterions);
 }

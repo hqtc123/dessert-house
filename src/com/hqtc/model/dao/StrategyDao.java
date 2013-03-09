@@ -12,7 +12,5 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface StrategyDao extends BaseDao<Strategy> {
-    public List getAll();
-
     public List getStrategyByScore(Strategy strategy);
 }

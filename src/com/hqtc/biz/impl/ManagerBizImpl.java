@@ -4,6 +4,7 @@ import com.hqtc.biz.ManagerBiz;
 import com.hqtc.model.entity.Card;
 import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Orderitem;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
@@ -14,7 +15,8 @@ import java.util.ArrayList;
  * Time: 下午4:14
  * To change this template use File | Settings | File Templates.
  */
-public class ManagerBizImpl implements ManagerBiz {
+@Service
+public class ManagerBizImpl extends MemberBizImpl implements ManagerBiz {
     @Override
     public ArrayList<Customer> viewCustomers() {
         return null;  //To change body of implemented methods use File | Settings | File Templates.

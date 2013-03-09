@@ -9,17 +9,39 @@
 
     <package name="interceptor" extends="struts-default">
         <interceptors>
-            <interceptor name="authority" class="com.hqtc.interceptor.AuthorityInterceptor">
-
+            <!--customer-->
+            <interceptor name="cusInterceptor" class="com.hqtc.interceptor.CustomerInterceptor">
             </interceptor>
-            <interceptor-stack name="myStack">
-                <interceptor-ref name="authority"></interceptor-ref>
+            <interceptor-stack name="myCusStack">
+                <interceptor-ref name="cusInterceptor"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+            <!--manager-->
+            <interceptor name="manInterceptor" class="com.hqtc.interceptor.ManagerInterception">
+            </interceptor>
+            <interceptor-stack name="myManStack">
+                <interceptor-ref name="manInterceptor"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+            <!--saler-->
+            <interceptor name="salInterceptor" class="com.hqtc.interceptor.SalerInterceptor">
+            </interceptor>
+            <interceptor-stack name="mySalStack">
+                <interceptor-ref name="salInterceptor"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+            <!--admin-->
+            <interceptor name="admInterceptor" class="com.hqtc.interceptor.AdminInterceptor">
+            </interceptor>
+            <interceptor-stack name="myAdmStack">
+                <interceptor-ref name="admInterceptor"></interceptor-ref>
                 <interceptor-ref name="defaultStack"></interceptor-ref>
             </interceptor-stack>
         </interceptors>
-        <default-interceptor-ref name="myStack"></default-interceptor-ref>
         <global-results>
-            <result name="login" type="redirect">/customer/login.jsp</result>
+            <result name="cusLogin" type="redirect">/customer/login.jsp</result>
+            <result name="memLogin" type="redirect">/member/login.jsp</result>
+            <result name="admLogin" type="redirect">/admin/login.jsp</result>
         </global-results>
     </package>
 </struts>

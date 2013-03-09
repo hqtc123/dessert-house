@@ -9,6 +9,8 @@ import com.hqtc.model.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: hqtc
@@ -17,7 +19,7 @@ import org.springframework.stereotype.Service;
  * To change this template use File | Settings | File Templates.
  */
 @Service
-public class SalerBizImpl implements SalerBiz {
+public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
     @Autowired
     private TorderDao torderDao;
     @Autowired
@@ -40,8 +42,33 @@ public class SalerBizImpl implements SalerBiz {
     }
 
     @Override
-    public void manageDessert(Dessert dessert) {
+    public void addDessert(Dessert dessert) {
+        dessertDao.save(dessert);
+    }
+
+    @Override
+    public void deleteDessert(Dessert dessert) {
+        dessertDao.delete(dessert);
+    }
+
+    @Override
+    public void updateDessert(Dessert dessert) {
         dessertDao.update(dessert);
+    }
+
+    @Override
+    public Dessert getDessertById(int id) {
+        return dessertDao.findById(id);
+    }
+
+    @Override
+    public List getAllDesserts() {
+        return dessertDao.getAll();
+    }
+
+    @Override
+    public List getAllWeeknums() {
+        return null;  //todo
     }
 
     @Override

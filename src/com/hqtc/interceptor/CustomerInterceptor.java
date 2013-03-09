@@ -14,8 +14,8 @@ import java.util.Map;
  * Time: 上午8:25
  * To change this template use File | Settings | File Templates.
  */
-public class AuthorityInterceptor extends AbstractInterceptor {
-    public AuthorityInterceptor() {
+public class CustomerInterceptor extends AbstractInterceptor {
+    public CustomerInterceptor() {
         super();    //To change body of overridden methods use File | Settings | File Templates.
     }
 

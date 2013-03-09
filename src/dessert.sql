@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50513
 File Encoding         : 65001
 
-Date: 2013-03-08 22:00:46
+Date: 2013-03-09 21:59:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -66,11 +66,14 @@ CREATE TABLE `dessert` (
   `name` varchar(255) NOT NULL,
   `price` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dessert
 -- ----------------------------
+INSERT INTO `dessert` VALUES ('1', 'des1', '12');
+INSERT INTO `dessert` VALUES ('3', 'des5', '8.8');
+INSERT INTO `dessert` VALUES ('4', 'sde', '9');
 
 -- ----------------------------
 -- Table structure for `member`
@@ -80,17 +83,25 @@ CREATE TABLE `member` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `account` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `position` int(11) NOT NULL,
+  `position` varchar(11) NOT NULL,
   `shopid` int(11) NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `account` (`account`),
   KEY `shopid` (`shopid`),
   CONSTRAINT `shopid` FOREIGN KEY (`shopid`) REFERENCES `shop` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of member
 -- ----------------------------
-INSERT INTO `member` VALUES ('1', 'admin', '21232f297a57a5a743894a0e4a801fc3', '0', '1');
+INSERT INTO `member` VALUES ('1', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', '1');
+INSERT INTO `member` VALUES ('9', '张启超', '0032dc72c84d29479f930b60c7c59bb9', 'saler', '3');
+INSERT INTO `member` VALUES ('10', 'meng', '70110c42465beafda6c139ba93fe1eca', 'manager', '1');
+INSERT INTO `member` VALUES ('11', 'wuhu', '768b6950f7c4deafd927c4e67d57d263', 'manager', '2');
+INSERT INTO `member` VALUES ('12', 'yanxin', 'dcfb7b61fc0da2ef7deb549fde4467cd', 'saler', '1');
+INSERT INTO `member` VALUES ('13', 'haoson', 'ec0e130033724bf07c307e1228e949e0', 'manager', '3');
+INSERT INTO `member` VALUES ('14', 'hqtc', '24f381e3278b092bd004acc1b1a0d0bd', 'manager', '1');
+INSERT INTO `member` VALUES ('15', 'aaa', '47bce5c74f589f4867dbd57e9ca9f808', 'saler', '2');
 
 -- ----------------------------
 -- Table structure for `orderitem`
@@ -133,12 +144,14 @@ DROP TABLE IF EXISTS `shop`;
 CREATE TABLE `shop` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of shop
 -- ----------------------------
 INSERT INTO `shop` VALUES ('1');
+INSERT INTO `shop` VALUES ('2');
+INSERT INTO `shop` VALUES ('3');
 
 -- ----------------------------
 -- Table structure for `strategy`
@@ -149,11 +162,15 @@ CREATE TABLE `strategy` (
   `score` int(11) NOT NULL,
   `discount` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of strategy
 -- ----------------------------
+INSERT INTO `strategy` VALUES ('1', '1000', '0.9');
+INSERT INTO `strategy` VALUES ('2', '2000', '0.85');
+INSERT INTO `strategy` VALUES ('3', '3000', '0.8');
+INSERT INTO `strategy` VALUES ('4', '3500', '0.7');
 
 -- ----------------------------
 -- Table structure for `torder`
@@ -190,7 +207,11 @@ CREATE TABLE `weeknum` (
   `dessertid` int(11) NOT NULL,
   `num` int(11) NOT NULL,
   `weekday` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `shop` (`shopid`),
+  KEY `dessert` (`dessertid`),
+  CONSTRAINT `dessert` FOREIGN KEY (`dessertid`) REFERENCES `dessert` (`id`),
+  CONSTRAINT `shop` FOREIGN KEY (`shopid`) REFERENCES `shop` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------

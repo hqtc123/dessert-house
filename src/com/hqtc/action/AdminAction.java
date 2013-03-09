@@ -31,7 +31,7 @@ import java.util.Map;
 @ParentPackage("struts-default")
 public class AdminAction extends ActionSupport implements RequestAware, SessionAware {
     @Autowired
-    AdminBiz adminBiz;
+    private AdminBiz adminBiz;
     Member member;
 
     List<Member> members = new ArrayList<Member>();
@@ -65,13 +65,15 @@ public class AdminAction extends ActionSupport implements RequestAware, SessionA
     @Action(value = "loginAction", results = {@Result(name = "success", type = "redirect", location = "/admin/viewMemAndStr.action"),
             @Result(name = "input", type = "redirect", location = "/customer/login.jsp")})
     public String login() {
-        member.setPosition("admin");
         Member admin = adminBiz.getAdminByAccPass(member);
         if (admin == null) {
             addFieldError("member.account", "登录失败、请检查您的账号和密码");
             return ActionSupport.INPUT;
         }
-
+        if (!admin.getPosition().equals("admin")) {
+            addFieldError("member.account", "登录失败、您不具有管理员权限");
+            return ActionSupport.INPUT;
+        }
         session.put("admin", admin);
         return ActionSupport.SUCCESS;
     }

@@ -19,10 +19,6 @@ import java.util.List;
  */
 @Repository
 public class StrategyDaoImpl extends BaseDaoImpl<Strategy> implements StrategyDao {
-    @Override
-    public List getAll() {
-        return getSession().createCriteria(Strategy.class).list();
-    }
 
     @Override
     public List getStrategyByScore(Strategy strategy) {
