@@ -27,6 +27,9 @@ public class AdminBizImpl implements AdminBiz {
 
     @Override
     public void addMember(Member member) {
+        String oldPass = member.getPassword();
+        String newPass = MyMD5.encryption(oldPass);
+        member.setPassword(newPass);
         memberDao.save(member);
     }
 
@@ -46,9 +49,10 @@ public class AdminBizImpl implements AdminBiz {
     }
 
     @Override
-    public void updateStrategy(Strategy strategy) {
-        strategyDao.update(strategy);
+    public void deleteStrategy(Strategy strategy) {
+        strategyDao.delete(strategy);
     }
+
 
     @Override
     public Member getAdminByAccPass(Member member) {
@@ -59,6 +63,43 @@ public class AdminBizImpl implements AdminBiz {
         if (list.size() > 0) {
             return (Member) list.get(0);
         }
+        return null;
+    }
+
+    @Override
+    public Member getMemberByAcc(Member member) {
+        List list = memberDao.accSearch(member);
+        if (list.size() > 0) {
+            return (Member) list.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public List getAllMembers() {
+        return memberDao.getAll();
+    }
+
+    @Override
+    public List getAllStrategies() {
+        return strategyDao.getAll();
+    }
+
+    @Override
+    public Member getMemberById(int id) {
+        return memberDao.findById(id);
+    }
+
+    @Override
+    public Strategy getStrategyById(int id) {
+        return strategyDao.findById(id);
+    }
+
+    @Override
+    public Strategy getStrategyByScore(Strategy strategy) {
+        List list = strategyDao.getStrategyByScore(strategy);
+        if (list.size() > 0)
+            return (Strategy) list.get(0);
         return null;
     }
 }

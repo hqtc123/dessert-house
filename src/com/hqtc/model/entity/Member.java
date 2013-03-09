@@ -48,15 +48,15 @@ public class Member implements Serializable {
         this.password = password;
     }
 
-    private int position;
+    private String position;
 
     @javax.persistence.Column(name = "position", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
     @Basic
-    public int getPosition() {
+    public String getPosition() {
         return position;
     }
 
-    public void setPosition(int position) {
+    public void setPosition(String position) {
         this.position = position;
     }
 
@@ -93,7 +93,6 @@ public class Member implements Serializable {
         int result = id;
         result = 31 * result + (account != null ? account.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + position;
         return result;
     }
 }

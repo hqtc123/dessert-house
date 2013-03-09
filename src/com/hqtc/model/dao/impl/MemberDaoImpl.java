@@ -18,7 +18,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Repository
-public class MemberDaoImpl extends BaseDaoImpl<Member> implements MemberDao{
+public class MemberDaoImpl extends BaseDaoImpl<Member> implements MemberDao {
     @Override
     public List accPassSearch(Member member) {
         List list = null;
@@ -28,7 +28,28 @@ public class MemberDaoImpl extends BaseDaoImpl<Member> implements MemberDao{
             if (member != null) {
                 criteria.add(Restrictions.like("account", member.getAccount(), MatchMode.EXACT));
                 criteria.add(Restrictions.like("password", member.getPassword(), MatchMode.EXACT));
-                criteria.add(Restrictions.eq("position",0));
+                criteria.add(Restrictions.like("position", member.getPosition(), MatchMode.EXACT));
+                list = criteria.list();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    @Override
+    public List getAll() {
+        return getSession().createCriteria(Member.class).list();
+    }
+
+    @Override
+    public List accSearch(Member member) {
+        List list = null;
+        Session session = getSession();
+        Criteria criteria = session.createCriteria(Member.class);
+        try {
+            if (member != null) {
+                criteria.add(Restrictions.like("account", member.getAccount(), MatchMode.EXACT));
                 list = criteria.list();
             }
         } catch (Exception e) {

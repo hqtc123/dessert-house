@@ -47,7 +47,7 @@
     <div id="boxArea2">
         <h3>快速登录</h3>
         <s:form id="login_form" action="loginAction" method="POST">
-            <s:textfield required="true" id="accountField" label="账户名" cssClass="textField"
+            <s:textfield required="true" id="accountField" label="账户名" cssClass="input-large"
                          name="customer.account"></s:textfield>
 
             <s:password required="true" id="passwordField" cssClass="input-large" name="customer.password"

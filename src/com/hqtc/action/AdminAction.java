@@ -4,6 +4,7 @@ import com.hqtc.biz.AdminBiz;
 import com.hqtc.biz.CustomerBiz;
 import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Member;
+import com.hqtc.model.entity.Strategy;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
@@ -31,14 +32,22 @@ import java.util.Map;
 public class AdminAction extends ActionSupport implements RequestAware, SessionAware {
     @Autowired
     AdminBiz adminBiz;
-    @Autowired
-    CustomerBiz customerBiz;
     Member member;
 
-    List<Customer> customers = new ArrayList<Customer>();
+    List<Member> members = new ArrayList<Member>();
 
-    public List<Customer> getCustomers() {
-        return customers;
+    public List<Strategy> getStrategies() {
+        return strategies;
+    }
+
+    public void setStrategies(List<Strategy> strategies) {
+        this.strategies = strategies;
+    }
+
+    List<Strategy> strategies = new ArrayList<Strategy>();
+
+    public List<Member> getMembers() {
+        return members;
     }
 
     public Member getMember() {
@@ -53,18 +62,27 @@ public class AdminAction extends ActionSupport implements RequestAware, SessionA
     Map<String, Object> session;
 
     @SuppressWarnings("unchecked")
-    @Action(value = "loginAction", results = {@Result(type = "redirect", name = "success", location = "/admin/main.jsp"),
-            @Result(name = "input", location = "/customer/login.jsp")})
+    @Action(value = "loginAction", results = {@Result(name = "success", type = "redirect", location = "/admin/viewMemAndStr.action"),
+            @Result(name = "input", type = "redirect", location = "/customer/login.jsp")})
     public String login() {
+        member.setPosition("admin");
         Member admin = adminBiz.getAdminByAccPass(member);
         if (admin == null) {
-            addFieldError("customer.account", "登录失败、请检查您的账号和密码");
+            addFieldError("member.account", "登录失败、请检查您的账号和密码");
             return ActionSupport.INPUT;
         }
-        customers = customerBiz.getAll();
 
         session.put("admin", admin);
         return ActionSupport.SUCCESS;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Action(value = "viewMemAndStr", results = {@Result(name = SUCCESS, location = "/admin/main.jsp")})
+    public String viewMemAndStr() {
+        members = adminBiz.getAllMembers();
+        members.remove(0);
+        strategies = adminBiz.getAllStrategies();
+        return SUCCESS;
     }
 
     @Override

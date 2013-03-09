@@ -26,6 +26,9 @@
 
             <div class="nav-collapse collapse">
                 <ul class="nav">
+                    <li class="active">
+                        <a href="#">系统管理员</a>
+                    </li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -38,11 +41,11 @@
         <div class="span3">
             <div class="well sidebar-nav">
                 <ul class="nav nav-list">
-                    <li class="nav-header">分店查询</li>
-                    <li class="active">
+                    <li class="nav-header">选项</li>
+                    <li id="mem-menu">
                         <a href="#">管理员工</a>
                     </li>
-                    <li>
+                    <li id="strategy-menu">
                         <a href="#">制定优惠策略</a>
                     </li>
                 </ul>
@@ -52,60 +55,89 @@
         <!--/span-->
         <div class="span9">
             <div class="hero-unit">
-                <table class="table">
+                <table class="table" id="man-mem-table">
                     <tbody>
                     <tr>
                         <th>员工号</th>
                         <th>账户</th>
+                        <th>职位</th>
                         <th>店铺号</th>
                         <th></th>
-
+                        <th></th>
                     </tr>
-                    <S:iterator value="customers">
-                        <s:property></s:property>
+                    <S:iterator value="members">
+                        <tr>
+                            <td><S:property value="id"></S:property></td>
+                            <td><S:property value="account"></S:property></td>
+                            <td><S:property value="position"></S:property></td>
+                            <td><S:property value="shop.id"></S:property></td>
+                            <td>
+                                <button class="btn change-mem">修改</button>
+                            </td>
+                            <td>
+                                <button class="btn delete-mem">删除</button>
+                            </td>
+                        </tr>
                     </S:iterator>
-                    <tr>
-                        <td>row 1,col 1</td>
-                        <td>row 1,col 2</td>
-                        <td>row 1,col 3</td>
+                    <tr id="add-mem-tr">
+                        <td></td>
+                        <td><input class="input-mini" id="add-acc"></td>
+                        <td><input class="input-mini" id="add-pos"></td>
+                        <td><input class="input-mini" id="add-shop-id"></td>
                         <td>
-                            <button class="btn">修改</button>
+                            <button class="btn" id="add-sure">添加</button>
+                            <button class="btn" id="add-cancel">取消</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>row 2,col 1</td>
-                        <td>row 2,col 2</td>
-                        <td>row 2,col 3</td>
+                    <tr id="add-btn-tr">
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td>
-                            <button class="btn">修改</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>row 3,col 1</td>
-                        <td>row 3,col 2</td>
-                        <td>row 3,col 3</td>
-                        <td>
-                            <button class="btn">修改</button>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td>row 3,col 1</td>
-                        <td>row 3,col 2</td>
-                        <td>row 3,col 3</td>
-                        <td>
-                            <button class="btn">修改</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>row 3,col 1</td>
-                        <td>row 3,col 2</td>
-                        <td>row 3,col 3</td>
-                        <td>
-                            <button class="btn">修改</button>
+                            <button id="add-mem-btn" class="btn">添加员工</button>
                         </td>
                     </tr>
                     </tbody>
+
+                </table>
+                <table class="table" id="man-strategy-table">
+                    <tbody>
+                    <tr>
+                        <th>策略号</th>
+                        <th>积分</th>
+                        <th>折扣</th>
+                        <th></th>
+                    </tr>
+                    <S:iterator value="strategies">
+                        <tr>
+                            <td><S:property value="id"></S:property></td>
+                            <td><S:property value="score"></S:property></td>
+                            <td><S:property value="discount"></S:property></td>
+                            <td>
+                                <button class="btn delete-strategy-mem">删除</button>
+                            </td>
+                        </tr>
+                    </S:iterator>
+                    <tr id="add-strategy-tr">
+                        <td></td>
+                        <td><input class="input-mini" id="add-sco"></td>
+                        <td><input class="input-mini" id="add-dis"></td>
+                        <td>
+                            <button class="btn" id="add-strategy-sure">添加</button>
+                            <button class="btn" id="add-strategy-cancel">取消</button>
+                        </td>
+                    </tr>
+                    <tr id="add-btn-strategy">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button id="add-strategy-btn" class="btn">添加策略</button>
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
                 </table>
             </div>
         </div>

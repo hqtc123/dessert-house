@@ -38,11 +38,11 @@
     <div id="boxArea2">
         <h3>快速登录</h3>
         <s:form id="login_form" action="loginAction" method="POST">
-            <s:textfield required="true"  label="账户名" cssClass="textField"
-                         name="member.account"></s:textfield>
+            <s:textfield required="true" label="账户名" cssClass="input-large"
+                         name="member.account" value="admin"></s:textfield>
 
-            <s:password required="true"  cssClass="input-large" name="member.password"
-                        label="密 码"></s:password>
+            <s:password required="true" cssClass="input-large" name="member.password"
+                        label="密 码" value="admin"></s:password>
             <br>
             <s:submit cssClass="btn" type="button" value="登录"/>
         </s:form>

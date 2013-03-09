@@ -3,6 +3,8 @@ package com.hqtc.biz;
 import com.hqtc.model.entity.Member;
 import com.hqtc.model.entity.Strategy;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: hqtc
@@ -19,7 +21,19 @@ public interface AdminBiz {
 
     public void addStrategy(Strategy strategy);
 
-    public void updateStrategy(Strategy strategy);
+    public void deleteStrategy(Strategy strategy);
 
     public Member getAdminByAccPass(Member member);
+
+    public Member getMemberByAcc(Member member);
+
+    public List getAllMembers();
+
+    public List getAllStrategies();
+
+    public Member getMemberById(int id);
+
+    public Strategy getStrategyById(int id);
+
+    public Strategy getStrategyByScore(Strategy strategy);
 }

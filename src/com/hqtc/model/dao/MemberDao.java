@@ -13,4 +13,8 @@ import java.util.List;
  */
 public interface MemberDao extends BaseDao<Member> {
     public List accPassSearch(Member member);
+
+    public List getAll();
+
+    public List accSearch(Member member);
 }
