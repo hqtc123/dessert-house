@@ -76,7 +76,8 @@ public class Torder implements Serializable {
     }
 
     private Set<Orderitem> orderitems;
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "torder")
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "torder")
     public Set<Orderitem> getOrderitems() {
         return orderitems;
     }
@@ -109,29 +110,5 @@ public class Torder implements Serializable {
         result = 31 * result + customerid;
         result = 31 * result + (money != +0.0f ? Float.floatToIntBits(money) : 0);
         return result;
-    }
-
-    private Date date;
-
-    @Column(name = "date", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @Basic
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    private float realmoney;
-
-    @Column(name = "realmoney", nullable = false, insertable = true, updatable = true, length = 12, precision = 0)
-    @Basic
-    public float getRealmoney() {
-        return realmoney;
-    }
-
-    public void setRealmoney(float realmoney) {
-        this.realmoney = realmoney;
     }
 }

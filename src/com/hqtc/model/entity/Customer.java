@@ -96,17 +96,6 @@ public class Customer implements Serializable {
         this.score = score;
     }
 
-    private Card card;
-
-    @OneToOne(fetch = FetchType.LAZY,mappedBy = "customer",cascade = CascadeType.ALL)
-    public Card getCard() {
-        return card;
-    }
-
-    public void setCard(Card card) {
-        this.card = card;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

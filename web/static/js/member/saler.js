@@ -76,7 +76,7 @@ $(function () {
 
     $(document).on("click", "#cha-dessert-sure", function () {
         name = $("#cha-name").val();
-        price = $("#cha-priced").val();
+        price = $("#cha-price").val();
         if (name == "" || price == "") {
             alert("请输入完整的信息");
             return false;

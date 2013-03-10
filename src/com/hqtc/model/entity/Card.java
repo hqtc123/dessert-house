@@ -26,19 +26,6 @@ public class Card implements Serializable {
         this.id = id;
     }
 
-    private String cardId;
-
-    @javax.persistence.Column(name = "cardId", nullable = false, insertable = true, updatable = true, length = 255, precision = 0)
-    @Basic
-    public String getCardId() {
-        return cardId;
-    }
-
-    public void setCardId(String cardId) {
-        this.cardId = cardId;
-    }
-
-
     private int state;
 
     @javax.persistence.Column(name = "state", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
@@ -75,15 +62,15 @@ public class Card implements Serializable {
         this.money = money;
     }
 
-    private Customer customer;
-    @OneToOne(fetch = FetchType.EAGER)
-    @PrimaryKeyJoinColumn
-    public Customer getCustomer() {
-        return customer;
+    private int customerid;
+    @javax.persistence.Column(name = "customerid", nullable = false, insertable = true, updatable = true, length = 11, precision = 0)
+    @Basic
+    public int getCustomerid() {
+        return customerid;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerid(int customerid) {
+        this.customerid = customerid;
     }
 
     @Override
@@ -96,16 +83,13 @@ public class Card implements Serializable {
         if (id != card.id) return false;
         if (Float.compare(card.money, money) != 0) return false;
         if (state != card.state) return false;
-        if (cardId != null ? !cardId.equals(card.cardId) : card.cardId != null) return false;
         if (lastTme != null ? !lastTme.equals(card.lastTme) : card.lastTme != null) return false;
-
         return true;
     }
 
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (cardId != null ? cardId.hashCode() : 0);
         result = 31 * result + state;
         result = 31 * result + (lastTme != null ? lastTme.hashCode() : 0);
         result = 31 * result + (money != +0.0f ? Float.floatToIntBits(money) : 0);

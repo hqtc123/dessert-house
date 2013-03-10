@@ -27,10 +27,10 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li>
-                        <a href="main.jsp">首页</a>
+                        <a href="customerIndex.action">首页</a>
                     </li>
                     <li>
-                        <a href="#">购物车</a>
+                        <a href="viewCart.action">购物车</a>
                     </li>
                     <li>
                         <a class="active" href="#">个人资料</a>
@@ -77,12 +77,40 @@
                         <td><label>地址:</label></td>
                         <td><s:property value="customer.address"></s:property></td>
                         <td>
-                            <button class="btn cha-add">修改</button>
+                            <button class="btn cha-addr">修改</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mem-label">会员卡状态:</label></td>
+                        <td><s:if test="card.state==0">未激活</s:if><s:else>已激活</s:else></td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mem-label">会员卡余额:</label></td>
+                        <td><s:property value="card.money"></s:property></td>
+                        <td>
+                            <button class="btn cha-money">充值</button>
                         </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+    <%--modal--%>
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">充值</h3>
+        </div>
+        <div class="modal-body">
+            <input class="input-medium" id="modal-input">
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            <button class="btn btn-primary btn-re-primary">确认</button>
         </div>
     </div>
 </div>

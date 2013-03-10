@@ -1,7 +1,9 @@
 package com.hqtc.action;
 
 import com.hqtc.biz.CustomerBiz;
-import com.hqtc.model.entity.Customer;
+import com.hqtc.model.entity.*;
+import com.hqtc.util.SuperItem;
+import com.hqtc.util.SuperWeeknum;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.*;
 import org.apache.struts2.interceptor.RequestAware;
@@ -9,7 +11,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Map;
+import java.util.*;
 
 /**
  * `
@@ -20,17 +22,84 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 @Component
-@ParentPackage("muinterceptor")
+@ParentPackage("myinterceptor")
 @Namespace("/customer")
 public class CustomerAction extends ActionSupport implements RequestAware, SessionAware {
     Map<String, Object> request;
     Map<String, Object> session;
 
     @Autowired
-    CustomerBiz customerBiz;
+    private CustomerBiz customerBiz;
     private Customer customer;
     private String resultMsg;
     private String rePassword;
+    private Card card;
+    private Torder torder;
+    private float moneySum;
+
+    public float getMoneySum() {
+        return moneySum;
+    }
+
+    public void setMoneySum(float moneySum) {
+        this.moneySum = moneySum;
+    }
+
+    public Torder getTorder() {
+        return torder;
+    }
+
+    public void setTorder(Torder torder) {
+        this.torder = torder;
+    }
+
+    private Torder order;
+    private List<Orderitem> orderitems = new ArrayList<Orderitem>();
+
+    public List<Orderitem> getOrderitems() {
+        return orderitems;
+    }
+
+    public void setOrderitems(List<Orderitem> orderitems) {
+        this.orderitems = orderitems;
+    }
+
+    public Torder getOrder() {
+        return order;
+    }
+
+    public void setOrder(Torder order) {
+        this.order = order;
+    }
+
+    private List<SuperWeeknum> super1 = new ArrayList<SuperWeeknum>();
+    private List<SuperWeeknum> super2 = new ArrayList<SuperWeeknum>();
+
+    private List<SuperItem> superItems = new ArrayList<SuperItem>();
+
+    public List<SuperWeeknum> getSuper1() {
+        return super1;
+    }
+
+    public void setSuper1(List<SuperWeeknum> super1) {
+        this.super1 = super1;
+    }
+
+    public List<SuperWeeknum> getSuper2() {
+        return super2;
+    }
+
+    public void setSuper2(List<SuperWeeknum> super2) {
+        this.super2 = super2;
+    }
+
+    public Card getCard() {
+        return card;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
+    }
 
     public String getRePassword() {
         return rePassword;
@@ -51,6 +120,14 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
 
     public Customer getCustomer() {
         return customer;
+    }
+
+    public List<SuperItem> getSuperItems() {
+        return superItems;
+    }
+
+    public void setSuperItems(List<SuperItem> superItems) {
+        this.superItems = superItems;
     }
 
     public void setCustomer(Customer customer) {
@@ -80,7 +157,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "loginAction", results = {@Result(type = "redirect", name = "success", location = "/customer/main.jsp"),
+    @Action(value = "loginAction", results = {@Result(type = "redirect", name = "success", location = "/customer/customerIndex.action"),
             @Result(name = "input", location = "/customer/login.jsp")})
     public String login() {
         Customer customer1 = customerBiz.getCustomerByAccPass(customer);
@@ -106,7 +183,45 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
     @Action(interceptorRefs = {@InterceptorRef("myCusStack")}, value = "getInfoAction", results = {@Result(name = "success", location = "/customer/info.jsp")})
     public String getInfo() {
         customer = (Customer) session.get("customer");
+        card = customerBiz.getCardByCustomerId(customer);
         return ActionSupport.SUCCESS;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Action(interceptorRefs = {@InterceptorRef("myCusStack")}, value = "customerIndex", results = {@Result(name = "success", location = "/customer/main.jsp")})
+    public String customerIndex() {
+        Calendar cal = Calendar.getInstance();
+//        int weekday = cal.get(Calendar.DAY_OF_WEEK) - 1;  //todo
+        int weekday = 1;
+        ArrayList<Weeknum> list1 = (ArrayList) customerBiz.findWeekDesserts(1, weekday);
+        ArrayList<Weeknum> list2 = (ArrayList) customerBiz.findWeekDesserts(2, weekday);
+        for (int i = 0; i < list1.size(); i++) {
+            super1.add(new SuperWeeknum(list1.get(i), customerBiz.getDessertByWeekNum(list1.get(i)).getPrice()));
+        }
+        for (int i = 0; i < list2.size(); i++) {
+            super1.add(new SuperWeeknum(list2.get(i), customerBiz.getDessertByWeekNum(list2.get(i)).getPrice()));
+        }
+        return SUCCESS;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Action(interceptorRefs = {@InterceptorRef("myCusStack")}, value = "viewCart", results = {@Result(name = "success", location = "/customer/cart.jsp")})
+    public String viewCart() {
+        if (session.get("items") != null) {
+            orderitems = (List<Orderitem>) session.get("items");
+            for (int i = 0; i < orderitems.size(); i++) {
+                superItems.add(new SuperItem(customerBiz.getDessertById(orderitems.get(i).getDessertid()),
+                        orderitems.get(i)));
+            }
+            moneySum = 0;
+            for (int i = 0; i < superItems.size(); i++) {
+                moneySum += superItems.get(i).getDessert().getPrice() * superItems.get(i).getOrderitem().getNum();
+            }
+            return SUCCESS;
+        } else {
+            setResultMsg("购物车中没有甜品");
+            return SUCCESS;
+        }
     }
 
     @Override

@@ -12,5 +12,5 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface WeeknumDao extends BaseDao<Weeknum> {
-    List<Weeknum> getWeekNumByShopDay(Weeknum weeknum1);
+    public List<Weeknum> getWeekNumByShopDay(Weeknum weeknum1);
 }

@@ -1,13 +1,9 @@
 package com.hqtc.biz.impl;
 
 import com.hqtc.biz.CustomerBiz;
-import com.hqtc.model.dao.CardDao;
-import com.hqtc.model.dao.TorderDao;
-import com.hqtc.model.entity.Card;
-import com.hqtc.model.entity.Torder;
+import com.hqtc.model.dao.*;
+import com.hqtc.model.entity.*;
 import com.hqtc.util.MyMD5;
-import com.hqtc.model.dao.CustomerDao;
-import com.hqtc.model.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +24,12 @@ public class CustomerBizImpl implements CustomerBiz {
     private CardDao cardDao;
     @Autowired
     private TorderDao torderDao;
+    @Autowired
+    private WeeknumDao weeknumDao;
+    @Autowired
+    private DessertDao dessertDao;
+    @Autowired
+    private OrderitemDao orderitemDao;
 
     public void setCustomerDao(CustomerDao customerDao) {
         this.customerDao = customerDao;
@@ -64,8 +66,7 @@ public class CustomerBizImpl implements CustomerBiz {
     }
 
     @Override
-    public void recharge(Customer customer, int money) {
-        Card card = customer.getCard();
+    public void recharge(Card card, int money) {
         float oldMoney = card.getMoney();
         float newMoney = oldMoney + money;
         card.setMoney(newMoney);
@@ -83,12 +84,57 @@ public class CustomerBizImpl implements CustomerBiz {
     }
 
     @Override
-    public void cancelOrder(Torder torder) {
-        torderDao.delete(torder);
+    public List getAll() {
+        return customerDao.getAll();
     }
 
     @Override
-    public List getAll() {
-        return customerDao.getAll();
+    public Card getCardByCustomerId(Customer customer) {
+        return cardDao.findByCustomerId(customer.getId());
+    }
+
+    @Override
+    public void activeCard(Card card) {
+        card.setState(1);
+        cardDao.update(card);
+    }
+
+    @Override
+    public List findWeekDesserts(int shopid, int weekday) {
+        Weeknum weeknum = new Weeknum();
+        weeknum.setShopid(shopid);
+        weeknum.setWeekday(weekday);
+        return weeknumDao.getWeekNumByShopDay(weeknum);
+    }
+
+    @Override
+    public Dessert getDessertByWeekNum(Weeknum weeknum) {
+        int dessertid = weeknum.getDessertid();
+        return dessertDao.findById(dessertid);
+    }
+
+    @Override
+    public Dessert getDessertById(int dessertid) {
+        return dessertDao.findById(dessertid);
+    }
+
+    @Override
+    public Weeknum getWeeknumById(int id) {
+        return weeknumDao.findById(id);
+    }
+
+    @Override
+    public void updateWeeknum(Weeknum weeknum1) {
+        weeknumDao.update(weeknum1);
+    }
+
+    @Override
+    public void saveOrderitem(Orderitem orderitem) {
+        orderitemDao.save(orderitem);
+    }
+
+    @Override
+    public void updateCard(Card card) {
+        cardDao.update(card);
     }
 }

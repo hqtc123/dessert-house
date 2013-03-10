@@ -34,7 +34,7 @@ public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
         torder.setSalerid(member.getId());
         Customer customer = customerDao.findById(torder.getCustomerid());
         int oldScore = customer.getScore();
-        int newScore = oldScore + (int) torder.getRealmoney();
+        int newScore = oldScore + (int) torder.getMoney();
         customer.setScore(newScore);
 
         torderDao.update(torder);
@@ -85,6 +85,4 @@ public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
     public void addWeeknum(Weeknum weeknum) {
         weeknumDao.save(weeknum);
     }
-
-
 }

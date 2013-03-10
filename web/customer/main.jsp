@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: hqtc
@@ -28,7 +29,7 @@
                         <a href="main.jsp">首页</a>
                     </li>
                     <li>
-                        <a href="#">购物车</a>
+                        <a href="viewCart.action">购物车</a>
                     </li>
                     <li>
                         <a href="getInfoAction.action">个人资料</a>
@@ -50,15 +51,13 @@
             <div class="well sidebar-nav">
                 <ul class="nav nav-list">
                     <li class="nav-header">分店查询</li>
-                    <li class="active">
+                    <li id="shop-menu1" class="active">
                         <a href="#">店铺一</a>
                     </li>
                     <li>
-                        <a href="#">店铺二</a>
+                        <a id="shop-menu2" href="#">店铺二</a>
                     </li>
-                    <li>
-                        <a href="#">店铺三</a>
-                    </li>
+
                 </ul>
             </div>
             <!--/.well -->
@@ -69,57 +68,43 @@
                 <table class="table">
                     <tbody>
                     <tr>
+                        <th></th>
+                        <th>甜品ID</th>
                         <th>甜品名称</th>
                         <th>单价</th>
-                        <th>剩余数量</th>
+                        <th>今天剩余数量</th>
                         <th></th>
                     </tr>
+                    <s:iterator value="super1">
                     <tr>
-                        <td>row 1,col 1</td>
-                        <td>row 1,col 2</td>
-                        <td>row 1,col 3</td>
+                        <td><label class="hide-id"><s:property value="weeknum.id"></s:property></label></td>
+                        <td><s:property value="weeknum.dessertid"></s:property></td>
+                        <td><s:property value="weeknum.dessertname"></s:property></td>
+                        <td><s:property value="dessertPrice"></s:property></td>
+                        <td><s:property value="weeknum.num"></s:property></td>
                         <td>
-                            <button class="btn">购买</button>
+                            <button class="btn buy-btn">购买</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>row 2,col 1</td>
-                        <td>row 2,col 2</td>
-                        <td>row 2,col 3</td>
-                        <td>
-                            <button class="btn">购买</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>row 3,col 1</td>
-                        <td>row 3,col 2</td>
-                        <td>row 3,col 3</td>
-                        <td>
-                            <button class="btn">购买</button>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td>row 3,col 1</td>
-                        <td>row 3,col 2</td>
-                        <td>row 3,col 3</td>
-                        <td>
-                            <button class="btn">购买</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>row 3,col 1</td>
-                        <td>row 3,col 2</td>
-                        <td>row 3,col 3</td>
-                        <td>
-                            <button class="btn">购买</button>
-                        </td>
-                    </tr>
-                    </tbody>
+                    </s:iterator>
                 </table>
             </div>
         </div>
         <!--/span-->
+        <div id="my-main-Modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">输入购买数量</h3>
+            </div>
+            <div class="modal-body">
+                <input class="input-medium" id="modal-input">
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                <button class="btn btn-main-primary btn-primary">确认</button>
+            </div>
+        </div>
     </div>
     <hr>
     <footer>

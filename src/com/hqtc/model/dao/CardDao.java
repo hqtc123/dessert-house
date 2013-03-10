@@ -10,5 +10,5 @@ import com.hqtc.model.entity.Card;
  * To change this template use File | Settings | File Templates.
  */
 public interface CardDao extends BaseDao<Card> {
-
+    public Card findByCustomerId(int id);
 }
