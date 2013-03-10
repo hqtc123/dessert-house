@@ -3,6 +3,7 @@ package com.hqtc.model.dao.impl;
 import com.hqtc.model.dao.WeeknumDao;
 import com.hqtc.model.entity.Weeknum;
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
@@ -19,7 +20,7 @@ import java.util.List;
  */
 @Repository
 public class WeeknumDaoImpl extends BaseDaoImpl<Weeknum> implements WeeknumDao {
-
+    @SuppressWarnings("unchecked")
     @Override
     public List getWeekNumByShopDay(Weeknum weeknum) {
         List list = null;
@@ -27,7 +28,7 @@ public class WeeknumDaoImpl extends BaseDaoImpl<Weeknum> implements WeeknumDao {
         Criteria criteria = session.createCriteria(Weeknum.class);
         try {
             if (weeknum != null) {
-                criteria.add(Restrictions.eq("shopid", weeknum.getShop().getId()));
+                criteria.add(Restrictions.eq("shopid", weeknum.getShopid()));
                 criteria.add(Restrictions.eq("weekday", weeknum.getWeekday()));
                 list = criteria.list();
             }

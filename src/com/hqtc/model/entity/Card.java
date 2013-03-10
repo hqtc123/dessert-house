@@ -76,7 +76,7 @@ public class Card implements Serializable {
     }
 
     private Customer customer;
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @PrimaryKeyJoinColumn
     public Customer getCustomer() {
         return customer;

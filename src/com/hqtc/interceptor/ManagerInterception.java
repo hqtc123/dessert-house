@@ -24,11 +24,11 @@ public class ManagerInterception extends AbstractInterceptor {
             ActionContext ac = actionInvocation.getInvocationContext();
             Map session = (Map)ac.get(ServletActionContext.SESSION);
             if(session==null){
-                return "manLogin";
+                return "memLogin";
             }else{
                 Object manager=session.get("manager");
                 if(manager==null){
-                    return "manLogin";
+                    return "memLogin";
                 }else{
                     return actionInvocation.invoke();
                 }

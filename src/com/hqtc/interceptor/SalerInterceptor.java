@@ -24,11 +24,11 @@ public class SalerInterceptor extends AbstractInterceptor {
             ActionContext ac = actionInvocation.getInvocationContext();
             Map session = (Map) ac.get(ServletActionContext.SESSION);
             if (session == null) {
-                return "salLogin";
+                return "memLogin";
             } else {
                 Object saler = session.get("saler");
                 if (saler == null) {
-                    return "salLogin";
+                    return "memLogin";
                 } else {
                     return actionInvocation.invoke();
                 }

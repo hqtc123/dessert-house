@@ -15,4 +15,6 @@ public interface MemberDao extends BaseDao<Member> {
     public List accPassSearch(Member member);
 
     public List accSearch(Member member);
+
+
 }

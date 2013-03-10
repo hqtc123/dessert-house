@@ -5,6 +5,7 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -28,26 +29,15 @@ public class Shop implements Serializable {
         this.id = id;
     }
 
-    private Set<Member> members;
+    private List<Member> members;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "shop")
-    public Set<Member> getMembers() {
+    public List<Member> getMembers() {
         return members;
     }
 
-    public void setMembers(Set<Member> members) {
+    public void setMembers(List<Member> members) {
         this.members = members;
-    }
-
-    private Set<Weeknum> weeknums;
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "shop")
-    public Set<Weeknum> getWeeknums() {
-        return weeknums;
-    }
-
-    public void setWeeknums(Set<Weeknum> weeknums) {
-        this.weeknums = weeknums;
     }
 
     @Override

@@ -175,16 +175,18 @@
       <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
       <column name="price" sqlType="FLOAT" length="12" precision="0" nullable="false" jdbcType="7" />
       <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="dessert" table="weeknum" schema="" catalog="dessert" columns="dessertid" />
     </table>
     <table name="member" schema="" catalog="dessert" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="account" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
       <column name="password" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
-      <column name="position" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="position" sqlType="VARCHAR" length="11" precision="0" nullable="false" jdbcType="12" />
       <column name="shopid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
       <foreign-key name="shopid" columns="shopid" ref-table="shop" ref-schema="" ref-catalog="dessert" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
       <exported-key name="saleid" table="torder" schema="" catalog="dessert" columns="salerid" />
+      <index name="account" unique="true" columns="account" />
     </table>
     <table name="orderitem" schema="" catalog="dessert" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -206,6 +208,7 @@
       <primary-key name="PRIMARY" columns="id" />
       <exported-key name="shopid" table="member" schema="" catalog="dessert" columns="shopid" />
       <exported-key name="shoid" table="torder" schema="" catalog="dessert" columns="shopid" />
+      <exported-key name="shop" table="weeknum" schema="" catalog="dessert" columns="shopid" />
     </table>
     <table name="strategy" schema="" catalog="dessert" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
@@ -233,7 +236,10 @@
       <column name="dessertid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="num" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="weekday" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="dessertname" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="dessert" columns="dessertid" ref-table="dessert" ref-schema="" ref-catalog="dessert" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="shop" columns="shopid" ref-table="shop" ref-schema="" ref-catalog="dessert" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="user" schema="" catalog="ee" type="TABLE">
       <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />

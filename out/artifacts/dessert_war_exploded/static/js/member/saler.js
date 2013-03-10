@@ -10,6 +10,13 @@ function showStr() {
     $("#weeknum-menu").addClass("active");
     $("#dessert-menu").removeClass("active")
 }
+
+function showTableWeekday(weekday) {
+    for (var i = 1; i < 6; i++) {
+        $("#tbody" + i).hide();
+    }
+    $("#tbody" + weekday).show();
+}
 $(function () {
     showMem();
     $("#dessert-menu").on("click", function () {
@@ -18,8 +25,10 @@ $(function () {
     $("#weeknum-menu").on("click", function () {
         showStr();
     })
-    //manage members
-    var dessertId, name, price;
+
+
+    //manage desserts
+    var dessertId, name, price, weekday = 1;
     $("#add-dessert-tr").hide();
     $("#add-cancel").on("click", function () {
         $("#add-dessert-tr").hide();
@@ -109,37 +118,44 @@ $(function () {
         })
     })
 
-    //manage strategies
-    $("#add-weeknum-tr").hide();
-    $("#add-weeknum-tr").hide();
-    $("#add-weeknum-cancel").on("click", function () {
-        $("#add-weeknum-tr").hide();
-        $("#add-weeknum-btn").show();
+    //manage weeknums
+
+    showTableWeekday(1);
+    $("#week-select").on("change", function () {
+        weekday = $(this).children('option:selected').val();
+        showTableWeekday(weekday);
     })
-    $("#add-weeknum-btn").on("click", function () {
-        $("#add-weeknum-tr").show();
-        $("#add-weeknum-btn").hide();
+    $(".add-weeknum-tr").hide();
+    $(".add-weeknum-cancel").on("click", function () {
+        $(".add-weeknum-tr").hide();
+        $(".add-weeknum-btn").show();
+    })
+    $(".add-weeknum-btn").on("click", function () {
+        $(".add-weeknum-tr").show();
+        $(".add-weeknum-btn").hide();
     })
 
-    $("#add-weeknum-sure").on("click", function () {
-        var score = $("#add-sco").val();
-        var discount = $("#add-dis").val();
-        if (score == "" || discount == "") {
+    $(".add-weeknum-sure").on("click", function () {
+        var tr = $(this).parents("tr");
+        var dessertid = tr.children().children(".add-dessert-id").val();
+        var num = tr.children().children(".add-dessert-num").val();
+        if (dessertid == "" || num == "") {
             alert("请输入完整的信息");
             return false;
         }
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "addStrategy.action",
+            url: "addWeeknum.action",
             data: {
-                "weeknum.score": score,
-                "weeknum.discount": discount
+                "weeknum.weekday": weekday,
+                "weeknum.dessertid": dessertid,
+                "weeknum.num": num
             },
             success: function (data) {
                 alert(data.resultMsg);
                 if (data.resultMsg == "添加成功") {
-                    window.location.href = "viewMemAndStr.action";
+                    window.location.href = "viewDesserts.action";
                     showStr();
                 }
             }
@@ -148,12 +164,13 @@ $(function () {
 
     $(".delete-weeknum-mem").on("click", function () {
         var tr = $(this).parents("tr");
-        var weeknum = tr.children("td:eq(0)").html();
+        var weeknumid = tr.children("td:eq(0)").html();
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "deleteStrategy.action",
+            url: "deleteWeeknum.action",
             data: {
+                "weeknum.id": weeknumid
             },
             success: function (data) {
                 alert(data.resultMsg);

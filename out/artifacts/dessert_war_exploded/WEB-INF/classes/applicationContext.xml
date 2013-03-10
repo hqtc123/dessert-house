@@ -33,7 +33,7 @@
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
     <!--Declarative Transaction Management-->
-    <!--<tx:annotation-driven transaction-manager="transactionManager" />-->
+    <tx:annotation-driven transaction-manager="transactionManager" />
     <tx:advice transaction-manager="transactionManager" id="allAdvice">
         <tx:attributes>
             <tx:method name="*" propagation="REQUIRED" rollback-for="Exception"/>

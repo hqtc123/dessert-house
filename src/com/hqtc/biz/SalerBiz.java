@@ -28,4 +28,10 @@ public interface SalerBiz extends MemberBiz {
     public List getAllDesserts();
 
     List<Weeknum> getWeekNumByShopDay(Weeknum weeknum1);
+
+    public Weeknum getWeeknumById(int id);
+
+    public void deleteWeeknum(Weeknum weeknum1);
+
+    public void addWeeknum(Weeknum weeknum);
 }

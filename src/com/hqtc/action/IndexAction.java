@@ -3,6 +3,7 @@ package com.hqtc.action;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.*;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,8 +12,8 @@ import org.springframework.stereotype.Component;
  * Time: 上午11:46
  * To change this template use File | Settings | File Templates.
  */
-@Component
-@ParentPackage("myinterceptor")
+@Controller
+@ParentPackage("struts-default")
 @Namespace("/")
 public class IndexAction extends ActionSupport {
     @Action(value = "toCustomer", results = {@Result(name = SUCCESS, type = "redirect", location = "/customer/login.jsp")})

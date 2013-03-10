@@ -4,6 +4,7 @@ import com.hqtc.biz.ManagerBiz;
 import com.hqtc.biz.SalerBiz;
 import com.hqtc.model.entity.Dessert;
 import com.hqtc.model.entity.Member;
+import com.hqtc.model.entity.Shop;
 import com.hqtc.model.entity.Weeknum;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.*;
@@ -126,6 +127,7 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
             return ActionSupport.INPUT;
         }
         if (member1.getPosition().equals("saler")) {
+            session.put("shop", member1.getShop());
             session.put("saler", member1);
             return "saler";
         }
@@ -145,7 +147,8 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
         int shopid = ((Member) session.get("saler")).getShop().getId();
         desserts = salerBiz.getAllDesserts();
         Weeknum weeknum1 = new Weeknum();
-        weeknum1.getShop().setId(shopid);
+
+        weeknum1.setShopid(shopid);
         weeknum1.setWeekday(1);
         weeknums1 = salerBiz.getWeekNumByShopDay(weeknum1);
         weeknum1.setWeekday(2);
@@ -156,8 +159,17 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
         weeknums4 = salerBiz.getWeekNumByShopDay(weeknum1);
         weeknum1.setWeekday(5);
         weeknums5 = salerBiz.getWeekNumByShopDay(weeknum1);
-        //todo
         return SUCCESS;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Action(value = "logoutAction", results = {@Result(name = "success", type = "redirect", location = "/index.jsp")})
+    public String logout() {
+        if (session.get("saler") != null)
+            session.remove("admin");
+        if (session.get("manager") != null)
+            session.remove("manager");
+        return ActionSupport.SUCCESS;
     }
 
     @Override

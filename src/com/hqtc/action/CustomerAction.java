@@ -20,7 +20,7 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 @Component
-@ParentPackage("struts-default")
+@ParentPackage("muinterceptor")
 @Namespace("/customer")
 public class CustomerAction extends ActionSupport implements RequestAware, SessionAware {
     Map<String, Object> request;
@@ -94,12 +94,18 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         return ActionSupport.SUCCESS;
     }
 
-    @Action(value = "logoutAction", results = {@Result(type = "redirect", name = "success", location = "/index.jsp")})
+    @Action(interceptorRefs = {@InterceptorRef("myCusStack")}, value = "logoutAction", results = {@Result(type = "redirect", name = "success", location = "/index.jsp")})
     public String logout() {
         if (session.get("customer") != null) {
             session.remove("customer");
         }
         setResultMsg("success");
+        return ActionSupport.SUCCESS;
+    }
+
+    @Action(interceptorRefs = {@InterceptorRef("myCusStack")}, value = "getInfoAction", results = {@Result(name = "success", location = "/customer/info.jsp")})
+    public String getInfo() {
+        customer = (Customer) session.get("customer");
         return ActionSupport.SUCCESS;
     }
 

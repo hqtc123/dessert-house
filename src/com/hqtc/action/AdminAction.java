@@ -61,7 +61,7 @@ public class AdminAction extends ActionSupport implements RequestAware, SessionA
 
     @SuppressWarnings("unchecked")
     @Action(value = "loginAction", results = {@Result(name = "success", type = "redirect", location = "/admin/viewMemAndStr.action"),
-            @Result(name = "input", type = "redirect", location = "/customer/login.jsp")})
+            @Result(name = "input", type = "redirect", location = "/admin/login.jsp")})
     public String login() {
         Member admin = adminBiz.getAdminByAccPass(member);
         if (admin == null) {

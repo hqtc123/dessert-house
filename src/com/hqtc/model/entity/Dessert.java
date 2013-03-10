@@ -49,17 +49,6 @@ public class Dessert implements Serializable {
         this.price = price;
     }
 
-    private Set<Weeknum> weeknums;
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "shop")
-    public Set<Weeknum> getWeeknums() {
-        return weeknums;
-    }
-
-    public void setWeeknums(Set<Weeknum> weeknums) {
-        this.weeknums = weeknums;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

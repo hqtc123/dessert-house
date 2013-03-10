@@ -1,11 +1,9 @@
 package com.hqtc.biz.impl;
 
 import com.hqtc.biz.SalerBiz;
-import com.hqtc.model.dao.CustomerDao;
-import com.hqtc.model.dao.DessertDao;
-import com.hqtc.model.dao.TorderDao;
-import com.hqtc.model.dao.WeeknumDao;
+import com.hqtc.model.dao.*;
 import com.hqtc.model.entity.*;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +26,8 @@ public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
     private DessertDao dessertDao;
     @Autowired
     private WeeknumDao weeknumDao;
+    @Autowired
+    private ShopDao shopDao;
 
     @Override
     public void dealOrder(Torder torder, Member member) {
@@ -69,6 +69,21 @@ public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
     @Override
     public List<Weeknum> getWeekNumByShopDay(Weeknum weeknum1) {
         return weeknumDao.getWeekNumByShopDay(weeknum1);
+    }
+
+    @Override
+    public Weeknum getWeeknumById(int id) {
+        return weeknumDao.findById(id);
+    }
+
+    @Override
+    public void deleteWeeknum(Weeknum weeknum1) {
+        weeknumDao.delete(weeknum1);
+    }
+
+    @Override
+    public void addWeeknum(Weeknum weeknum) {
+        weeknumDao.save(weeknum);
     }
 
 
