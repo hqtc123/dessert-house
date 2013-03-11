@@ -35,6 +35,9 @@
     <div id="pad">
 
     </div>
+    <div id="logo">
+        <a><img src="../static/images/logo.png" title="返回首页"></a>
+    </div>
     <div id="boxArea2">
         <h3>快速登录</h3>
         <s:form id="login_form" action="loginAction" method="POST">

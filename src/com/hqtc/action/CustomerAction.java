@@ -138,7 +138,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         this.customerBiz = customerBiz;
     }
 
-    @Action(value = "registerAction", results = {@Result(type = "redirect", name = "success", location = "/customer/main.jsp"),
+    @Action(value = "registerAction", results = {@Result(type = "redirect", name = "success", location = "/customer/customerIndex.action"),
             @Result(name = "input", location = "/customer/register.jsp")})
     public String register() {
         if (customerBiz.checkAccExist(customer)) {
@@ -153,6 +153,11 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         }
         customerBiz.register(customer);
         session.put("customer", customer);
+        Card card1 = new Card();
+        card1.setCustomerid(customer.getId());
+        card1.setState(0);
+        card1.setMoney(0);
+        customerBiz.saveCard(card1);
         setResultMsg("success");
         return ActionSupport.SUCCESS;
     }
@@ -175,6 +180,12 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
     public String logout() {
         if (session.get("customer") != null) {
             session.remove("customer");
+        }
+        if (session.get("items") != null) {
+            session.remove("items");
+        }
+        if (session.get("weeks") != null) {
+            session.remove("weeks");
         }
         setResultMsg("success");
         return ActionSupport.SUCCESS;
@@ -199,7 +210,7 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
             super1.add(new SuperWeeknum(list1.get(i), customerBiz.getDessertByWeekNum(list1.get(i)).getPrice()));
         }
         for (int i = 0; i < list2.size(); i++) {
-            super1.add(new SuperWeeknum(list2.get(i), customerBiz.getDessertByWeekNum(list2.get(i)).getPrice()));
+            super2.add(new SuperWeeknum(list2.get(i), customerBiz.getDessertByWeekNum(list2.get(i)).getPrice()));
         }
         return SUCCESS;
     }

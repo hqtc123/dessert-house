@@ -41,7 +41,7 @@
 
     </div>
     <div id="logo">
-        <a href="../index.jsp"><img src="../static/images/logo.png" title="返回首页"></a>
+        <a><img src="../static/images/logo.png" title="返回首页"></a>
     </div>
 
     <div id="boxArea2">

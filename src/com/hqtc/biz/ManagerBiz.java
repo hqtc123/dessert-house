@@ -4,7 +4,7 @@ import com.hqtc.model.entity.Card;
 import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Orderitem;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,8 +13,12 @@ import java.util.ArrayList;
  * Time: 下午3:42
  * To change this template use File | Settings | File Templates.
  */
-public interface ManagerBiz extends MemberBiz{
-    public ArrayList<Customer> viewCustomers();
-    public ArrayList<Card> viewCards();
-    public ArrayList<Orderitem> viewSales();
+public interface ManagerBiz extends MemberBiz {
+    public List<Customer> viewCustomers();
+
+    public List<Card> viewCards();
+
+    public List<Orderitem> viewSales();
+
+    public Card getCardByCutomer(Customer customer);
 }

@@ -66,7 +66,6 @@
                         <td><label>年龄:</label></td>
                         <td><s:property value="customer.age"></s:property></td>
                         <td>
-                            <button class="btn cha-age">修改</button>
                         </td>
                     </tr>
                     <tr>
@@ -77,7 +76,6 @@
                         <td><label>地址:</label></td>
                         <td><s:property value="customer.address"></s:property></td>
                         <td>
-                            <button class="btn cha-addr">修改</button>
                         </td>
                     </tr>
                     <tr>

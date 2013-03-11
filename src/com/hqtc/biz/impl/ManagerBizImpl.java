@@ -1,12 +1,16 @@
 package com.hqtc.biz.impl;
 
 import com.hqtc.biz.ManagerBiz;
+import com.hqtc.model.dao.CardDao;
+import com.hqtc.model.dao.CustomerDao;
+import com.hqtc.model.dao.OrderitemDao;
 import com.hqtc.model.entity.Card;
 import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Orderitem;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,18 +21,32 @@ import java.util.ArrayList;
  */
 @Service
 public class ManagerBizImpl extends MemberBizImpl implements ManagerBiz {
+    @Autowired
+    private CustomerDao customerDao;
+    @Autowired
+    private CardDao cardDao;
+    @Autowired
+    private OrderitemDao orderitemDao;
+
     @Override
-    public ArrayList<Customer> viewCustomers() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public List<Customer> viewCustomers() {
+        return customerDao.getAll();
     }
 
     @Override
-    public ArrayList<Card> viewCards() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public List<Card> viewCards() {
+        return cardDao.getAll();
     }
 
     @Override
-    public ArrayList<Orderitem> viewSales() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public List<Orderitem> viewSales() {
+        return orderitemDao.getAll();
     }
+
+    @Override
+    public Card getCardByCutomer(Customer customer) {
+        int customerId = customer.getId();
+        return cardDao.findByCustomerId(customerId);
+    }
+
 }

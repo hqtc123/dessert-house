@@ -137,4 +137,9 @@ public class CustomerBizImpl implements CustomerBiz {
     public void updateCard(Card card) {
         cardDao.update(card);
     }
+
+    @Override
+    public void saveCard(Card card1) {
+        cardDao.save(card1);
+    }
 }

@@ -2,6 +2,19 @@ function isInteger(str) {
     var regu = /^[-]{0,1}[0-9]{1,}$/;
     return regu.test(str);
 }
+
+function showShop1() {
+    $("#table-shop2").hide();
+    $("#table-shop1").show();
+    $("#shop-menu2").removeClass("active");
+    $("#shop-menu1").addClass("active")
+}
+function showShop2() {
+    $("#table-shop1").hide();
+    $("#table-shop2").show();
+    $("#shop-menu1").removeClass("active");
+    $("#shop-menu2").addClass("active")
+}
 $(function () {
 //    充值
     $(document).on("click", ".cha-money", function () {
@@ -111,5 +124,14 @@ $(function () {
                 window.location.href = "customerIndex.action";
             }
         })
+    })
+
+    //choose shop
+    showShop1();
+    $("#shop-menu1").on("click", function () {
+        showShop1();
+    })
+    $("#shop-menu2").on("click", function () {
+        showShop2();
     })
 })

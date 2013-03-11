@@ -44,4 +44,6 @@ public interface CustomerBiz {
     public void saveOrderitem(Orderitem orderitem);
 
     public void updateCard(Card card);
+
+    public void saveCard(Card card1);
 }

@@ -65,7 +65,7 @@
         <!--/span-->
         <div class="span9">
             <div class="hero-unit">
-                <table class="table">
+                <table class="table" id="table-shop1">
                     <tbody>
                     <tr>
                         <th></th>
@@ -76,6 +76,29 @@
                         <th></th>
                     </tr>
                     <s:iterator value="super1">
+                    <tr>
+                        <td><label class="hide-id"><s:property value="weeknum.id"></s:property></label></td>
+                        <td><s:property value="weeknum.dessertid"></s:property></td>
+                        <td><s:property value="weeknum.dessertname"></s:property></td>
+                        <td><s:property value="dessertPrice"></s:property></td>
+                        <td><s:property value="weeknum.num"></s:property></td>
+                        <td>
+                            <button class="btn buy-btn">购买</button>
+                        </td>
+                    </tr>
+                    </s:iterator>
+                </table>
+                <table class="table" id="table-shop2">
+                    <tbody>
+                    <tr>
+                        <th></th>
+                        <th>甜品ID</th>
+                        <th>甜品名称</th>
+                        <th>单价</th>
+                        <th>今天剩余数量</th>
+                        <th></th>
+                    </tr>
+                    <s:iterator value="super2">
                     <tr>
                         <td><label class="hide-id"><s:property value="weeknum.id"></s:property></label></td>
                         <td><s:property value="weeknum.dessertid"></s:property></td>

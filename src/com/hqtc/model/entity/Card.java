@@ -38,17 +38,6 @@ public class Card implements Serializable {
         this.state = state;
     }
 
-    private Date lastTme;
-
-    @javax.persistence.Column(name = "lastTme", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
-    @Basic
-    public Date getLastTme() {
-        return lastTme;
-    }
-
-    public void setLastTme(Date lastTme) {
-        this.lastTme = lastTme;
-    }
 
     private float money;
 
@@ -63,6 +52,7 @@ public class Card implements Serializable {
     }
 
     private int customerid;
+
     @javax.persistence.Column(name = "customerid", nullable = false, insertable = true, updatable = true, length = 11, precision = 0)
     @Basic
     public int getCustomerid() {
@@ -83,7 +73,6 @@ public class Card implements Serializable {
         if (id != card.id) return false;
         if (Float.compare(card.money, money) != 0) return false;
         if (state != card.state) return false;
-        if (lastTme != null ? !lastTme.equals(card.lastTme) : card.lastTme != null) return false;
         return true;
     }
 
@@ -91,7 +80,6 @@ public class Card implements Serializable {
     public int hashCode() {
         int result = id;
         result = 31 * result + state;
-        result = 31 * result + (lastTme != null ? lastTme.hashCode() : 0);
         result = 31 * result + (money != +0.0f ? Float.floatToIntBits(money) : 0);
         return result;
     }

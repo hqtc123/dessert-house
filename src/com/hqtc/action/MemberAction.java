@@ -2,10 +2,8 @@ package com.hqtc.action;
 
 import com.hqtc.biz.ManagerBiz;
 import com.hqtc.biz.SalerBiz;
-import com.hqtc.model.entity.Dessert;
-import com.hqtc.model.entity.Member;
-import com.hqtc.model.entity.Shop;
-import com.hqtc.model.entity.Weeknum;
+import com.hqtc.model.entity.*;
+import com.hqtc.util.SuperCusCard;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.*;
 import org.apache.struts2.interceptor.RequestAware;
@@ -53,6 +51,16 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
     }
 
     List<Dessert> desserts = new ArrayList<Dessert>();
+
+    public List<SuperCusCard> getCusCards() {
+        return cusCards;
+    }
+
+    public void setCusCards(List<SuperCusCard> cusCards) {
+        this.cusCards = cusCards;
+    }
+
+    List<SuperCusCard> cusCards = new ArrayList<SuperCusCard>();
 
     public List<Weeknum> getWeeknums1() {
         return weeknums1;
@@ -170,6 +178,16 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
         if (session.get("manager") != null)
             session.remove("manager");
         return ActionSupport.SUCCESS;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Action(interceptorRefs = {@InterceptorRef("myManStack")}, value = "managerIndex", results = {@Result(name = SUCCESS, location = "/member/manager.jsp")})
+    public String managerIndex() {
+        List<Customer> customers = managerBiz.viewCustomers();
+        for (int i = 0; i < customers.size(); i++) {
+            cusCards.add(new SuperCusCard(customers.get(i), managerBiz.getCardByCutomer(customers.get(i))));
+        }
+        return SUCCESS;
     }
 
     @Override
