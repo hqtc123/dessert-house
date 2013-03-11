@@ -17,14 +17,13 @@
     <script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
     <link href="static/bootstrap/lib.min.css" rel="stylesheet" type="text/css"/>
     <link href="static/bootstrap/lib-resp.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/index.css" rel="stylesheet" type="text/css">
     <link href="static/css/layout.css" rel="stylesheet" type="text/css">
     <style>
         body {
             padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
         }
     </style>
-    <link href="<%=basePath%>static/bootstrap/lib-resp.min.css"
-          rel="stylesheet">
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
