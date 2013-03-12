@@ -36,11 +36,13 @@ public class CustomerBizImpl implements CustomerBiz {
     }
 
     @Override
-    public void register(Customer customer) {
+    public int register(Customer customer) {
         String password = customer.getPassword();
         String newPass = MyMD5.encryption(password);
         customer.setPassword(newPass);
         customerDao.save(customer);
+        List list = customerDao.accSearch(customer);
+        return ((Customer) list.get(0)).getId();
     }
 
     @Override
@@ -81,11 +83,6 @@ public class CustomerBizImpl implements CustomerBiz {
     @Override
     public void makeOrder(Torder torder) {
         torderDao.save(torder);
-    }
-
-    @Override
-    public List getAll() {
-        return customerDao.getAll();
     }
 
     @Override
@@ -141,5 +138,10 @@ public class CustomerBizImpl implements CustomerBiz {
     @Override
     public void saveCard(Card card1) {
         cardDao.save(card1);
+    }
+
+    @Override
+    public void update(Customer customer1) {
+        customerDao.update(customer1);
     }
 }

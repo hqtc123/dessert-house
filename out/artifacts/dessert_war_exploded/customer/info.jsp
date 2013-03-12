@@ -32,8 +32,8 @@
                     <li>
                         <a href="viewCart.action">购物车</a>
                     </li>
-                    <li>
-                        <a class="active" href="#">个人资料</a>
+                    <li class="active">
+                        <a href="#">个人资料</a>
                     </li>
                     <li>
                         <a href="logoutAction.action">注销</a>
@@ -51,7 +51,7 @@
     <div class="row-fluid">
         <div class="span9">
             <div class="hero-unit">
-                <table class="table">
+                <table class="table info-table">
                     <tbody>
                     <tr>
                         <th></th>
@@ -64,8 +64,9 @@
                     </tr>
                     <tr>
                         <td><label>年龄:</label></td>
-                        <td><s:property value="customer.age"></s:property></td>
+                        <td id="age-td"><s:property value="customer.age"></s:property></td>
                         <td>
+                            <button class="btn btn-cha-age">修改</button>
                         </td>
                     </tr>
                     <tr>
@@ -74,8 +75,9 @@
                     </tr>
                     <tr>
                         <td><label>地址:</label></td>
-                        <td><s:property value="customer.address"></s:property></td>
+                        <td id="addr-td"><s:property value="customer.address"></s:property></td>
                         <td>
+                            <button class="btn btn-cha-addr">修改</button>
                         </td>
                     </tr>
                     <tr>
@@ -109,6 +111,38 @@
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
             <button class="btn btn-primary btn-re-primary">确认</button>
+        </div>
+    </div>
+
+
+    <div id="my-cha-addr-Modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="addr-Label">输入新的地址</h3>
+        </div>
+        <div class="modal-body">
+            <input class="input-medium" id="modal-cha-addr-input">
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            <button class="btn btn-primary btn-cha-addr-primary">确认</button>
+        </div>
+    </div>
+
+
+    <div id="my-cha-age-Modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="age-Label">输入年龄</h3>
+        </div>
+        <div class="modal-body">
+            <input class="input-medium" id="modal-cha-age-input">
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            <button class="btn btn-primary btn-cha-age-primary">确认</button>
         </div>
     </div>
 </div>

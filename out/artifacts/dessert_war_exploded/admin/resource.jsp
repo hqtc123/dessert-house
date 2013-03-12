@@ -17,3 +17,4 @@
 <link href="<%=basePath%>static/bootstrap/lib.min.css" rel="stylesheet" type="text/css"/>
 <link href="<%=basePath%>static/bootstrap/lib-resp.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/reglog.css">
+<link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/color.css">

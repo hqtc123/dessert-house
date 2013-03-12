@@ -34,6 +34,15 @@ public class CustomerAjaxAction extends ActionSupport implements RequestAware, S
     private Weeknum weeknum;
     private float moneySum;
     private Torder torder;
+    private int shopid;
+
+    public int getShopid() {
+        return shopid;
+    }
+
+    public void setShopid(int shopid) {
+        this.shopid = shopid;
+    }
 
     public Torder getTorder() {
         return torder;
@@ -137,6 +146,7 @@ public class CustomerAjaxAction extends ActionSupport implements RequestAware, S
         weeks.add(weeknum1);
         session.put("weeks", weeks);
         setResultMsg("已经加入购物车");
+        session.put("shopid", shopid);
         return SUCCESS;
     }
 
@@ -157,8 +167,8 @@ public class CustomerAjaxAction extends ActionSupport implements RequestAware, S
         card.setMoney(newMoney);
         customerBiz.updateCard(card);
         torder.setCustomerid(customer.getId());
-        torder.setShopid(1);
         torder.setSalerid(0);
+        torder.setShopid((Integer) (session.get("shopid")));
         customerBiz.makeOrder(torder);
         ArrayList<Orderitem> items = (ArrayList<Orderitem>) session.get("items");
         for (int i = 0; i < items.size(); i++) {
@@ -183,6 +193,17 @@ public class CustomerAjaxAction extends ActionSupport implements RequestAware, S
         if (session.get("weeks") != null)
             session.remove("weeks");
         setResultMsg("取消成功");
+        return SUCCESS;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Action(value = "changeInfo", results = {@Result(name = SUCCESS, type = "json")})
+    public String changeInfo() {
+        Customer customer1 = (Customer) session.get("customer");
+        customer1.setAge(customer.getAge());
+        customer1.setAddress(customer.getAddress());
+        customerBiz.update(customer1);
+        setResultMsg("修改成功");
         return SUCCESS;
     }
 

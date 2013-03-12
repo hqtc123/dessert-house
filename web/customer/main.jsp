@@ -45,7 +45,6 @@
 </div>
 
 <div class="container-fluid">
-    <div class="pad"></div>
     <div class="row-fluid">
         <div class="span3">
             <div class="well sidebar-nav">
@@ -54,8 +53,8 @@
                     <li id="shop-menu1" class="active">
                         <a href="#">店铺一</a>
                     </li>
-                    <li>
-                        <a id="shop-menu2" href="#">店铺二</a>
+                    <li id="shop-menu2">
+                        <a href="#">店铺二</a>
                     </li>
 
                 </ul>

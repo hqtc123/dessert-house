@@ -11,6 +11,11 @@
 <head>
     <title>工作人员登陆</title>
     <jsp:include page="resource.jsp"></jsp:include>
+    <style type="text/css">
+        body {
+            background-image: none;
+        }
+    </style>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">

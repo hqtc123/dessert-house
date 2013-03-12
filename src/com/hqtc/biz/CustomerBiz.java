@@ -12,7 +12,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface CustomerBiz {
-    public void register(Customer customer);
+    public int register(Customer customer);
 
     public boolean checkAccExist(Customer customer);
 
@@ -23,9 +23,6 @@ public interface CustomerBiz {
     public void terminate(Customer customer);
 
     public void makeOrder(Torder torder);
-
-
-    public List getAll();
 
     public Card getCardByCustomerId(Customer customer);
 
@@ -46,4 +43,6 @@ public interface CustomerBiz {
     public void updateCard(Card card);
 
     public void saveCard(Card card1);
+
+    public void update(Customer customer1);
 }

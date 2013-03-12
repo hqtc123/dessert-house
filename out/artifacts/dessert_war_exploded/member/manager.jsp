@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: hqtc
@@ -41,20 +42,50 @@
 <div class="container-fluid">
     <div class="pad"></div>
     <div class="row-fluid">
+
+        <div class="span3">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="nav-header">选项</li>
+                    <li id="cus-card-menu" class="active">
+                        <a href="#">统计顾客信息</a>
+                    </li>
+                    <li id="cus-order-menu">
+                        <a href="#">统计订单信息</a>
+                    </li>
+                    <li id="cus-dessert-menu">
+                        <a href="#">统计热卖产品</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.well -->
+        </div>
+
         <div class="span9">
             <div class="hero-unit">
-                <table class="table">
+                <table class="table cus-card-table">
                     <tbody>
                     <tr>
                         <th>会员ID</th>
                         <th>会员账号</th>
-                        <th></th>
+                        <th>会员年龄</th>
+                        <th>卡状态</th>
+                        <th>卡余额</th>
                     </tr>
-                    <s:iterator value="superItems">
+                    <s:iterator value="cusCards">
                         <tr>
-                            <td><s:property value="dessert.name"></s:property></td>
-                            <td><s:property value="dessert.price"></s:property></td>
-                            <td><s:property value="orderitem.num"></s:property></td>
+                            <td><s:property value="customer.id"></s:property></td>
+                            <td><s:property value="customer.account"></s:property></td>
+                            <td><s:property value="customer.age"></s:property></td>
+                            <td><s:if test="card.state==1">
+                                激活
+                            </s:if><s:elseif test="card.state==2">
+                                暂停
+                            </s:elseif><s:else>
+                                未激活
+                            </s:else>
+                            </td>
+                            <td><s:property value="card.money"></s:property></td>
                         </tr>
                     </s:iterator>
                     </tbody>
@@ -62,11 +93,10 @@
                         <td></td>
                         <td></td>
                         <td>
-                            总价： <label id="sum-label"><s:property value="moneySum"></s:property></label>
+                            合计总人数： <s:property value="cusCards.size"></s:property>
                         </td>
                     </tr>
-                    <s:submit type="button" cssClass="btn pay-btn">付款</s:submit>
-                    <s:submit type="button" cssClass="btn pay-cancel-btn">取消订单</s:submit>
+
                 </table>
             </div>
         </div>

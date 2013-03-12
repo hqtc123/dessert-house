@@ -44,7 +44,19 @@ $(function () {
     })
 
     //add order item
-    var dessertid , dessertnum, avainum, weeknumid, tr, orderid = 0;
+    var dessertid , dessertnum, avainum, weeknumid, tr, shopid = 1;
+
+    //choose shop
+    showShop1();
+    $("#shop-menu1").on("click", function () {
+        showShop1();
+        shopid = 1;
+    })
+    $("#shop-menu2").on("click", function () {
+        shopid = 2;
+        showShop2();
+    })
+
     $(".hide-id").hide();
     $(".buy-btn").on("click", function () {
         $("#my-main-Modal").modal("show");
@@ -75,6 +87,7 @@ $(function () {
             dataType: "json",
             url: "addItem.action",
             data: {
+                "shopid": shopid,
                 "weeknum.id": weeknumid,
                 "weeknum.num": newnum,
                 "orderitem.dessertid": dessertid,
@@ -126,12 +139,63 @@ $(function () {
         })
     })
 
-    //choose shop
-    showShop1();
-    $("#shop-menu1").on("click", function () {
-        showShop1();
+
+    // change info of customer
+    var newAddr, newAge;
+    $(".btn-cha-age").on("click", function () {
+        newAddr = $(this).parents("table").find("#addr-td").html();
+        $("#my-cha-age-Modal").modal("show");
     })
-    $("#shop-menu2").on("click", function () {
-        showShop2();
+
+    $(".btn-cha-addr").on("click", function () {
+        newAge = $(this).parents("table").find("#age-td").html();
+        $("#my-cha-addr-Modal").modal("show");
+    })
+
+    $(document).on("click", ".btn-cha-age-primary", function () {
+        newAge = $("#modal-cha-age-input").val();
+        if (newAge == "") {
+            alert("请输入数额");
+            return false;
+        }
+        if (!isInteger(newAge)) {
+            alert("请输入整数");
+            return false;
+        }
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "changeInfo.action",
+            data: {
+                "customer.age": newAge,
+                "customer.address": newAddr
+            },
+            success: function (data) {
+                alert(data.resultMsg);
+                $("#my-cha-age-Modal").modal("hide");
+                $(".info-table").find("#age-td").html(newAge)
+            }
+        })
+    })
+    $(document).on("click", ".btn-cha-addr-primary", function () {
+        newAddr = $("#modal-cha-addr-input").val();
+        if (newAddr == "") {
+            alert("请输入新地址");
+            return false;
+        }
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "changeInfo.action",
+            data: {
+                "customer.age": newAge,
+                "customer.address": newAddr
+            },
+            success: function (data) {
+                alert(data.resultMsg);
+                $("#my-cha-addr-Modal").modal("hide");
+                $(".info-table").find("#addr-td").html(newAddr)
+            }
+        })
     })
 })

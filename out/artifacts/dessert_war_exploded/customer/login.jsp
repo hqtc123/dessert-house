@@ -10,6 +10,11 @@
 <html>
 <head>
     <jsp:include page="resource.jsp"></jsp:include>
+    <style type="text/css">
+        body {
+            background-image: none;
+        }
+    </style>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -53,7 +58,7 @@
             <s:password required="true" id="passwordField" cssClass="input-large" name="customer.password"
                         label="密 码"></s:password>
             <br>
-            <s:submit cssClass="btn" type="button" value="登录"/>
+            <s:submit cssClass="btn-small" type="button" value="登录"/>
         </s:form>
     </div>
 </div>

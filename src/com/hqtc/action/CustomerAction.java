@@ -151,10 +151,11 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
             addFieldError("customer.account", "两次密码输入不一致");
             return ActionSupport.INPUT;
         }
-        customerBiz.register(customer);
+        int id = customerBiz.register(customer);
+        customer.setId(id);
         session.put("customer", customer);
         Card card1 = new Card();
-        card1.setCustomerid(customer.getId());
+        card1.setCustomerid(id);
         card1.setState(0);
         card1.setMoney(0);
         customerBiz.saveCard(card1);

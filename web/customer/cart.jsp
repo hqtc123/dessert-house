@@ -28,8 +28,8 @@
                     <li>
                         <a href="customerIndex.action">首页</a>
                     </li>
-                    <li>
-                        <a class="active" href="#">购物车</a>
+                    <li class="active">
+                        <a href="#">购物车</a>
                     </li>
                     <li>
                         <a href="getInfoAction.action">个人资料</a>

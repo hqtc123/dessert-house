@@ -1,0 +1,16 @@
+body {
+    background: url("../images/back.jpg") no-repeat;
+}
+
+.btn-large, .btn-small {
+    background-color: #765a4b;
+    color: #dfdfdf;
+}
+
+.hero-unit {
+    opacity: 0.66;
+}
+
+td, th, .btn {
+    color: #34221a;
+}

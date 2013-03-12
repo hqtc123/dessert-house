@@ -122,7 +122,7 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
 
     @SuppressWarnings("unchecked")
     @Action(value = "loginAction", results = {@Result(name = "saler", type = "redirect", location = "/member/viewDesserts.action"),
-            @Result(name = "manager", type = "redirect", location = "/member/viewCustomers.action"),
+            @Result(name = "manager", type = "redirect", location = "/member/managerIndex.action"),
             @Result(name = INPUT, type = "redirect", location = "/member/login.jsp")})
     public String login() {
         Member member1 = salerBiz.getMemberByAccPass(member);
