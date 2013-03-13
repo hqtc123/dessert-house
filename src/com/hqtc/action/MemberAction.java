@@ -3,6 +3,7 @@ package com.hqtc.action;
 import com.hqtc.biz.ManagerBiz;
 import com.hqtc.biz.SalerBiz;
 import com.hqtc.model.entity.*;
+import com.hqtc.util.DessertNum;
 import com.hqtc.util.SuperCusCard;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.*;
@@ -35,6 +36,15 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
     private Weeknum weeknum;
     private List<Torder> torders1;
     private List<Torder> torders2;
+    private List<DessertNum> dessertNums;
+
+    public List<DessertNum> getDessertNums() {
+        return dessertNums;
+    }
+
+    public void setDessertNums(List<DessertNum> dessertNums) {
+        this.dessertNums = dessertNums;
+    }
 
     public List<Torder> getTorders2() {
         return torders2;

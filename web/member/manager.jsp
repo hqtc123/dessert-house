@@ -62,7 +62,7 @@
         </div>
 
         <div class="span9">
-            <div class="hero-unit">
+            <div class="hero-unit hhero-customer">
                 <table class="table cus-card-table">
                     <tbody>
                     <tr>
@@ -94,6 +94,76 @@
                         <td></td>
                         <td>
                             合计总人数： <s:property value="cusCards.size"></s:property>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="hero-unit heroo-rder">
+                <table class="table">
+                    <thead><label>店铺1</label></thead>
+                    <tbody>
+                    <tr>
+                        <th>订单ID</th>
+                        <th>会员ID</th>
+                        <th>订单状态</th>
+                        <th>总价</th>
+                    </tr>
+                    <s:iterator value="torders1">
+                        <tr>
+                            <td><s:property value="id"></s:property></td>
+                            <td><s:property value="customerid"></s:property></td>
+                            <td><s:if test="salerid!=0">
+                               已发货
+                            </s:if><s:else>
+                                未发货
+                            </s:else>
+                            </td>
+                            <td><s:property value="money"></s:property></td>
+                        </tr>
+                    </s:iterator>
+                    </tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            合计订单数： <s:property value="cusCards.size"></s:property>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="hero-unit heroo-rder">
+                <table class="table">
+                    <thead><label>店铺2</label></thead>
+                    <tbody>
+                    <tr>
+                        <th>订单ID</th>
+                        <th>会员ID</th>
+                        <th>订单状态</th>
+                        <th>总价</th>
+                    </tr>
+                    <s:iterator value="torders2">
+                        <tr>
+                            <td><s:property value="id"></s:property></td>
+                            <td><s:property value="customerid"></s:property></td>
+                            <td><s:if test="salerid!=0">
+                                已发货
+                            </s:if><s:else>
+                                未发货
+                            </s:else>
+                            </td>
+                            <td><s:property value="money"></s:property></td>
+                        </tr>
+                    </s:iterator>
+                    </tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            合计订单数： <s:property value="cusCards.size"></s:property>
                         </td>
                     </tr>
 
