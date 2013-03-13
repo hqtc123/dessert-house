@@ -33,6 +33,25 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
 
     private Member member;
     private Weeknum weeknum;
+    private List<Torder> torders1;
+    private List<Torder> torders2;
+
+    public List<Torder> getTorders2() {
+        return torders2;
+    }
+
+    public void setTorders2(List<Torder> torders2) {
+        this.torders2 = torders2;
+    }
+
+    public List<Torder> getTorders1() {
+        return torders1;
+    }
+
+    public void setTorders1(List<Torder> torders1) {
+        this.torders1 = torders1;
+    }
+
 
     public Weeknum getWeeknum() {
         return weeknum;
@@ -187,6 +206,8 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
         for (int i = 0; i < customers.size(); i++) {
             cusCards.add(new SuperCusCard(customers.get(i), managerBiz.getCardByCutomer(customers.get(i))));
         }
+        torders1 = managerBiz.viewOrdersByShopId(1);
+        torders2 = managerBiz.viewOrdersByShopId(2);
         return SUCCESS;
     }
 

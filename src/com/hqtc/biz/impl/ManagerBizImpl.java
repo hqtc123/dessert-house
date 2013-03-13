@@ -4,9 +4,11 @@ import com.hqtc.biz.ManagerBiz;
 import com.hqtc.model.dao.CardDao;
 import com.hqtc.model.dao.CustomerDao;
 import com.hqtc.model.dao.OrderitemDao;
+import com.hqtc.model.dao.TorderDao;
 import com.hqtc.model.entity.Card;
 import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Orderitem;
+import com.hqtc.model.entity.Torder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +29,8 @@ public class ManagerBizImpl extends MemberBizImpl implements ManagerBiz {
     private CardDao cardDao;
     @Autowired
     private OrderitemDao orderitemDao;
+    @Autowired
+    private TorderDao torderDao;
 
     @Override
     public List<Customer> viewCustomers() {
@@ -47,6 +51,11 @@ public class ManagerBizImpl extends MemberBizImpl implements ManagerBiz {
     public Card getCardByCutomer(Customer customer) {
         int customerId = customer.getId();
         return cardDao.findByCustomerId(customerId);
+    }
+
+    @Override
+    public List<Torder> viewOrdersByShopId(int i) {
+        return torderDao.findByShopId(i);
     }
 
 }

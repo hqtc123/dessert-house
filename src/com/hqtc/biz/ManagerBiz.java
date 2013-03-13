@@ -3,6 +3,7 @@ package com.hqtc.biz;
 import com.hqtc.model.entity.Card;
 import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Orderitem;
+import com.hqtc.model.entity.Torder;
 
 import java.util.List;
 
@@ -21,4 +22,6 @@ public interface ManagerBiz extends MemberBiz {
     public List<Orderitem> viewSales();
 
     public Card getCardByCutomer(Customer customer);
+
+    public List<Torder> viewOrdersByShopId(int i);
 }
