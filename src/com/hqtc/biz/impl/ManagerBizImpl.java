@@ -6,6 +6,7 @@ import com.hqtc.model.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -25,6 +26,9 @@ public class ManagerBizImpl implements ManagerBiz {
     private OrderitemDao orderitemDao;
     @Autowired
     private TorderDao torderDao;
+    @Autowired
+    private RechargeDao rechargeDao;
+
     @Override
     public List<Customer> viewCustomers() {
         return customerDao.getAll();
@@ -38,6 +42,20 @@ public class ManagerBizImpl implements ManagerBiz {
     @Override
     public int getNumofDessert(Dessert dessert) {
         return orderitemDao.getNumofDessert(dessert);  //todo
+    }
+
+    @Override
+    public void refreshCardsState() {
+        List<Recharge> list = rechargeDao.getAll();
+        for (int i = 0; i < list.size(); i++) {
+            Customer customer = customerDao.findById(list.get(i).getCustomerid());
+            Card card = cardDao.findByCustomerId(customer.getId());
+            if (new java.util.Date().getTime() - list.get(i).getDate().getTime() > 365 * 24 * 3600 * 1000) {
+                card.setState(2);
+            } else {
+                card.setState(1);
+            }
+        }
     }
 
     @Override

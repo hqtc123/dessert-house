@@ -62,7 +62,7 @@
         </div>
 
         <div class="span9">
-            <div class="hero-unit hhero-customer">
+            <div class="hero-unit hero-customer">
                 <table class="table cus-card-table">
                     <tbody>
                     <tr>
@@ -128,7 +128,7 @@
                         <td></td>
                         <td></td>
                         <td>
-                            合计订单数： <s:property value="cusCards.size"></s:property>
+                            合计订单数： <s:property value="torders1.size"></s:property>
                         </td>
                     </tr>
 
@@ -163,7 +163,7 @@
                         <td></td>
                         <td></td>
                         <td>
-                            合计订单数： <s:property value="cusCards.size"></s:property>
+                            合计订单数： <s:property value="torders2.size"></s:property>
                         </td>
                     </tr>
 
@@ -179,13 +179,16 @@
                         <th>产品名称</th>
                         <th>卖出数量</th>
                     </tr>
-                    <s:iterator value="dessertNums">
-                        <tr>
-                            <td><s:property value="dessert.id"></s:property></td>
-                            <td><s:property value="dessert.name"></s:property></td>
-                            <td><s:property value="num"></s:property></td>
-                        </tr>
-                    </s:iterator>
+                    <s:bean name="com.hqtc.util.NumComparator" var="numComparator"></s:bean>
+                    <s:sort comparator="#numComparator" source="dessertNums">
+                        <s:iterator>
+                            <tr>
+                                <td><s:property value="dessert.id"></s:property></td>
+                                <td><s:property value="dessert.name"></s:property></td>
+                                <td><s:property value="num"></s:property></td>
+                            </tr>
+                        </s:iterator>
+                    </s:sort>
                     </tbody>
                 </table>
             </div>

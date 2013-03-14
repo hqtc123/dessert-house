@@ -65,7 +65,7 @@ public class Torder implements Serializable {
 
     private float money;
 
-    @Column(name = "money", nullable = false, insertable = true, updatable = true, length = 12, precision = 0)
+    @Column(name = "money", nullable = false, insertable = true, updatable = true, length = 11, precision = 0)
     @Basic
     public float getMoney() {
         return money;
@@ -110,5 +110,17 @@ public class Torder implements Serializable {
         result = 31 * result + customerid;
         result = 31 * result + (money != +0.0f ? Float.floatToIntBits(money) : 0);
         return result;
+    }
+
+    private Date date;
+
+    @Column(name = "date", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
+    @Basic
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

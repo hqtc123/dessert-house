@@ -36,6 +36,9 @@
                         <a href="#">个人资料</a>
                     </li>
                     <li>
+                        <a href="viewRecords.action">消费记录</a>
+                    </li>
+                    <li>
                         <a href="logoutAction.action">注销</a>
                     </li>
                 </ul>

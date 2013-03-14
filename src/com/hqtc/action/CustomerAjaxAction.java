@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -167,6 +168,7 @@ public class CustomerAjaxAction extends ActionSupport implements RequestAware, S
         card.setMoney(newMoney);
         customerBiz.updateCard(card);
         torder.setCustomerid(customer.getId());
+        torder.setDate(new java.sql.Date(new Date().getTime()));
         torder.setSalerid(0);
         torder.setShopid((Integer) (session.get("shopid")));
         customerBiz.makeOrder(torder);

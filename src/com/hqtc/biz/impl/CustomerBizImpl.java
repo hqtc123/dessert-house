@@ -7,6 +7,7 @@ import com.hqtc.util.MyMD5;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -30,6 +31,8 @@ public class CustomerBizImpl implements CustomerBiz {
     private DessertDao dessertDao;
     @Autowired
     private OrderitemDao orderitemDao;
+    @Autowired
+    private RechargeDao rechargeDao;
 
     public void setCustomerDao(CustomerDao customerDao) {
         this.customerDao = customerDao;
@@ -73,6 +76,11 @@ public class CustomerBizImpl implements CustomerBiz {
         float newMoney = oldMoney + money;
         card.setMoney(newMoney);
         cardDao.update(card);
+        Recharge recharge = new Recharge();
+        recharge.setCustomerid(card.getCustomerid());
+        recharge.setDate(new Date(new java.util.Date().getTime()));
+        recharge.setMoney(money);
+        rechargeDao.save(recharge);
     }
 
     @Override
@@ -143,5 +151,15 @@ public class CustomerBizImpl implements CustomerBiz {
     @Override
     public void update(Customer customer1) {
         customerDao.update(customer1);
+    }
+
+    @Override
+    public List<Recharge> getRechargesByCustomer(Customer customer) {
+        return rechargeDao.getRechargesByCustomer(customer);  //todo
+    }
+
+    @Override
+    public List<Torder> getOrdersByCustomer(Customer customer) {
+        return torderDao.getOrdersByCustomer(customer);
     }
 }

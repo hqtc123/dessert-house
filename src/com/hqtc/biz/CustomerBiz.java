@@ -45,4 +45,8 @@ public interface CustomerBiz {
     public void saveCard(Card card1);
 
     public void update(Customer customer1);
+
+    public List<Recharge> getRechargesByCustomer(Customer customer);
+
+    public List<Torder> getOrdersByCustomer(Customer customer);
 }

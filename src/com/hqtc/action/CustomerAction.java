@@ -30,8 +30,34 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
 
     @Autowired
     private CustomerBiz customerBiz;
+
+
+    private List<Orderitem> orderitems = new ArrayList<Orderitem>();
+    private List<SuperWeeknum> super1 = new ArrayList<SuperWeeknum>();
+    private List<SuperWeeknum> super2 = new ArrayList<SuperWeeknum>();
+    private List<SuperItem> superItems = new ArrayList<SuperItem>();
+    private List<Torder> torders = new ArrayList<Torder>();
+    private List<Recharge> recharges = new ArrayList<Recharge>();
+
     private Customer customer;
     private String resultMsg;
+
+    public List<Torder> getTorders() {
+        return torders;
+    }
+
+    public void setTorders(List<Torder> torders) {
+        this.torders = torders;
+    }
+
+    public List<Recharge> getRecharges() {
+        return recharges;
+    }
+
+    public void setRecharges(List<Recharge> recharges) {
+        this.recharges = recharges;
+    }
+
     private String rePassword;
     private Card card;
     private Torder torder;
@@ -53,9 +79,6 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         this.torder = torder;
     }
 
-    private Torder order;
-    private List<Orderitem> orderitems = new ArrayList<Orderitem>();
-
     public List<Orderitem> getOrderitems() {
         return orderitems;
     }
@@ -64,18 +87,6 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
         this.orderitems = orderitems;
     }
 
-    public Torder getOrder() {
-        return order;
-    }
-
-    public void setOrder(Torder order) {
-        this.order = order;
-    }
-
-    private List<SuperWeeknum> super1 = new ArrayList<SuperWeeknum>();
-    private List<SuperWeeknum> super2 = new ArrayList<SuperWeeknum>();
-
-    private List<SuperItem> superItems = new ArrayList<SuperItem>();
 
     public List<SuperWeeknum> getSuper1() {
         return super1;
@@ -132,10 +143,6 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
-    }
-
-    public void setCustomerBiz(CustomerBiz customerBiz) {
-        this.customerBiz = customerBiz;
     }
 
     @Action(value = "registerAction", results = {@Result(type = "redirect", name = "success", location = "/customer/customerIndex.action"),
@@ -234,6 +241,15 @@ public class CustomerAction extends ActionSupport implements RequestAware, Sessi
             setResultMsg("购物车中没有甜品");
             return SUCCESS;
         }
+    }
+
+    @SuppressWarnings("unchecked")
+    @Action(interceptorRefs = {@InterceptorRef("myCusStack")}, value = "viewRecords", results = {@Result(name = SUCCESS, location = "/customer/record.jsp")})
+    public String viewRecords() {
+        customer = (Customer) session.get("customer");
+        torders = customerBiz.getOrdersByCustomer(customer);
+        recharges = customerBiz.getRechargesByCustomer(customer);
+        return SUCCESS;
     }
 
     @Override

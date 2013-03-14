@@ -1,6 +1,7 @@
 package com.hqtc.model.dao.impl;
 
 import com.hqtc.model.dao.TorderDao;
+import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Torder;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -23,8 +24,30 @@ public class TorderDaoImpl extends BaseDaoImpl<Torder> implements TorderDao {
         List list = null;
         Session session = getSession();
         Criteria criteria = session.createCriteria(Torder.class);
-        criteria.add(Restrictions.eq("shopid", i));
-        list = criteria.list();
+        try {
+            criteria.add(Restrictions.eq("shopid", i));
+            list = criteria.list();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    @SuppressWarnings("uncheck")
+    @Override
+    public List<Torder> getOrdersByCustomer(Customer customer) {
+        List list = null;
+        Session session = getSession();
+
+        Criteria criteria = session.createCriteria(Torder.class);
+        try {
+            if (customer != null) {
+                criteria.add(Restrictions.eq("customerid", customer.getId()));
+                list=criteria.list();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return list;
     }
 }

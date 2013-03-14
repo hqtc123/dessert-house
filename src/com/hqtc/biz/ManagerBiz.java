@@ -23,4 +23,6 @@ public interface ManagerBiz {
     public List<Torder> viewOrdersByShopId(int i);
 
     public int getNumofDessert(Dessert dessert);
+
+    public void refreshCardsState();
 }

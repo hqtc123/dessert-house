@@ -198,4 +198,20 @@ $(function () {
             }
         })
     })
+
+    //show records
+    $(".recharge-table").hide();
+    $(".order-menu").on("click", function () {
+        $(this).addClass("active");
+        $(".recharge-menu").removeClass("active");
+        $(".order-table").show();
+        $(".recharge-table").hide();
+    });
+    $(".recharge-menu").on("click", function () {
+        $(this).addClass("active");
+        $(".order-menu").removeClass("active");
+        $(".order-table").hide();
+        $(".recharge-table").show();
+    })
+
 })

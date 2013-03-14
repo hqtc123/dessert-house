@@ -1,16 +1,16 @@
-﻿/*
+/*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50513
+Source Server         : hqtcblog
+Source Server Version : 50528
 Source Host           : localhost:3306
 Source Database       : dessert
 
 Target Server Type    : MYSQL
-Target Server Version : 50513
+Target Server Version : 50528
 File Encoding         : 65001
 
-Date: 2013-03-13 13:12:21
+Date: 2013-03-14 12:41:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -87,7 +87,7 @@ INSERT INTO `dessert` VALUES ('7', '营养蛋糕', '9');
 INSERT INTO `dessert` VALUES ('8', '大果冻', '2');
 INSERT INTO `dessert` VALUES ('9', '冰淇淋', '3.2');
 INSERT INTO `dessert` VALUES ('10', '老酸奶', '10');
-INSERT INTO `dessert` VALUES ('11', '     ', '8');
+INSERT INTO `dessert` VALUES ('11', '     冰冰邦', '8');
 
 -- ----------------------------
 -- Table structure for `member`
@@ -122,7 +122,7 @@ DROP TABLE IF EXISTS `orderitem`;
 CREATE TABLE `orderitem` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `orderid` int(11) NOT NULL,
-  `dessertid` int(5) NOT NULL,
+  `dessertid` int(11) NOT NULL,
   `num` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `order` (`orderid`),
@@ -268,3 +268,4 @@ INSERT INTO `weeknum` VALUES ('35', '1', '9', '99', '3', '冰淇淋');
 INSERT INTO `weeknum` VALUES ('36', '3', '9', '56', '1', '冰淇淋');
 INSERT INTO `weeknum` VALUES ('37', '3', '10', '66', '1', '老酸奶');
 INSERT INTO `weeknum` VALUES ('38', '2', '5', '10', '1', '牛奶');
+INSERT INTO `weeknum` VALUES ('39', '2', '6', '11', '1', '麦圈');

@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : hqtcblog
-Source Server Version : 50528
+Source Server         : localhost
+Source Server Version : 50513
 Source Host           : localhost:3306
 Source Database       : dessert
 
 Target Server Type    : MYSQL
-Target Server Version : 50528
+Target Server Version : 50513
 File Encoding         : 65001
 
-Date: 2013-03-14 12:41:12
+Date: 2013-03-14 21:08:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `card` (
   `money` float NOT NULL,
   PRIMARY KEY (`id`),
   KEY `customerId` (`customerid`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of card
@@ -39,6 +39,7 @@ INSERT INTO `card` VALUES ('7', '28', '1', '42');
 INSERT INTO `card` VALUES ('8', '29', '1', '4');
 INSERT INTO `card` VALUES ('9', '30', '0', '0');
 INSERT INTO `card` VALUES ('10', '31', '1', '106');
+INSERT INTO `card` VALUES ('11', '32', '1', '218');
 
 -- ----------------------------
 -- Table structure for `customer`
@@ -53,7 +54,7 @@ CREATE TABLE `customer` (
   `address` varchar(255) NOT NULL,
   `score` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of customer
@@ -66,6 +67,7 @@ INSERT INTO `customer` VALUES ('28', 'qwe', '76d80224611fc919a5d54f0ff9fba446', 
 INSERT INTO `customer` VALUES ('29', 'ren', '00559ea764f3549e2a9c714ecd8af73f', '23', '0', '假定符合', '0');
 INSERT INTO `customer` VALUES ('30', 'mmm', 'c4efd5020cb49b9d3257ffa0fbccc0ae', '23', '0', 'er', '0');
 INSERT INTO `customer` VALUES ('31', 'nnn', 'a1931ec126bbad3fa7a3fc64209fd921', '20', '0', 'guangzhou', '0');
+INSERT INTO `customer` VALUES ('32', 'j2ee', '82572290b86fc6ad41c0f05937410631', '12', '0', '南京', '0');
 
 -- ----------------------------
 -- Table structure for `dessert`
@@ -81,7 +83,7 @@ CREATE TABLE `dessert` (
 -- ----------------------------
 -- Records of dessert
 -- ----------------------------
-INSERT INTO `dessert` VALUES ('5', '牛奶', '3');
+INSERT INTO `dessert` VALUES ('5', '牛奶', '2');
 INSERT INTO `dessert` VALUES ('6', '麦圈', '12');
 INSERT INTO `dessert` VALUES ('7', '营养蛋糕', '9');
 INSERT INTO `dessert` VALUES ('8', '大果冻', '2');
@@ -103,7 +105,7 @@ CREATE TABLE `member` (
   UNIQUE KEY `account` (`account`),
   KEY `shopid` (`shopid`),
   CONSTRAINT `shopid` FOREIGN KEY (`shopid`) REFERENCES `shop` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of member
@@ -114,6 +116,7 @@ INSERT INTO `member` VALUES ('16', 'aaa', '47bce5c74f589f4867dbd57e9ca9f808', 's
 INSERT INTO `member` VALUES ('17', 'qqq', 'b2ca678b4c936f905fb82f2733f5297f', 'saler', '2');
 INSERT INTO `member` VALUES ('18', 'yanxin', 'dcfb7b61fc0da2ef7deb549fde4467cd', 'saler', '3');
 INSERT INTO `member` VALUES ('19', 'tom', '34b7da764b21d298ef307d04d8152dc5', 'saler', '1');
+INSERT INTO `member` VALUES ('20', 'manager', '1d0258c2440a8d19e716292b231e3190', 'manager', '1');
 
 -- ----------------------------
 -- Table structure for `orderitem`
@@ -127,7 +130,7 @@ CREATE TABLE `orderitem` (
   PRIMARY KEY (`id`),
   KEY `order` (`orderid`),
   CONSTRAINT `order` FOREIGN KEY (`orderid`) REFERENCES `torder` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of orderitem
@@ -150,6 +153,8 @@ INSERT INTO `orderitem` VALUES ('15', '15', '6', '2');
 INSERT INTO `orderitem` VALUES ('16', '16', '6', '2');
 INSERT INTO `orderitem` VALUES ('17', '16', '6', '3');
 INSERT INTO `orderitem` VALUES ('18', '17', '6', '1');
+INSERT INTO `orderitem` VALUES ('19', '18', '8', '2');
+INSERT INTO `orderitem` VALUES ('20', '18', '7', '2');
 
 -- ----------------------------
 -- Table structure for `recharge`
@@ -161,11 +166,12 @@ CREATE TABLE `recharge` (
   `money` int(11) NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of recharge
 -- ----------------------------
+INSERT INTO `recharge` VALUES ('1', '32', '120', '2013-03-14');
 
 -- ----------------------------
 -- Table structure for `shop`
@@ -211,31 +217,33 @@ CREATE TABLE `torder` (
   `shopid` int(11) NOT NULL,
   `salerid` int(11) NOT NULL,
   `customerid` int(11) NOT NULL,
-  `money` float NOT NULL,
+  `money` float(11,0) NOT NULL,
+  `date` date NOT NULL,
   PRIMARY KEY (`id`),
   KEY `shoid` (`shopid`),
   KEY `saleid` (`salerid`),
   KEY `customeid` (`customerid`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of torder
 -- ----------------------------
-INSERT INTO `torder` VALUES ('3', '1', '0', '21', '36');
-INSERT INTO `torder` VALUES ('4', '1', '0', '21', '24');
-INSERT INTO `torder` VALUES ('5', '1', '0', '21', '56');
-INSERT INTO `torder` VALUES ('6', '1', '0', '21', '198');
-INSERT INTO `torder` VALUES ('7', '1', '0', '21', '32');
-INSERT INTO `torder` VALUES ('8', '1', '0', '0', '32');
-INSERT INTO `torder` VALUES ('9', '1', '0', '0', '96');
-INSERT INTO `torder` VALUES ('10', '2', '0', '28', '24');
-INSERT INTO `torder` VALUES ('11', '2', '0', '28', '36');
-INSERT INTO `torder` VALUES ('12', '1', '0', '28', '12');
-INSERT INTO `torder` VALUES ('13', '1', '0', '28', '12');
-INSERT INTO `torder` VALUES ('14', '1', '0', '18', '12');
-INSERT INTO `torder` VALUES ('15', '1', '0', '18', '24');
-INSERT INTO `torder` VALUES ('16', '2', '0', '18', '60');
-INSERT INTO `torder` VALUES ('17', '2', '0', '18', '12');
+INSERT INTO `torder` VALUES ('3', '1', '0', '21', '36', '2013-03-12');
+INSERT INTO `torder` VALUES ('4', '1', '0', '21', '24', '2013-02-27');
+INSERT INTO `torder` VALUES ('5', '1', '0', '21', '56', '2013-03-12');
+INSERT INTO `torder` VALUES ('6', '1', '0', '21', '198', '2013-03-20');
+INSERT INTO `torder` VALUES ('7', '1', '0', '21', '32', '2013-03-20');
+INSERT INTO `torder` VALUES ('8', '1', '0', '19', '32', '2013-03-20');
+INSERT INTO `torder` VALUES ('9', '1', '0', '19', '96', '2013-03-20');
+INSERT INTO `torder` VALUES ('10', '2', '0', '28', '24', '2013-03-12');
+INSERT INTO `torder` VALUES ('11', '2', '0', '28', '36', '2013-03-06');
+INSERT INTO `torder` VALUES ('12', '1', '0', '28', '12', '2013-03-06');
+INSERT INTO `torder` VALUES ('13', '1', '0', '28', '12', '2013-03-05');
+INSERT INTO `torder` VALUES ('14', '1', '0', '18', '12', '2013-03-12');
+INSERT INTO `torder` VALUES ('15', '1', '0', '18', '24', '2013-03-12');
+INSERT INTO `torder` VALUES ('16', '2', '0', '18', '60', '2013-03-27');
+INSERT INTO `torder` VALUES ('17', '2', '0', '18', '12', '2013-03-06');
+INSERT INTO `torder` VALUES ('18', '2', '0', '32', '22', '2013-03-14');
 
 -- ----------------------------
 -- Table structure for `weeknum`
@@ -253,7 +261,7 @@ CREATE TABLE `weeknum` (
   KEY `dessert` (`dessertid`),
   CONSTRAINT `dessert` FOREIGN KEY (`dessertid`) REFERENCES `dessert` (`id`),
   CONSTRAINT `shop` FOREIGN KEY (`shopid`) REFERENCES `shop` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of weeknum
@@ -269,3 +277,5 @@ INSERT INTO `weeknum` VALUES ('36', '3', '9', '56', '1', '冰淇淋');
 INSERT INTO `weeknum` VALUES ('37', '3', '10', '66', '1', '老酸奶');
 INSERT INTO `weeknum` VALUES ('38', '2', '5', '10', '1', '牛奶');
 INSERT INTO `weeknum` VALUES ('39', '2', '6', '11', '1', '麦圈');
+INSERT INTO `weeknum` VALUES ('40', '2', '7', '98', '1', '营养蛋糕');
+INSERT INTO `weeknum` VALUES ('41', '2', '8', '119', '1', '大果冻');

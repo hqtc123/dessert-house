@@ -1,6 +1,9 @@
 package com.hqtc.model.dao;
 
+import com.hqtc.model.entity.Customer;
 import com.hqtc.model.entity.Recharge;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,4 +13,5 @@ import com.hqtc.model.entity.Recharge;
  * To change this template use File | Settings | File Templates.
  */
 public interface RechargeDao extends BaseDao<Recharge>{
+    public List<Recharge> getRechargesByCustomer(Customer customer);
 }
