@@ -61,10 +61,7 @@ public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
         return dessertDao.findById(id);
     }
 
-    @Override
-    public List getAllDesserts() {
-        return dessertDao.getAll();
-    }
+
 
     @Override
     public List<Weeknum> getWeekNumByShopDay(Weeknum weeknum1) {

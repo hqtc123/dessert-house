@@ -1,5 +1,6 @@
 package com.hqtc.model.dao;
 
+import com.hqtc.model.entity.Dessert;
 import com.hqtc.model.entity.Orderitem;
 
 /**
@@ -10,5 +11,5 @@ import com.hqtc.model.entity.Orderitem;
  * To change this template use File | Settings | File Templates.
  */
 public interface OrderitemDao extends BaseDao<Orderitem>{
-
+    public int getNumofDessert(Dessert dessert);
 }

@@ -1,6 +1,9 @@
 package com.hqtc.biz;
 
+import com.hqtc.model.entity.Dessert;
 import com.hqtc.model.entity.Member;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,4 +14,6 @@ import com.hqtc.model.entity.Member;
  */
 public interface MemberBiz {
     public Member getMemberByAccPass(Member member);
+
+    public List<Dessert> getAllDesserts();
 }

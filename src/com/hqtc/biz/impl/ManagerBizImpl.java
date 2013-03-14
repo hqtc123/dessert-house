@@ -1,14 +1,8 @@
 package com.hqtc.biz.impl;
 
 import com.hqtc.biz.ManagerBiz;
-import com.hqtc.model.dao.CardDao;
-import com.hqtc.model.dao.CustomerDao;
-import com.hqtc.model.dao.OrderitemDao;
-import com.hqtc.model.dao.TorderDao;
-import com.hqtc.model.entity.Card;
-import com.hqtc.model.entity.Customer;
-import com.hqtc.model.entity.Orderitem;
-import com.hqtc.model.entity.Torder;
+import com.hqtc.model.dao.*;
+import com.hqtc.model.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +25,7 @@ public class ManagerBizImpl extends MemberBizImpl implements ManagerBiz {
     private OrderitemDao orderitemDao;
     @Autowired
     private TorderDao torderDao;
+    @Autowired
 
     @Override
     public List<Customer> viewCustomers() {
@@ -40,6 +35,11 @@ public class ManagerBizImpl extends MemberBizImpl implements ManagerBiz {
     @Override
     public List<Card> viewCards() {
         return cardDao.getAll();
+    }
+
+    @Override
+    public int getNumofDessert(Dessert dessert) {
+        return orderitemDao.getNumofDessert(dessert);  //todo
     }
 
     @Override

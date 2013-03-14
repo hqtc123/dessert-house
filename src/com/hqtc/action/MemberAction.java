@@ -218,6 +218,10 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
         }
         torders1 = managerBiz.viewOrdersByShopId(1);
         torders2 = managerBiz.viewOrdersByShopId(2);
+        List<Dessert> dessertList = managerBiz.getAllDesserts();
+        for(int i=0;i<dessertList.size();i++){
+            dessertNums.add(new DessertNum(dessertList.get(i),managerBiz.getNumofDessert(dessertList.get(i))));
+        }
         return SUCCESS;
     }
 

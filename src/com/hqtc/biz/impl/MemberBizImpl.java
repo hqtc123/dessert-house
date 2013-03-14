@@ -1,6 +1,7 @@
 package com.hqtc.biz.impl;
 
 import com.hqtc.biz.MemberBiz;
+import com.hqtc.model.dao.DessertDao;
 import com.hqtc.model.dao.MemberDao;
 import com.hqtc.model.entity.Member;
 import com.hqtc.util.MyMD5;
@@ -20,6 +21,13 @@ import java.util.List;
 public abstract class MemberBizImpl implements MemberBiz {
     @Autowired
     private MemberDao memberDao;
+    @Autowired
+    private DessertDao dessertDao;
+
+    @Override
+    public List getAllDesserts() {
+        return dessertDao.getAll();
+    }
 
     @Override
     public Member getMemberByAccPass(Member member) {
