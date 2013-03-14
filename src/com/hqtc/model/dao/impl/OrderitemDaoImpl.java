@@ -6,6 +6,7 @@ import com.hqtc.model.entity.Orderitem;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -20,11 +21,19 @@ public class OrderitemDaoImpl extends BaseDaoImpl<Orderitem> implements Orderite
 
     @Override
     public int getNumofDessert(Dessert dessert) {
+        if (dessert == null) {
+            return 0;
+        }
         int dessertid = dessert.getId();
         String sql = "SELECT SUM(num) FROM orderitem WHERE dessertid =" + dessertid + "";
         Session session = getSession();
 
         List list = session.createSQLQuery(sql).list();
-        return (Integer) list.get(0);
+        if (list == null || list.isEmpty()||list.get(0)==null) {
+            return 0;
+        }
+        Object oo=list.get(0);
+        BigDecimal bd = (BigDecimal)list.get(0);
+        return bd.intValue();
     }
 }

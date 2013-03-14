@@ -14,7 +14,7 @@ import java.util.List;
  * Time: 下午3:37
  * To change this template use File | Settings | File Templates.
  */
-public interface SalerBiz extends MemberBiz {
+public interface SalerBiz {
     public void dealOrder(Torder torder, Member member);
 
     public void addDessert(Dessert dessert);
@@ -34,4 +34,6 @@ public interface SalerBiz extends MemberBiz {
     public void deleteWeeknum(Weeknum weeknum1);
 
     public void addWeeknum(Weeknum weeknum);
+
+    public Member getMemberByAccPass(Member member);
 }

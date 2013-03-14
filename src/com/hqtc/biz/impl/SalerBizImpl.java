@@ -3,6 +3,7 @@ package com.hqtc.biz.impl;
 import com.hqtc.biz.SalerBiz;
 import com.hqtc.model.dao.*;
 import com.hqtc.model.entity.*;
+import com.hqtc.util.MyMD5;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Service
-public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
+public class SalerBizImpl implements SalerBiz {
     @Autowired
     private TorderDao torderDao;
     @Autowired
@@ -28,6 +29,8 @@ public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
     private WeeknumDao weeknumDao;
     @Autowired
     private ShopDao shopDao;
+    @Autowired
+    private MemberDao memberDao;
 
     @Override
     public void dealOrder(Torder torder, Member member) {
@@ -61,8 +64,6 @@ public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
         return dessertDao.findById(id);
     }
 
-
-
     @Override
     public List<Weeknum> getWeekNumByShopDay(Weeknum weeknum1) {
         return weeknumDao.getWeekNumByShopDay(weeknum1);
@@ -81,5 +82,22 @@ public class SalerBizImpl extends MemberBizImpl implements SalerBiz {
     @Override
     public void addWeeknum(Weeknum weeknum) {
         weeknumDao.save(weeknum);
+    }
+
+    @Override
+    public List getAllDesserts() {
+        return dessertDao.getAll();
+    }
+
+    @Override
+    public Member getMemberByAccPass(Member member) {
+        String password = member.getPassword();
+        String newPass = MyMD5.encryption(password);
+        member.setPassword(newPass);
+        List list = memberDao.accPassSearch(member);
+        if (list.size() > 0) {
+            return (Member) list.get(0);
+        }
+        return null;
     }
 }

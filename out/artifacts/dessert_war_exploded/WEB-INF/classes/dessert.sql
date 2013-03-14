@@ -1,4 +1,4 @@
-/*
+﻿/*
 Navicat MySQL Data Transfer
 
 Source Server         : localhost
@@ -122,7 +122,7 @@ DROP TABLE IF EXISTS `orderitem`;
 CREATE TABLE `orderitem` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `orderid` int(11) NOT NULL,
-  `dessertid` int(11) NOT NULL,
+  `dessertid` int(5) NOT NULL,
   `num` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `order` (`orderid`),
@@ -268,4 +268,3 @@ INSERT INTO `weeknum` VALUES ('35', '1', '9', '99', '3', '冰淇淋');
 INSERT INTO `weeknum` VALUES ('36', '3', '9', '56', '1', '冰淇淋');
 INSERT INTO `weeknum` VALUES ('37', '3', '10', '66', '1', '老酸奶');
 INSERT INTO `weeknum` VALUES ('38', '2', '5', '10', '1', '牛奶');
-INSERT INTO `weeknum` VALUES ('39', '2', '6', '11', '1', '麦圈');

@@ -100,7 +100,7 @@
                 </table>
             </div>
 
-            <div class="hero-unit heroo-rder">
+            <div class="hero-unit hero-order">
                 <table class="table">
                     <thead><label>店铺1</label></thead>
                     <tbody>
@@ -115,7 +115,7 @@
                             <td><s:property value="id"></s:property></td>
                             <td><s:property value="customerid"></s:property></td>
                             <td><s:if test="salerid!=0">
-                               已发货
+                                已发货
                             </s:if><s:else>
                                 未发货
                             </s:else>
@@ -135,7 +135,7 @@
                 </table>
             </div>
 
-            <div class="hero-unit heroo-rder">
+            <div class="hero-unit hero-order">
                 <table class="table">
                     <thead><label>店铺2</label></thead>
                     <tbody>
@@ -169,6 +169,27 @@
 
                 </table>
             </div>
+
+            <div class="hero-unit hero-dessert-num">
+                <table class="table">
+                    <thead><label>热卖产品</label></thead>
+                    <tbody>
+                    <tr>
+                        <th>产品ID</th>
+                        <th>产品名称</th>
+                        <th>卖出数量</th>
+                    </tr>
+                    <s:iterator value="dessertNums">
+                        <tr>
+                            <td><s:property value="dessert.id"></s:property></td>
+                            <td><s:property value="dessert.name"></s:property></td>
+                            <td><s:property value="num"></s:property></td>
+                        </tr>
+                    </s:iterator>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 </div>

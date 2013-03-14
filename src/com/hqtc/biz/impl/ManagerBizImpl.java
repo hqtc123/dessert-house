@@ -16,7 +16,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Service
-public class ManagerBizImpl extends MemberBizImpl implements ManagerBiz {
+public class ManagerBizImpl implements ManagerBiz {
     @Autowired
     private CustomerDao customerDao;
     @Autowired
@@ -25,8 +25,6 @@ public class ManagerBizImpl extends MemberBizImpl implements ManagerBiz {
     private OrderitemDao orderitemDao;
     @Autowired
     private TorderDao torderDao;
-    @Autowired
-
     @Override
     public List<Customer> viewCustomers() {
         return customerDao.getAll();

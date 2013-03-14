@@ -34,9 +34,9 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
 
     private Member member;
     private Weeknum weeknum;
-    private List<Torder> torders1;
-    private List<Torder> torders2;
-    private List<DessertNum> dessertNums;
+    private List<Torder> torders1 = new ArrayList<Torder>();
+    private List<Torder> torders2 = new ArrayList<Torder>();
+    private List<DessertNum> dessertNums = new ArrayList<DessertNum>();
 
     public List<DessertNum> getDessertNums() {
         return dessertNums;
@@ -218,9 +218,9 @@ public class MemberAction extends ActionSupport implements RequestAware, Session
         }
         torders1 = managerBiz.viewOrdersByShopId(1);
         torders2 = managerBiz.viewOrdersByShopId(2);
-        List<Dessert> dessertList = managerBiz.getAllDesserts();
-        for(int i=0;i<dessertList.size();i++){
-            dessertNums.add(new DessertNum(dessertList.get(i),managerBiz.getNumofDessert(dessertList.get(i))));
+        List<Dessert> dessertList = salerBiz.getAllDesserts();
+        for (int i = 0; i < dessertList.size(); i++) {
+            dessertNums.add(new DessertNum(dessertList.get(i), managerBiz.getNumofDessert(dessertList.get(i))));
         }
         return SUCCESS;
     }

@@ -11,7 +11,7 @@ import java.util.List;
  * Time: 下午3:42
  * To change this template use File | Settings | File Templates.
  */
-public interface ManagerBiz extends MemberBiz {
+public interface ManagerBiz {
     public List<Customer> viewCustomers();
 
     public List<Card> viewCards();
